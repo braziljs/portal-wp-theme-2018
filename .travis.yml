@@ -1,0 +1,20 @@
+language: node_js
+sudo: required
+dist: trusty
+node_js: stable
+addons:
+  ssh_known_hosts: 159.89.224.26
+before_script:
+  - "npm install -g gulp-cli"
+  - "npm install -g eval"
+script:
+  - "npm run build"
+cache:
+  directories:
+    - node_modules
+after_script:
+  - openssl aes-256-cbc -K $encrypted_99d98d3b8275_key -iv $encrypted_99d98d3b8275_iv -in deploy_rsa.enc -out deploy_rsa -d
+  - eval "$(ssh-agent -s)" #start the ssh agent
+  - chmod 600 deploy_rsa   # this key should have push access
+  - ssh-add deploy_rsa
+  - rsync -r --exclude=node_modules/ --exclude=.git ./ root@159.89.224.26:/var/www/html/wp-content/themes/portal-wp-theme-master/
