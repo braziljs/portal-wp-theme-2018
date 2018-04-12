@@ -30,6 +30,10 @@
 
 .article-list__item {
 
+	// &:nth-child(2n + 0) {
+	// 	background-color: red;
+	// }
+
 	&:nth-child(3n) {
 		margin-right:0;
 	}
