@@ -27,6 +27,7 @@ h1, h2, h3, h4, h5 {
 	display: inline-block;
 	color: $color-mine-shaft;
 	text-transform: uppercase;
+	font-family: $font-primary;
 	@include rem(font-size, 18px);
 	border-bottom: 2px solid $color-black;
 	@include rem(margin-bottom, $title-mobile-margin);

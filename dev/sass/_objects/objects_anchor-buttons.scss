@@ -34,7 +34,9 @@
 		color: $color-white;
 		border-color: $color-cloud-burst;
 		background-color: $color-cloud-burst;
-		transition: color ease $basic-transition, border-color ease $basic-transition, background-color ease $basic-transition;
+		transition: color ease $basic-transition,
+								border-color ease $basic-transition,
+								background-color ease $basic-transition;
 	}
 
 	& + .anchor-button {
@@ -51,9 +53,11 @@
 	background-color: $color-lightning-yellow;
 
 	&:hover, &:focus {
-		color: $color-lightning-yellow;
-		border-color: $color-lightning-yellow;
-		background-color: transparent;
+		opacity: .7;
+		color: $color-mine-shaft;
+		border-color: $color-golden-grass;
+		background-color: $color-golden-grass;
+		transition: opacity ease $basic-transition;
 	}
 
 }

@@ -98,18 +98,19 @@ $header-height: 530px;
 
 .header__title {
 	margin: 0;
-	font-weight: 900;
+	text-align: left;
 	max-width: 448px;
-	line-height: 120%;
+	line-height: 110%;
 	color: $color-white;
 	display: inline-block;
 	text-transform: uppercase;
-	@include rem(font-size, 24px);
+	font-family: $font-special;
+	@include rem(font-size, 40px);
 	@include rem(margin-bottom, 30px);	
 
 	@include breakpoint(desktop-and-up) {
 		@include rem(margin-bottom, 20px);
-		@include rem(font-size, 58px);
+		@include rem(font-size, 80px);
 	}
 
 }

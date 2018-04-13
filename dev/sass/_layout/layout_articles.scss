@@ -29,10 +29,14 @@
 }
 
 .article-list__item {
-
-	// &:nth-child(2n + 0) {
-	// 	background-color: red;
-	// }
+	display: flex;
+	max-width: 312px;
+	min-height: 320px;
+	position: relative;
+	// text-align: center;
+	margin-bottom: 30px;
+	flex-direction: column;
+	justify-content: flex-end;
 
 	&:nth-child(3n) {
 		margin-right:0;
@@ -42,29 +46,47 @@
 		clear: left;
 	}
 
+	&:after {
+    content: "";
+    top: 0;
+    z-index: 1;
+    width: 240px;
+    height: 100%;
+    position: absolute;
+    border: 15px solid $color-lightning-yellow;
+	}
+
 }
 
 .page-numbers {
 
 	li {
 		display: inline-block;
-		@include rem(margin-right, 10px);
+		@include rem(margin-right, 15px);
 	}
 
 	a {
-		@include rem(padding, 10px 15px);
-		font-family: $font-primary; @include rem(font-size, 13px); line-height: 120%; color: $color-white; font-weight: 900; font-style: italic; text-transform: uppercase;
-		background-color: $color-white;
-		color: $color-cloud-burst;
-		border: 1px solid $color-cloud-burst;
-		transition: color ease $basic-transition, background-color ease $basic-transition;
+		line-height: 120%;
+		font-weight: 900;
+		font-style: italic;
+		color: $color-white;
 		transform: skew(-6deg);
+		text-transform: uppercase;
+		color: $color-cloud-burst;
+		font-family: $font-primary;
+		@include rem(font-size, 13px);
+		@include rem(padding, 10px 15px);
+		background-color: $color-white;
+		border: 1px solid $color-cloud-burst;
+		transition: color ease $basic-transition, 
+								background-color ease $basic-transition;
 
 		&:hover, &:focus {
 			opacity: 1;
-			background-color: $color-cloud-burst;
 			color: $color-white;
-			transition: color ease $basic-transition, background-color ease $basic-transition;
+			background-color: $color-cloud-burst;
+			transition: color ease $basic-transition, 
+									background-color ease $basic-transition;
 		}
 
 	}

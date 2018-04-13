@@ -20,8 +20,8 @@
 	<?php while (have_posts()) : the_post(); ?>
 
 		<?php if ($firstItem): ?>
-			<?php $imageLink = wp_get_attachment_image_src(get_post_thumbnail_id(), 'highlight-thumb'); ?>
 			
+			<?php $imageLink = wp_get_attachment_image_src(get_post_thumbnail_id(), 'highlight-thumb'); ?>
 			<div class="highlight">
 				<div class="highlight__thumb-container col-7-12">
 					<div class="highlight__thumb-background" style="background-image: url(<?php echo $imageLink[0]; ?>)"></div>
@@ -42,18 +42,29 @@
 		<?php $firstItem = false; ?>
 		<?php else: ?>
 			<?php $imageLink = wp_get_attachment_image_src(get_post_thumbnail_id(), 'post-thumb'); ?>
-			<li class="col-4-12 article-list__item">
+
+			<li class="col-6-12 article-list__item">
 				<div class="card">
+					
+					<?php /* ?>
+					
 					<div class="card__header">
 						<a href="<?php the_permalink() ?>" class="media-wrapper" aria-hidden="true" role="presentation" tabindex="-1">
 							<img class="media-wrapper__thumb card__thumb" src="<?php echo $imageLink[0]; ?>" alt="<?php echo get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true); ?>" />
 						</a>
 					</div>
+
+					<?php */ ?>
+
 					<div class="card__content">
-						<h3 class="card__title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+						<h3 class="card__title">
+							<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+						</h3>
+						<?php /* ?>
 						<div class="card__paragraph">
 							<?php the_excerpt(); ?>
 						</div>
+						<?php */ ?>
 					</div>
 				</div>
 			</li>
