@@ -24,7 +24,7 @@
 	background-color: $color-white;
 	@include rem(font-size, 13px);
 	// @include rem(padding, 10px 20px);
-	border: 1px solid $color-cloud-burst;
+	border: 3px solid $color-cloud-burst;
 	transition: color ease $basic-transition, 
 										border-color ease $basic-transition,
 										background-color ease $basic-transition;
@@ -95,8 +95,8 @@
 
 	&:hover, &:focus {
 		color: $color-mine-shaft;
-		border-color: $color-mine-shaft;
 		background-color: $color-gold;
+		border-color: $color-gold;
 	}
 
 }

@@ -129,11 +129,15 @@
 }
 
 .card__label {
-	position: relative; top: -20px;
-	@include rem(padding, 5px 10px);
-	@include rem(font-size, 13px); line-height: 135%; color: $color-white; text-transform: uppercase;
-	background-color: $color-mine-shaft;
+	line-height: 135%;
 	border-radius: 4px;
+	color: $color-white;
+	text-transform: uppercase;
+	position: relative; top: -20px;
+	background-color: $color-mine-shaft;
+	
+	@include rem(font-size, 13px);
+	@include rem(padding, 5px 10px);
 
 	& + .card__title {
 		@include rem(margin-top, -5px);
@@ -145,6 +149,7 @@
 	font-weight: 900;
 	line-height: 167%;
 	color: $color-mine-shaft;
+
 	@include rem(font-size, 24px);
 	@include rem(margin, 0 0 0 15px);
 
@@ -156,13 +161,21 @@
 
 .card__subtitle {
 	display: block;
-	@include rem(margin-top, -5px); @include rem(margin-bottom, 10px);
-	@include rem(font-size, 13px); font-weight: 600; font-style: italic;
+	font-weight: 600;
+	font-style: italic;
+	
+	@include rem(font-size, 13px);
+	@include rem(margin-top, -5px);
+	@include rem(margin-bottom, 10px);
 }
 
 .card__paragraph {
 	display: none;
-	font-family: $font-special; @include rem(font-size, 15px); color: $color-emperor; line-height: 140%;
+	line-height: 140%;
+	color: $color-emperor;
+	font-family: $font-special;
+
+	@include rem(font-size, 15px);
 
 	@include breakpoint(tablet-and-up) {
 		display: block;

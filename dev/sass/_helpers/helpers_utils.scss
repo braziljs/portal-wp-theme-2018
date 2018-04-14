@@ -1,0 +1,61 @@
+/*
+ * @MIXIN'S
+*/
+
+@mixin transition($duration:0.2s, $ease:ease-in) {
+  -webkit-transition: all $duration $ease;
+  -moz-transition: all $duration $ease;
+  -ms-transition: all $duration $ease;
+  transition: all $duration $ease;
+}
+
+
+@mixin background-image ($image, $size: auto, $position: center, $repeat: no-repeat, $attachment: unset) {
+  background-size: $size;
+  background-repeat: $repeat;
+  background-position: $position;
+  background-attachment: $attachment;
+  background-image: url($image);
+}
+
+/*
+ * @GLOBAL CLASS
+*/
+
+.center {
+  display: block;
+  margin: 0 auto;
+}
+
+.absolute-center {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  position: absolute;
+}
+
+.bounce {
+  animation: bounce 4s 2s infinite;
+}
+
+
+/*
+ * @KEYFRAME'S
+*/
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0) ;
+    transform: translateY(0) ;
+  }
+
+  40% {
+    -webkit-transform: translateY(-10px) ;
+    transform: translateY(-10px) ;
+  }
+
+  60% {
+    -webkit-transform: translateY(-5px) ;
+    transform: translateY(-5px) ;
+  }
+}

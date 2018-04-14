@@ -49,8 +49,9 @@ $header-height: 530px;
 	    color: #fff;
 	    text-align: right;
 	    padding-right: 16px;
-	    padding-bottom: 30px;
 	    border-right: 1px solid #fff;
+
+	    @include rem(padding-bottom, 52px);
     }
 
     .arrow {
@@ -58,6 +59,7 @@ $header-height: 530px;
     	height: 17px;
     	right: 15px;
     	bottom: 10px;
+    	@extend .bounce;
     	position: absolute;
     	display: inline-block;
 			background: url('../img/icons/icon-arrow.svg') transparent no-repeat top center;
