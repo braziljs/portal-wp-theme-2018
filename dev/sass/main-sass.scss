@@ -74,6 +74,7 @@
 @import "_tools/tools_rem.scss";
 @import "_tools/tools_breakpoint.scss";
 @import "_tools/tools_placeholder.scss";
+@import "_tools/tools_utils.scss";
 
 /**
  * #GENERIC
@@ -135,7 +136,6 @@
 /**
  * #HELPERS
  */
-@import "_helpers/helpers_utils.scss";
 @import "_helpers/helpers_hide-show.scss";
 @import "_helpers/helpers_element-positions.scss";
 // @import "_helpers/helpers_text.scss";
