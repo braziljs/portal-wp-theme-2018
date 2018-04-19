@@ -4,12 +4,7 @@ define( function () {
 
 	var course = {},
 		url = 'https://www.alura.com.br/api/cursos-em-destaque',
-		list = $('#card-wrapper-list'),
-		article  = null,
-		card = null,
-		card_header = null,
-		media_wrapper = null,
-		card_thumb = null;
+		list = $('#card-wrapper-list');
 
 	course = {
 

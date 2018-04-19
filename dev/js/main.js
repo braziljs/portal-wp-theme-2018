@@ -11,6 +11,7 @@
         //configure our requireJS paths
         require.config({
             paths: {
+                'home': 'modules/home',
                 'skipLinks': 'modules/skip-links',
                 'navigation': 'modules/navigation',
                 'article': 'modules/article',
@@ -29,7 +30,9 @@
 
 	PUBLIC.init = function () {
 
-		PUBLIC.skipLinks();
+        PUBLIC.home();
+		
+        PUBLIC.skipLinks();
 
         PUBLIC.navigation();
 
@@ -42,6 +45,16 @@
         PUBLIC.conf();
 
 	};
+
+    PUBLIC.home = function () {
+
+        var main = document.getElementById('main');
+
+        if (main) {
+            require(['home']);
+        }
+
+    };    
 
     PUBLIC.skipLinks = function () {
 
