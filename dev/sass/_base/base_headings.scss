@@ -30,6 +30,10 @@ h1, h2, h3, h4, h5 {
 	text-decoration: underline;
 	font-family: $font-primary;
 
+	&.white {
+		color: white;
+	}
+
 	@include rem(padding, 0 78px);
 	@include rem(font-size, 30px);
 	@include rem(margin-bottom, 64px);

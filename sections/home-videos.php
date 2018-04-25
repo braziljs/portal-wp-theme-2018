@@ -1,5 +1,6 @@
 <!-- HOME VIDEOS -->
 <section>
+	<?php /* ?>
 	<div class="section-wrapper--type-2">
 		<div class="content">
 			<div class="center-elements"><h2 class="title title--type-2 title--color-2">Vídeos</h2></div>
@@ -25,27 +26,38 @@
 			</div>
 		</div>
 	</div>
+	<?php */ ?>
+
 	<div class="home-videos__wrapper">
 		<div class="content">
-			<div class="home-videos row">
-				<h3 class="home-videos__title" id="playlists">Playlists exclusivas</h3>
+			<div class="row">
+				<h3 class="title white" id="playlists">Vídeos</h3>
 				<?php $playlists = get_field('playlist', 'option'); ?>
 				<ul class="home-videos__item-list" aria-labelledby="playlists">
-					<?php while( have_rows('playlist', 'option') ): the_row(); ?>
+					
+					<?php while(have_rows('playlist', 'option')): the_row(); ?>
 						<?php $playlistThumb = get_sub_field('thumb'); ?>
-						<li class="home-videos__item col-4-12">
+						
+						<li class="home-videos__item">
 							<a href="<?php the_sub_field('url'); ?>" class="media-wrapper media-wrapper--video">
+								<button class="highlight_button-play"></button>
 								<img class="media-wrapper__thumb card__thumb" src="<?php echo $playlistThumb[sizes]['post-thumb']; ?>" alt="<?php echo $playlistThumb[alt]; ?>" />
 							</a>
-							<p class="home-videos__info paragraph paragraph--color-2"><?php the_sub_field('nome'); ?></p>
+							<p class="home-videos__info paragraph paragraph--color-2">
+								<?php the_sub_field('nome'); ?>
+							</p>
 						</li>
-		    		<?php endwhile; ?>
+
+		    	<?php endwhile; ?>
 				</ul>
+				<?php /* ?>
 				<div class="center-elements">
 					<a href="https://www.youtube.com/channel/UCnLdHOuue5i1O7TsH6oh07w" class="anchor-button anchor-button--color-2">Confira o nosso canal do Youtube</a>
 				</div>
+				<?php */ ?>
 			</div>
 		</div>
 	</div>
+
 </section>
 <!-- END HOME VIDEOS -->

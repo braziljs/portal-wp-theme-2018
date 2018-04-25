@@ -7,64 +7,72 @@
 
 /* VIDEOS
 ========================================================================== */
-.home-videos {
+
+.home-videos__wrapper {
 	position: relative;
-	z-index: 1;
+	@include rem(padding, 64px 0);
+	background-color: $color-black;
 
-	.media-wrapper {
-		float: left;
-		@include rem(margin-bottom, 10px); @include rem(margin-right, 15px);
+	@include breakpoint(tablet-and-up) {
+		// @include rem(padding-bottom, 100px);
+	}
 
-		@include breakpoint(tablet-and-up) {
-			width: 100%;
-		}
-
+	@include breakpoint(desktop-and-up) {
+		// padding-top: 0;
 	}
 
 }
 
 .home-videos__item-list {
-	display: inline-block;
-	@include rem(margin-bottom, 35px);
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: space-between;
+  @include rem(margin-bottom, 35px);
+	
+	@include breakpoint(tablet-and-up) {
+		flex-flow: row wrap;
+		align-items: normal;
+	}
+
+	.home-videos__item {
+		width: 100%;
+
+		.media-wrapper {
+			height: 176px;
+
+			.highlight_button-play:hover {
+				opacity: 1;
+			}
+		}
+
+		@include breakpoint(desktop-and-up) {
+			width: 300px;
+		}
+	}
 }
 
 .home-videos__title {
+	font-weight: 900;
+	line-height: 120%;
+	font-style: italic;
+	color: $color-white;
+	text-transform: uppercase;
+
+	@include rem(font-size, 20px);
 	@include rem(margin-bottom, 15px);
-	@include rem(font-size, 20px); line-height: 120%; color: $color-white; font-weight: 900; font-style: italic; text-transform: uppercase;
 }
 
 .home-videos__info {
-	float: left;
 	width: 50%;
-	font-family: $font-primary; @include rem(font-size, 16px);
+	float: left;
+	font-weight: 900;
+	font-family: $font-primary;
+	@include rem(font-size, 14px);
 
 	@include breakpoint(tablet-and-up) {
 		width: 100%;
-		@include rem(font-size, 15px);
-	}
-
-}
-
-.home-videos__wrapper {
-	position: relative;
-	@include rem(margin-bottom, 90px); @include rem(margin-top, -35px);  @include rem(padding-top, 30px); padding-bottom: 60px;
-	background-color: $color-gondola;
-
-	&:before {
-    	content: "";
-    	position: absolute; bottom: 0; left: 0;
-    	width: 0; height: 0;
-	    border-color: transparent transparent $color-white transparent;
-    	border-style: solid;
-    	border-width: 0 0 3vw 100vw;
-	}
-
-	@include breakpoint(tablet-and-up) {
-		@include rem(padding-bottom, 100px);
-	}
-
-	@include breakpoint(desktop-and-up) {
-		padding-top: 0;
+		@include rem(font-size, 14px);
 	}
 
 }

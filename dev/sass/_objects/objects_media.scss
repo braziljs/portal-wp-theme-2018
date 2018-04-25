@@ -5,30 +5,32 @@
 /* VARIABLES
 ========================================================================== */
 $inner-border-width: 1px;
-$inner-border-color: rgba($color-white, .6);
 $inner-border-space: 5px;
+$inner-border-color: rgba($color-white, .6);
 
 /* WRAPPER
 ========================================================================== */
 .media-wrapper {
-	display: inline-block;
+	width: 100%;
+	height: 100%;
 	position: relative;
-
-	&:before {
-		content: '';
-		position: absolute; top: $inner-border-space; left: $inner-border-space;
-		width: calc(100% -  #{$inner-border-space} * 2); height: calc(100% - #{$inner-border-space} * 2);
-		border: $inner-border-width solid $inner-border-color;
+	display: inline-block;
+	
+	.media-wrapper__thumb {
+		filter: grayscale(100%);
 	}
 
 }
 
 .media-wrapper--video {
-	&:after {
-		content: '';
-		position: absolute; top: 0; left: 0;
-		width: 100%; height: 100%;
-		background: url(../img/icons/icon-play.svg) no-repeat center center;
+	.highlight_button-play {
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 2;
+		margin: auto;
+		position: absolute;
 	}
 }
 
