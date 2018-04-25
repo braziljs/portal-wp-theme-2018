@@ -8,11 +8,15 @@
 /* PARAGRAPHS
 ========================================================================== */
 .paragraph {
-	@include rem(margin-bottom, 20px);
+	line-height: 267%;
+	color: $color-black;
 	font-family: $font-primary;
-	color: $color-emperor;
-	@include rem(font-size, 15px);
-	line-height: 135%;
+	@include rem(font-size, 12px);
+	@include rem(margin-bottom, 20px);
+
+	&.size-14 {
+		font-size: 14px;
+	}
 }
 
 /* COLOR VARIATIONS

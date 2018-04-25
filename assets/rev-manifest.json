@@ -1,5 +1,5 @@
 {
-  "css/main.css": "css/main-79db49eb16.css",
+  "css/main.css": "css/main-214ee27a13.css",
   "img/backgrounds/bg-wrapper--3.png": "img/backgrounds/bg-wrapper--3-1c86696607.png",
   "img/backgrounds/bg-wrapper--5.png": "img/backgrounds/bg-wrapper--5-5559ad6cda.png",
   "img/backgrounds/header-bg-2.jpg": "img/backgrounds/header-bg-2-cd512cefaf.jpg",
@@ -43,6 +43,7 @@
   "img/examples/video/video-thumb.jpg": "img/examples/video/video-thumb-2e4deaeb6e.jpg",
   "img/examples/video/weekly-thumb.jpg": "img/examples/video/weekly-thumb-aa0dc4b25d.jpg",
   "img/icons/icon-arrow.svg": "img/icons/icon-arrow-f4fe37345d.svg",
+  "img/icons/icon-news.svg": "img/icons/icon-news-0472b99649.svg",
   "img/icons/icon-play.svg": "img/icons/icon-play-d983a59253.svg",
   "img/icons/icon-search.svg": "img/icons/icon-search-60bb1896cc.svg",
   "img/logos/braziljs-otr-sorocaba.png": "img/logos/braziljs-otr-sorocaba-61829b6408.png",
@@ -78,5 +79,5 @@
   "img/thumb-generica-2.jpg": "img/thumb-generica-2-d08ab00929.jpg",
   "img/thumb-generica.jpg": "img/thumb-generica-c80a3665cb.jpg",
   "img/thumb-generica.png": "img/thumb-generica-e6a8d8412e.png",
-  "js/main.js": "js/main-a5e71eb9e7.js"
+  "js/main.js": "js/main-7f5d4ed30e.js"
 }

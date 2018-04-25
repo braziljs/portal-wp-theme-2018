@@ -3,7 +3,8 @@ define(function () {
 	'use strict';
 
 	var home = {},
-		elm = $('#latest-news-vine');
+		elm = $('#latest-news-vine'),
+		btn = $('.highlight_button-play');
 
 	home = {
 
@@ -16,9 +17,14 @@ define(function () {
 		bindEvents: function () {
 
 			var url = elm.attr('data-embed').match(/v=.*/gi)[0].replace('v=', '');
+			home.makeIframe(url)
+		},
 
+		makeIframe: function (url) {
 			
-			console.log(elm);
+			btn.click(function () {
+				elm.html('<iframe src=https://www.youtube.com/embed/'+ url +'?autoplay=1 frameborder="0" allowfullscreen>');
+			});
 		}
 	}
 

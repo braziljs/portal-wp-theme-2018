@@ -15,16 +15,16 @@
 	font-weight: 900;
 	line-height: 120%;
 	text-align: center;
+	color: $color-white;
 	flex-direction: column;
 	justify-content: center;
 	-webkit-appearance: none;
 	text-transform: lowercase;
-	color: $color-cloud-burst;
 	font-family: $font-primary;
-	background-color: $color-white;
 	@include rem(font-size, 13px);
+	background-color: $color-white;
 	// @include rem(padding, 10px 20px);
-	border: 3px solid $color-cloud-burst;
+	border: 3px solid $sunny-yellow;
 	transition: color ease $basic-transition, 
 										border-color ease $basic-transition,
 										background-color ease $basic-transition;
@@ -43,6 +43,27 @@
 		@include rem(margin-left, 5px);
 	}
 
+}
+
+.anchor-link {
+	float: right;
+	text-align: left;
+	font-weight: 900;
+	line-height: 260%;
+	position: relative;
+	color: $color-black;
+	text-transform: lowercase;
+	text-decoration: underline;
+	@include rem(font-size, 16px);
+
+	&:after {
+		top: 2px;
+		left: -26px;
+		content: "+";
+		font-weight: 200;
+		position: absolute;
+		@include rem(font-size, 24px);
+	}
 }
 
 /* COLOR VARIATIONS
@@ -90,7 +111,6 @@
 
 .anchor-button--color-5 {
 	color: $color-white;
-	border-color: $color-gold;
 	background-color: transparent;
 
 	&:hover, &:focus {

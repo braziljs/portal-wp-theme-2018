@@ -21,46 +21,41 @@ h1, h2, h3, h4, h5 {
 /* TITLES
 ========================================================================== */
 .title {
-	line-height: 120%;
 	font-weight: 900;
+	line-height: 150%;
 	position: relative;
+	color: $color-black;
 	display: inline-block;
-	color: $color-mine-shaft;
 	text-transform: uppercase;
+	text-decoration: underline;
 	font-family: $font-primary;
-	@include rem(font-size, 18px);
-	border-bottom: 2px solid $color-black;
-	@include rem(margin-bottom, $title-mobile-margin);
-	// @include rem(padding-bottom, $title-mobile-margin);
 
-	// &:after {
-	// 	content: '';
-	// 	position: absolute; right: 0; bottom: 0; left: 0;
-	// 	margin: auto;
-	// 	@include rem(width, 44px); @include rem(height, 3px);
-	// 	background-color: currentColor;
-	// }
+	@include rem(padding, 0 78px);
+	@include rem(font-size, 30px);
+	@include rem(margin-bottom, 64px);
 
 	@include breakpoint(tablet-and-up) {
-		@include rem(margin-bottom, $title-tablet-margin);
-		// @include rem(padding-bottom, $title-tablet-margin);
+		// @include rem(margin-bottom, $title-tablet-margin);
 
 		&:after {
-			margin: 0;
+			// margin: 0;
 		}
 
 	}
 
-	@include breakpoint(desktop-and-up) {
-		@include rem(margin-left, 78px);
-		@include rem(margin-bottom, $title-desktop-margin);
-		// @include rem(padding-bottom, $title-desktop-padding);
+	@include breakpoint(tablet-and-up) {
 		@include rem(font-size, 48px);
+		// @include rem(margin-bottom, $title-desktop-margin);
 	}
 
 }
 
 .title--type-2 {
+	font-weight: 900;
+	line-height: 165%;
+	color: $color-black;
+	text-transform: uppercase;
+
 	@include breakpoint(tablet-and-up) {
 		&:after {
 			margin: auto;
@@ -96,7 +91,14 @@ h1, h2, h3, h4, h5 {
 	@include breakpoint(tablet-and-up) {
 		@include rem(font-size, 60px);
 	}
+}
 
+.title-size-24 {
+	@include rem(font-size, 24px);
+
+	@include breakpoint(tablet-and-up) {
+		// @include rem(font-size, 60px);
+	}
 }
 
 /* COLOR VARIATIONS

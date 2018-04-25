@@ -9,10 +9,11 @@
 /* HEADER
 ========================================================================== */
 .conf-header {
-	position: relative;
-	@include rem(padding-top, 175px);
 	width: 100%;
-	background-size: cover; background-position: top;
+	position: relative;
+	background-size: cover;
+	background-position: top;
+	@include rem(padding-top, 175px);
 
 	@include breakpoint(small) {
 		@include rem(padding-top, 130px);
@@ -107,4 +108,46 @@
 		margin-right: 0;
 	}
 
+}
+
+/*
+ *
+ * NEXT EVENTS
+ *
+*/
+
+.event-list {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: space-between;
+	@include rem(margin-bottom, 64px);
+
+	@include breakpoint(tablet-and-up) {
+		flex-flow: row wrap;
+		align-items: normal;
+	}
+
+	.events-list__item {
+		width: 240px;
+		margin-bottom: 32px;
+	}
+
+	.card {
+
+		.card__header {
+			width: 100%;
+			height: 320px;
+			@include background-image('none', cover);
+		}
+
+		.card__content {
+			width: 100%;
+			margin: 32px 0 0 0;
+
+			.card__title a {
+				text-decoration: underline;
+			}
+		}
+	}
 }

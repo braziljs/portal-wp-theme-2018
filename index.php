@@ -10,10 +10,17 @@
 <main class="section-wrapper" id="main">
 	<div class="content">
 		<?php get_template_part('sections/latest-news'); ?>
-		<?php get_template_part('sections/ticker'); ?>
+		<?php get_template_part('sections/weekly-internal'); ?>
+		<?php get_template_part('sections/events'); ?>
+		<?php //get_template_part('sections/home-videos'); ?>
+		<?php // get_template_part('sections/ticker'); ?>
+		
+		<?php /* ?>
 		<div class="courses_recommended">
 			<?php get_template_part('sections/alura-course'); ?>
 		</div>
+		<?php */ ?>
+	
 	</div>
 </main>
 

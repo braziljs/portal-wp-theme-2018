@@ -11,28 +11,42 @@ $input-border-color: $color-silver;
 ========================================================================== */
 .label {
 	display: block;
+	font-weight: bold;
+	color: $color-mine-shaft;
+	text-transform: uppercase;
+	@include rem(font-size, 13px);
 	@include rem(margin-bottom, 10px);
-	@include rem(font-size, 13px); font-weight: bold; color: $color-mine-shaft; text-transform: uppercase;
 }
 
 .input {
-	position: relative;
-	z-index: $z-index-ground;
+	width: 100%;
+	outline: none;
 	display: block;
-	@include rem(margin-bottom, 5px); @include rem(padding-left, 15px);
-	width: 100%; @include rem(height, 60px);
-	border: 1px solid $input-border-color;
+	position: relative;
+	color: $color-white;
+	@include transition;
+	z-index: $z-index-ground;
+	@include rem(height, 64px);
 	@include rem(font-size, 16px);
+	background-color: transparent;
+	border: 3px solid $sunny-yellow;
+	@include rem(margin-bottom, 5px);
+	@include rem(padding-left, 15px);
 
 	+ .label {
 		@include rem(margin-top, 30px);
 	}
 
+	&:focus {
+		@include transition;
+		border-color: $color-gold;
+	}
+
 }
 
 .input--textarea {
-	@include rem(padding-top, 20px);
 	@include rem(height, 180px);
+	@include rem(padding-top, 20px);
 }
 
 .input-wrapper {

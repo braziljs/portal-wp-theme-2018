@@ -18,6 +18,11 @@
 		@include rem(margin, 0 0 64px 0);
 
 	}
+
+	iframe {
+		width: 100%;
+		height: 100%;
+	}
 }
 
 
@@ -101,7 +106,9 @@
 .highlight_button-play {
   width: 64px;
   height: 63px;
+  outline: none;
   cursor: pointer;
+  @include transition;
   margin-bottom: 15px;
   background: transparent;
   border: solid 3px $sunny-yellow;
@@ -115,6 +122,11 @@
 	  border-top: 12px solid transparent;
 	  border-left: 20px solid $color-white;
 	  border-bottom: 12px solid transparent;
+  }
+
+  &:hover {
+  	opacity: .5;
+  	@include transition;
   }
 }
 
