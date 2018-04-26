@@ -31,7 +31,14 @@
 	<div class="home-videos__wrapper">
 		<div class="content">
 			<div class="row">
-				<h3 class="title white" id="playlists">Vídeos</h3>
+				<h3 class="home-videos__title white" id="playlists">Vídeos</h3>
+				<div class="home-videos__subscribe">
+					<a href="https://www.youtube.com/channel/UCnLdHOuue5i1O7TsH6oh07w" target="__blank" class="subscribe__link">
+						SE INSCREVA NO NOSSO CANAL DO YOUTUBE
+					</a>
+				</div>
+			</div>
+			<div class="row">
 				<?php $playlists = get_field('playlist', 'option'); ?>
 				<ul class="home-videos__item-list" aria-labelledby="playlists">
 					
@@ -50,11 +57,6 @@
 
 		    	<?php endwhile; ?>
 				</ul>
-				<?php /* ?>
-				<div class="center-elements">
-					<a href="https://www.youtube.com/channel/UCnLdHOuue5i1O7TsH6oh07w" class="anchor-button anchor-button--color-2">Confira o nosso canal do Youtube</a>
-				</div>
-				<?php */ ?>
 			</div>
 		</div>
 	</div>

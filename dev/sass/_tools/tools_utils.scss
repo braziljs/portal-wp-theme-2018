@@ -16,8 +16,8 @@
   background-position: $position;
   background-attachment: $attachment;
 
-  @if $image != 'null' {
-    background-image: url($image);
+  @if $image != null {
+    background-image: url("../img/#{$image}");
   }
   
 }

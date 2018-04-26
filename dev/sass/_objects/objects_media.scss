@@ -17,6 +17,8 @@ $inner-border-color: rgba($color-white, .6);
 	display: inline-block;
 	
 	.media-wrapper__thumb {
+		width: 100%;
+		height: 100%;
 		filter: grayscale(100%);
 	}
 

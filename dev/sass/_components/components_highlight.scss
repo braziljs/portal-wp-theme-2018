@@ -57,7 +57,7 @@
 		height: 100%;
 		position: absolute;
 		filter: grayscale(100%);
-	  @include background-image('null', cover);
+	  @include background-image(null, cover);
 	}
 
 	// @include breakpoint(desktop-and-up) {

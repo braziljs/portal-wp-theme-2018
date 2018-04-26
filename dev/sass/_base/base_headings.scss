@@ -21,10 +21,12 @@ h1, h2, h3, h4, h5 {
 /* TITLES
 ========================================================================== */
 .title {
+	width: 100%;
 	font-weight: 900;
 	line-height: 150%;
 	position: relative;
 	color: $color-black;
+	@include transition;
 	display: inline-block;
 	text-transform: uppercase;
 	text-decoration: underline;
@@ -34,21 +36,14 @@ h1, h2, h3, h4, h5 {
 		color: white;
 	}
 
-	@include rem(padding, 0 78px);
 	@include rem(font-size, 30px);
 	@include rem(margin-bottom, 64px);
 
 	@include breakpoint(tablet-and-up) {
-		// @include rem(margin-bottom, $title-tablet-margin);
-
-		&:after {
-			// margin: 0;
-		}
-
-	}
-
-	@include breakpoint(tablet-and-up) {
+		width: auto;
+		@include transition;
 		@include rem(font-size, 48px);
+		@include rem(padding, 0 78px);
 		// @include rem(margin-bottom, $title-desktop-margin);
 	}
 

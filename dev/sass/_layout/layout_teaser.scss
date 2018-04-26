@@ -10,20 +10,20 @@ $yellow: #ffdd16;
 /* MIXIN'S
 ========================================================================== */
 
-@mixin transition($duration:0.2s, $ease:ease-in) {
-  -webkit-transition: all $duration $ease;
-  	 -moz-transition: all $duration $ease;
-  		-ms-transition: all $duration $ease;
-  				transition: all $duration $ease;
-}
+// @mixin transition($duration:0.2s, $ease:ease-in) {
+//   -webkit-transition: all $duration $ease;
+//   	 -moz-transition: all $duration $ease;
+//   		-ms-transition: all $duration $ease;
+//   				transition: all $duration $ease;
+// }
 
-@mixin background-image ($image, $size: auto, $position: center, $repeat: no-repeat, $attachment: unset) {
-  background-size: $size;
-  background-repeat: $repeat;
-  background-position: $position;
-  background-attachment: $attachment;
-  background-image: url($image);
-}
+// @mixin background-image ($image, $size: auto, $position: center, $repeat: no-repeat, $attachment: unset) {
+//   background-size: $size;
+//   background-repeat: $repeat;
+//   background-position: $position;
+//   background-attachment: $attachment;
+//   background-image: url($image);
+// }
 
 /* GLOBAL CLASS
 ========================================================================== */
