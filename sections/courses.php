@@ -17,8 +17,8 @@
 			)
 		)
 	);
-    $wp_query = new WP_Query($args);
 
+  $wp_query = new WP_Query($args);
 ?>
 
 <?php if (have_posts()): ?>
