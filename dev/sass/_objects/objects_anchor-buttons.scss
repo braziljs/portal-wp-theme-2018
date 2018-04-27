@@ -57,11 +57,10 @@
 	@include rem(font-size, 16px);
 
 	&:after {
-		top: 2px;
-		left: -26px;
 		content: "+";
+		float: left;
 		font-weight: 200;
-		position: absolute;
+		margin-right: 26px;
 		@include rem(font-size, 24px);
 	}
 }

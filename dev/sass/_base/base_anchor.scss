@@ -8,8 +8,9 @@
 /* CUSTOM RESET
 ========================================================================== */
 a {
+	color: inherit;
 	display: inline-block;
-	color: inherit; text-decoration: none;
+	text-decoration: none;
 	transition: opacity ease $basic-transition;
 
 	&:focus, &:hover {
