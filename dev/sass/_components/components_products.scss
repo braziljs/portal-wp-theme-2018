@@ -1,19 +1,35 @@
-///*------------------------------------*\
-//    #PRODUCTS
-//\*------------------------------------*/
+/*
+*********************
+***** PRODUCTS ******
+*********************
+*/
 
-/* VARIABLES
-========================================================================== */
+/*
+*
+* VARIABLES
+*
+*/
+
 $product-color-1: $color-cloud-burst;
 $product-color-2: $color-jon;
 $product-color-3: $color-mine-shaft;
 
-/* WRAPPER
-========================================================================== */
+/*
+*
+* WRAPPER
+*
+*/
+
 .product__wrapper {
 	.products__title {
 		h2 {
 			@extend .title;
+		}
+
+		@include breakpoint(small) {
+			h2 {
+				text-align: center;
+			}
 		}
 	}
 }
@@ -21,8 +37,14 @@ $product-color-3: $color-mine-shaft;
 .product {
 	width: 100%;
 	display: flex;
-	flex-flow: row;
+	flex-flow: column;
+	align-items: center;
 	justify-content: space-between;
+
+	@include breakpoint(tablet-and-up) {
+		flex-flow: row;
+		align-items: normal;
+	}
 
 }
 
@@ -63,7 +85,7 @@ $product-color-3: $color-mine-shaft;
 
 	.products-highlight__info {
 		display: flex;
-		flex-flow: row nowrap;
+		flex-flow: row wrap;
 
 		.products-highlight {
 			display: flex;
@@ -121,8 +143,12 @@ $product-color-3: $color-mine-shaft;
 
 }
 
-/* ITEM
-========================================================================== */
+/*
+*
+* ITEM
+*
+*/
+
 .products__item {
 	position: relative;
 	display: inline-block;
@@ -184,8 +210,11 @@ $product-color-3: $color-mine-shaft;
 
 }
 
-/* PRODUCTS THUMB
-========================================================================== */
+/*
+*
+* PRODUCTS THUMB
+*
+*/
 
 .products-highlight__picture {
   width: 430px;
@@ -200,11 +229,25 @@ $product-color-3: $color-mine-shaft;
 		width: 208px;
 		height: 100%;
 		margin-right: 30px;
+		position: relative;
 		display: inline-block;
-		@include background-image('products-example.jpg', cover);
 
-		@include breakpoint(tablet-and-up) {
+		.products__thumb-pic {
+			width: 100%;
+			height: 100%;
+			filter: grayscale(100%);
+			@include background-image('products-example.jpg', cover);
+		}
 
+		&:after {
+			content: '';
+			bottom: 0;
+			left: -35px;
+			width: 193px;
+			height: 35px;
+			position: absolute;
+			display: inline-block;
+			background-color: $sunny-yellow;
 		}
 	}
 }

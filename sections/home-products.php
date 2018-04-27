@@ -31,7 +31,9 @@
 		</div>
 
 		<div class="products-highlight__picture">
-			<div class="products__thumb"></div>
+			<div class="products__thumb">
+				<div class="products__thumb-pic"></div>
+			</div>
 		</div>
 	</div>
 
