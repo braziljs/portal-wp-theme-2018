@@ -48,6 +48,8 @@
 		</ul>
 	</div>
 
+	<hr class="hr">
+
 	<div class="products-list__type-2">
 		
 		<div class="product">

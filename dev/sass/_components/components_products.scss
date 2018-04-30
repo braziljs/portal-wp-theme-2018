@@ -226,10 +226,13 @@ $product-color-3: $color-mine-shaft;
 
 .products-list__type-2 {
 	display: flex;
-	flex-flow: columns;
-	margin-top: 100px;
+	flex-flow: column;
 
 	.product {
+		margin-bottom: 64px;
+	}
 
+	@include breakpoint(tablet-and-up) {
+		flex-flow: row;
 	}
 }
