@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <!-- HEADER -->
-<section class="header__reborn">
+<section class="section-wrapper header__reborn">
 	<?php get_template_part('sections/navigation'); ?>
 	<?php get_template_part('sections/header'); ?>
 </section>
@@ -33,5 +33,8 @@
 </section>
 
 <?php get_template_part('sections/sponsors'); ?>
-<?php //get_template_part('sections/footer'); ?>
+<?php get_template_part('sections/footer'); ?>
+<div class="content">
+	<hr class="hr">
+</div>
 <?php get_footer(); ?>

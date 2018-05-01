@@ -30,12 +30,14 @@
   margin: 50px 0;
   border-color: #000;
 
-  &:before {
-    content: "";
-    height: 1px;
-    display: block;
-    margin-top: 3px;
-    border-bottom: 1px solid #000;
+  &.double-line {
+    &:before {
+      content: "";
+      height: 1px;
+      display: block;
+      margin-top: 3px;
+      border-bottom: 1px solid #000;
+    }
   }
 }
 

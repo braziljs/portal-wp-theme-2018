@@ -1,32 +1,127 @@
-///*------------------------------------*\
-//    #FOOTER
-//\*------------------------------------*/
+/*
+*********************
+****** FOOTER *******
+*********************
+*/
 
-/* VARIABLES
-========================================================================== */
 
-/* FOOTER INFO
-========================================================================== */
-.footer-info {
+/*
+*
+* FOOTER WAPPER
+*
+*/
 
-	@include breakpoint(tablet-and-up) {
-		@include rem(margin-top, 60px);
+.footer {
+	@include rem(padding-top, 64px);
+	
+	.footer__links {
+		width: 100%;
+		float: left;
+		display: flex;
+		// flex-flow: column;
+		justify-content: space-between;
+
+		.subtitle {
+			color: #000;
+			font-style: normal;
+			@include rem(font-size, 24px);
+		}
+
+		.links-list {
+			.links-list__item {
+				.links-list__anchor {
+					font-weight: 900;
+					line-height: 267%;
+					text-decoration: underline;
+					text-transform: uppercase;
+					@include rem(font-size, 12px);
+				}
+			}
+		}
+
+		@include breakpoint(small) {
+			flex-flow: column;
+			
+			.footer__link-item {
+				margin-bottom: 50px;
+			}
+		}
+
+		@include breakpoint(desktop) {
+			width: 65%;
+			flex-flow: row;
+			padding-right: 35px;
+		}
 	}
 
+	.footer__social {
+		float: right;
+		width: 285px;
+
+		.social-networks__item {
+			margin: 0 24px 24px 0;
+
+			&:nth-child(5) {
+				margin: 0;
+			}
+		}
+	}
 }
 
-.footer-info__description {
-	display: inline-block;
-	@include rem(margin-bottom, 35px);
-	line-height: 150%;
-}
+/*
+*
+* POWERED
+*
+*/
 
-.powered-wrapper {
-	@include rem(padding, 25px 0 15px);
-	background-color: $color-mine-shaft;
-	color: $color-white;
-}
+.powered {
+	width: 100%;
+	display: flex;
+	flex-flow: row;
+	position: relative;
+	align-items: center;
+	padding-bottom: 50px;
 
-.powered__info {
-	@include rem(font-size, 14px);
+	.powered__title {
+		text-transform: uppercase;
+		@include rem(font-size, 12px);
+
+		a {
+			text-decoration: underline;
+		}
+	}
+
+	.powered_link {
+		right: 0;
+		display: flex;
+		flex-flow: row;
+		position: absolute;
+		align-items: center;
+		justify-content: space-between;
+
+		.p__link {
+			&:nth-child(1) {
+				a {
+					width: 36px;
+					line-height: 210%;
+					border-right: 2px solid;
+					font-family: $font-special;
+					@include rem(font-size, 15px);
+				}
+			}
+			&:nth-child(2) {
+				a {
+					width: 51px;
+					padding: 0 4px;
+					line-height: 210%;
+				}
+			}
+			&:nth-child(3) {
+				a {
+					width: 20px;
+					display: block;
+				}
+			}
+		}
+	}
 }

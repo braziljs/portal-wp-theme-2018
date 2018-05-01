@@ -83,13 +83,8 @@
 /* SECTION WRAPPERS
 ========================================================================== */
 .section-wrapper {
-	@include rem(padding-bottom, 60px);
+	@include rem(padding-bottom, 64px);
 	background-color: $color-white;
-
-	@include breakpoint(tablet-and-up) {
-		@include rem(padding-bottom, 80px);
-	}
-
 }
 
 /* TYPE VARIATIONS

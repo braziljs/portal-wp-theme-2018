@@ -13,11 +13,11 @@ $header-height: 530px;
 .header-container {
 	width: 100%;
 	background-color: $color-black;
-	@include rem(margin-bottom, 40px);
+	// @include rem(margin-bottom, 40px);
 	// background: url('../img/backgrounds/header-bg-2.jpg') black no-repeat top center;
 
 	@include breakpoint(tablet-and-up) {
-		@include rem(margin-bottom, 100px);
+		// @include rem(margin-bottom, 100px);
 		// @include rem(height, $header-height);
 		// border-bottom: 10px solid $color-lightning-yellow;
 	}

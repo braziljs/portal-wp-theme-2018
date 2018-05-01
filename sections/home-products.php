@@ -48,7 +48,7 @@
 		</ul>
 	</div>
 
-	<hr class="hr">
+	<hr class="hr double-line">
 
 	<div class="products-list__type-2">
 		

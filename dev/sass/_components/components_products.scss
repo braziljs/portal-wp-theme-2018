@@ -228,11 +228,13 @@ $product-color-3: $color-mine-shaft;
 	display: flex;
 	flex-flow: column;
 
-	.product {
-		margin-bottom: 64px;
-	}
-
 	@include breakpoint(tablet-and-up) {
 		flex-flow: row;
+	}
+
+	@include breakpoint(small) {
+		.product:first-child {
+			margin-bottom: 64px;
+		}
 	}
 }

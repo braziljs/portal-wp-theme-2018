@@ -1,13 +1,15 @@
-	<div class="powered-wrapper">
-		<div class="content">
-			<span class="powered__info">BrazilJS®  é uma iniciativa <a href="https://nasc.io/?utm_source=braziljs"><strong>NASC.</strong></a></span>
-			<div class="flow-opposite">
-				<a href="http://marimbondo.me/?utm_source=braziljs" title="Feito à mão por marimbondo"><img src="<?php asset_path('img/logos/logo-marimbondo.svg') ?>" alt="marimbondo" /><span class="visuallyhidden">Desenvolvido por marimbondo</span></a>
-			</div>
-		</div>
+<div class="content">
+	<div class="powered">
+		<span class="powered__title">BrazilJS é uma iniciativa <a href="https://nasc.io/?utm_source=braziljs" target="__blank"><strong>NASC</strong></a></span>
+		<ul class="powered_link">
+			<li class="p__link"><a href="https://asgabe.github.io//?utm_source=braziljs" target="__blank" title="Made by gabe">gabe</a></li>
+			<li class="p__link"><a href="https://nasc.io/?utm_source=braziljs" target="__blank" title="Powered by Nasc">nasc</a></li>
+			<li class="p__link"><a href="http://www.dex01.com/?utm_source=braziljs" target="__blank" title="Design by Dex01"><img src="<?php asset_path('img/logos/dex01.svg') ?>" /><span class="visuallyhidden">Designer by Dex01</span></a></li>
+		</ul>
 	</div>
 </div>
 <?php wp_footer(); ?>
+
 <?php  if (getEnvironment() === 'dev') { ?>
 	<script src="<?php echo get_template_directory_uri(); ?>/dev/js/lib/require.js" data-main="<?php echo get_template_directory_uri(); ?>/dev/js/main"></script>
 <?php } else { ?>
