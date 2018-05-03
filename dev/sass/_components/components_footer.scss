@@ -81,6 +81,7 @@
 	position: relative;
 	align-items: center;
 	padding-bottom: 50px;
+	justify-content: space-between;
 
 	.powered__title {
 		text-transform: uppercase;
@@ -92,10 +93,8 @@
 	}
 
 	.powered_link {
-		right: 0;
 		display: flex;
 		flex-flow: row;
-		position: absolute;
 		align-items: center;
 		justify-content: space-between;
 

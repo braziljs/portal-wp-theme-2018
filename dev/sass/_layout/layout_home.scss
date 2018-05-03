@@ -9,6 +9,7 @@
 ========================================================================== */
 
 .home-videos__wrapper {
+	min-height: 600px;
 	position: relative;
 	@include rem(padding, 64px 0);
 	background-color: $color-black;
@@ -45,10 +46,8 @@
 		content: '';
 		width: 32px;
 		height: 32px;
-		float: none;
 		margin-right: 0;
 		min-width: 32px;
-		margin: auto auto 15px auto;
 		display: inline-block;
 		@include background-image('icons/icon-youtube.svg', cover);
 	}
@@ -65,17 +64,11 @@
 		width: 50%;
     display: flex;
     flex-flow: row;
-    text-align: left;
-    align-items: center;
     margin: 25px 0 25px 0;
-    justify-content: space-between;
-		&:before {
-			float: left;
-			margin-right: 28px;
-		}
+    justify-content: flex-end;
 		
-		.subscribe__link {
-			width: auto;
+		&:before {
+			margin: 0 30px;
 		}
 	}
 }

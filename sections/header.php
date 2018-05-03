@@ -6,17 +6,19 @@
 			<img src="<?php asset_path('img/logos/brjs-logo-vertical-72.png') ?>" alt="BrazilJS" />
 		</h1>
 		
-		<div class="header-content center-elements--mobile col-5-12">
-			<div class="anchor__header">
-				<h2 class="header__title">A BrazilJS é mais do que apenas uma conferência.</h2>
-				<p class="paragraph paragraph--font-2 paragraph--color-2">Levamos conteúdo de qualidade para toda a comunidade.</p>
-				<a href="<?php bloginfo('url'); ?>/sobre" class="anchor-button anchor-button--color-5">Sobre a BrazilJS</a>
+		<div class="header-wrapper">
+			<div class="row">
+				<div class="header__tp">
+					<h2 class="header__title">A BrazilJS é mais do que apenas uma conferência.</h2>
+					<p class="paragraph">Levamos conteúdo de qualidade para toda a comunidade.</p>
+				</div>
 			</div>
 			
-			<div class="anchor__articles">
-				<p class="paragraph">Confira os úlitmos artigos</p>
-				<a href="<?php bloginfo('url'); ?>/blog" class="arrow" title="Explore os artigos disponíveis no Portal BrazilJS">
-				</a>
+			<div class="row">
+				<div class="header__li">
+					<a href="<?php bloginfo('url'); ?>/sobre" class="anchor-button anchor-button--color-5">Sobre a BrazilJS</a>
+					<a href="<?php bloginfo('url'); ?>/blog" class="paragraph" title="Explore os artigos disponíveis no Portal BrazilJS">Confira os úlitmos artigos</a>
+				</div>
 			</div>
 		</div>
 		
@@ -28,18 +30,6 @@
 				$headerLink = get_field('header_link', 'option');
 				$headerLinkText = get_field('header_valor-link', 'option');
 			?>
-			
-			<?php /* ?>
-			<div class="header-highlight center-elements--mobile col-4-12 flow-opposite">
-				<div class="header-highlight__content">
-					<h2 class="title title--color-2"><?php echo $headerTitle; ?></h2>
-					<div class="paragraph paragraph--font-2 paragraph--color-2">
-						<?php echo $headerDescription; ?>
-					</div>
-					<a href="<?php echo $headerLink; ?>" class="anchor-button anchor-button--color-2"><?php echo $headerLinkText; ?></a>
-				</div>
-			</div>
-			<?php */ ?>
 		<?php endif; ?>
 	</div>
 </header>
