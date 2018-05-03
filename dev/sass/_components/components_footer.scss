@@ -77,42 +77,57 @@
 .powered {
 	width: 100%;
 	display: flex;
-	flex-flow: row;
+	flex-flow: column;
 	position: relative;
 	align-items: center;
 	padding-bottom: 50px;
 	justify-content: space-between;
 
+	@include breakpoint(tablet-and-up) {
+		flex-flow: row;
+	}
+
 	.powered__title {
+		line-height: 200%;
+		margin-bottom: 20px;
 		text-transform: uppercase;
 		@include rem(font-size, 12px);
 
 		a {
 			text-decoration: underline;
 		}
+
+		@include breakpoint(tablet-and-up) {
+			margin-bottom: 0;
+		}
 	}
 
 	.powered_link {
+		height: 33px;
 		display: flex;
 		flex-flow: row;
-		align-items: center;
 		justify-content: space-between;
 
 		.p__link {
+			display: flex;
+
 			&:nth-child(1) {
+		    padding: 0 5px;
+		    align-items: center;
+				border-right: 2px solid;
+
 				a {
-					width: 36px;
-					line-height: 210%;
-					border-right: 2px solid;
 					font-family: $font-special;
 					@include rem(font-size, 15px);
 				}
 			}
 			&:nth-child(2) {
+				margin-right: 15px;
+				align-items: flex-end;
+
 				a {
-					width: 51px;
-					padding: 0 4px;
-					line-height: 210%;
+					padding: 0 5px;
+					margin-bottom: 5px;
 				}
 			}
 			&:nth-child(3) {
