@@ -52,13 +52,13 @@ Template Name: Artigos
 								</div>
 							</div>
 
-							<ul class="row card-wrapper">
+							<ul class="row card-wrapper articles-others__wrapper">
 						<?php $firstItem = false; ?>
 						<?php else: ?>
 							<?php $postThumb = wp_get_attachment_image_src(get_post_thumbnail_id($postID), 'post-thumb'); ?>
 							<li class="col-4-12">
-								<div class="card__articles card">
-									<div class="card__header__articles card__header">
+								<div class="card">
+									<div class="card__header">
 										<a href="<?php echo get_permalink($postID); ?>" class="media-wrapper" aria-hidden="true" role="presentation" tabindex="-1">
 											<img class="media-wrapper__thumb card__thumb" src="<?php echo $postThumb[0]; ?>" alt="<?php echo get_post_meta(get_post_thumbnail_id($postID), '_wp_attachment_image_alt', true); ?>" />
 										</a>

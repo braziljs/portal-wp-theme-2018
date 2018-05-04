@@ -18,8 +18,15 @@
 		width: 100%;
 		float: left;
 		display: flex;
-		// flex-flow: column;
+		flex-flow: row wrap;
 		justify-content: space-between;
+
+		.footer__link-item {
+			&:nth-child(1),
+			&:nth-child(2) {
+				margin-right: 15px;
+			}
+		}
 
 		.subtitle {
 			color: #000;
@@ -40,7 +47,7 @@
 		}
 
 		@include breakpoint(small) {
-			flex-flow: column;
+			// flex-flow: column;
 			
 			.footer__link-item {
 				margin-bottom: 50px;
