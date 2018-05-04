@@ -47,10 +47,4 @@
 </head>
 
 <body id="js-body" class="body">
-<div class="full-wrapper">
-	<!-- SKIP LINKS -->
-	<ul class="skip-links" id="js-skip-links">
-		<li class="skip-links__item"><a class="visuallyhidden skip-links__anchor" href="#js-navigation">Ir para o menu do site</a></li>
-		<li class="skip-links__item"><a class="visuallyhidden skip-links__anchor" href="#main">Ir para o conteúdo do site</a></li>
-	</ul>
-	<!-- END SKIP LINKS -->
+<!-- <div class="full-wrapper"> -->

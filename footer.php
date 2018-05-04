@@ -1,5 +1,8 @@
 <div class="content">
-	<div class="powered">
+	<hr class="hr">
+</div>
+<div class="content">
+	<div class="powered force-font">
 		<span class="powered__title">BrazilJS é uma iniciativa <a href="https://nasc.io/?utm_source=braziljs" target="__blank"><strong>NASC</strong></a></span>
 		<ul class="powered_link">
 			<li class="p__link"><a href="https://asgabe.github.io//?utm_source=braziljs" target="__blank" title="Made by gabe">gabe</a></li>

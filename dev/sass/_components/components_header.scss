@@ -101,18 +101,17 @@
 */
 
 .header__logo {
-	position: absolute; @include rem(top, 10px);
+	position: absolute;
+	@include rem(top, 10px);
 	z-index: $z-index-jump;
-	width: 145px; height: 104px;
+	max-width: 72px;
 
 	@include breakpoint(tablet-and-up) {
 		@include rem(top, 5px);
-		width: 166px; height: 119px;
 	}
 
 	@include breakpoint(desktop-and-up) {
 		@include rem(top, 25px);
-		width: auto; height: auto;
 	}
 }
 

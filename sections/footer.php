@@ -1,5 +1,5 @@
 <!-- FOOTER -->
-<footer class="">
+<footer>
 	<div class="footer">
 		<div class="content">
 			<div class="footer__links">

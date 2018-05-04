@@ -3,18 +3,20 @@
 Template Name: Artigos
 */
 ?>
+
 <?php get_header(); ?>
 <?php get_template_part('sections/navigation'); ?>
 <?php get_template_part('sections/search-box'); ?>
 
 	<?php $paginationNumber = get_query_var('paged'); ?>
+	
 	<?php if ($paginationNumber <= 0): ?>
 		<div class="featured-wrapper">
 			<div class="content">
-				<h2 class="subtitle">Artigos Em Destaque</h2>
+				<!-- <h2 class="title white">Artigos Em Destaque</h2> -->
 				<?php
-				    //We need to store the articles highlight ids to not show them inside the post list
-				    $postsID = array();
+			    //We need to store the articles highlight ids to not show them inside the post list
+			    $postsID = array();
 
 				    // Recover the "destaques" field and get the highlight list from it.
 					$highlights = get_field('destaques', 'option');
@@ -35,33 +37,35 @@ Template Name: Artigos
 						?>
 						<?php if ($firstItem): ?>
 							<?php $postThumb = wp_get_attachment_image_src(get_post_thumbnail_id($postID), 'highlight-thumb'); ?>
-							<div class="highlight">
-								<div class="highlight__thumb-container col-8-12">
-									<a href="<?php echo get_permalink($postID); ?>" class="col-8-12 media-wrapper" aria-hidden="true" role="presentation" tabindex="-1">
+							<div class="highlight__articles">
+								<div class="highlight__thumb-img__articles col-8-12">
+									<a href="<?php echo get_permalink($postID); ?>" class="media-wrapper" aria-hidden="true" role="presentation" tabindex="-1">
 										<img src="<?php echo $postThumb[0]; ?>" alt="<?php echo get_post_meta(get_post_thumbnail_id($postID), '_wp_attachment_image_alt', true); ?>" />
 									</a>
 								</div>
-								<div class="highlight__info col-4-12">
-									<h3 class="highlight__title highlight__title--color-2"><a href="<?php echo get_permalink($postID); ?>"><?php echo $postTitle; ?></a></h3>
-									<div class="paragraph paragraph--color-2">
+								
+								<div class="highlight__info__articles col-4-12">
+									<h3 class="highlight__title__articles"><a href="<?php echo get_permalink($postID); ?>"><?php echo $postTitle; ?></a></h3>
+									<div class="paragraph">
 										<?php echo $postExcerpt; ?>
 									</div>
 								</div>
 							</div>
+
 							<ul class="row card-wrapper">
 						<?php $firstItem = false; ?>
 						<?php else: ?>
 							<?php $postThumb = wp_get_attachment_image_src(get_post_thumbnail_id($postID), 'post-thumb'); ?>
 							<li class="col-4-12">
-								<div class="card">
-									<div class="card__header">
+								<div class="card__articles card">
+									<div class="card__header__articles card__header">
 										<a href="<?php echo get_permalink($postID); ?>" class="media-wrapper" aria-hidden="true" role="presentation" tabindex="-1">
 											<img class="media-wrapper__thumb card__thumb" src="<?php echo $postThumb[0]; ?>" alt="<?php echo get_post_meta(get_post_thumbnail_id($postID), '_wp_attachment_image_alt', true); ?>" />
 										</a>
 									</div>
-									<div class="card__content card__content--list">
-										<h3 class="card__title"><a href="<?php echo get_permalink($postID); ?>"><?php echo $postTitle; ?></a></h3>
-										<div class="card__paragraph">
+									<div class="card__content__articles card__content--list">
+										<h3 class="card__title card__title__articles"><a href="<?php echo get_permalink($postID); ?>"><?php echo $postTitle; ?></a></h3>
+										<div class="card__paragraph card__paragraph__articles">
 											<?php echo $postExcerpt; ?>
 										</div>
 									</div>
@@ -71,14 +75,13 @@ Template Name: Artigos
 
 					<?php } ?>
 			</div>
-
+		</div>	
 	<?php endif ?>
 
-	</div>
-	<div class="section-wrapper article-list-wrapper">
+	<div class="section-wrapper article-list-wrapper" style="padding-top: 64px;">
 		<div class="content">
-			<h2 class="subtitle subtitle--color-3">Últimos artigos</h2>
-			<ul class="article-list">
+			<h2 class="title">Últimos artigos</h2>
+			<ul class="article-list article-list__articles">
 				<?php
 				    //Variable that holds the pagination for the query
 				    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -102,6 +105,7 @@ Template Name: Artigos
 							$postThumb[0] = get_template_directory_uri().'/dev/img/thumb-generica-2.jpg';
 						}
 					?>
+
 					<li class="col-4-12 article-list__item">
 						<div class="card">
 							<div class="card__header">
@@ -117,6 +121,7 @@ Template Name: Artigos
 							</div>
 						</div>
 					</li>
+
 				<?php endwhile; ?>
 			</ul>
 			<div class="center-elements row">
@@ -131,9 +136,13 @@ Template Name: Artigos
 			</div>
 		</div>
 	</div>
-<div class="weekly-wrapper-articles">
-	<?php get_template_part('sections/weekly'); ?>
-</div>
+
+	<div class="weekly-wrapper-articles">
+		<?php get_template_part('sections/weekly-internal'); ?>
+		<?php //get_template_part('sections/weekly'); ?>
+	</div>
+
+
 <?php get_template_part('sections/sponsors'); ?>
 <?php get_template_part('sections/footer'); ?>
 <?php get_footer(); ?>

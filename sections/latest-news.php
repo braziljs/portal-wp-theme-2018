@@ -1,4 +1,4 @@
-<section class="latest-news">
+<section class="featured-wrapper_home latest-news">
 	<div class="center-elements--mobile">
 		<h2 class="title">Últimos artigos</h2>
 	</div>

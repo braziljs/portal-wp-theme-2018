@@ -34,7 +34,4 @@
 
 <?php get_template_part('sections/sponsors'); ?>
 <?php get_template_part('sections/footer'); ?>
-<div class="content">
-	<hr class="hr">
-</div>
 <?php get_footer(); ?>
