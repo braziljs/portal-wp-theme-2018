@@ -32,7 +32,9 @@
 				<h3 class="highlight__title">
 					<?php the_field('playlist_highlight_titulo', 'option'); ?>
 				</h3>
-				<p class="paragraph size-14 paragraph--color-2"><?php the_field('playlist_highlight_descrição_do_video', 'option'); ?></p>
+				<p class="paragraph size-14 paragraph--color-2">
+					<?php the_field('playlist_highlight_descrição_do_video', 'option'); ?>
+				</p>
 			</div>
 
 		</div>
@@ -46,7 +48,7 @@
 			<li class="col-6-12 article-list__item">
 				<div class="card">
 					<div class="article-img" style="background-image: url(<?php echo $imageLink[0]; ?>)"></div>
-					<div class="after-shadow"></div>
+					<!-- <div class="after-shadow"></div> -->
 				</div>
 				<div class="article__title">
 					<h3 class="card__title">

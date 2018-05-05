@@ -17,7 +17,7 @@
 			<div class="row">
 				<div class="header__li">
 					<a href="<?php bloginfo('url'); ?>/sobre" class="anchor-button anchor-button--color-5">Sobre a BrazilJS</a>
-					<a href="<?php bloginfo('url'); ?>/blog" class="paragraph" title="Explore os artigos disponíveis no Portal BrazilJS">Confira os úlitmos artigos</a>
+					<a href="<?php bloginfo('url'); ?>/blog" class="paragraph" title="Explore os artigos disponíveis no Portal BrazilJS">Confira os últimos artigos</a>
 				</div>
 			</div>
 		</div>

@@ -143,6 +143,6 @@ Template Name: Artigos
 	</div>
 
 
-<?php get_template_part('sections/sponsors'); ?>
+<?php //get_template_part('sections/sponsors'); ?>
 <?php get_template_part('sections/footer'); ?>
 <?php get_footer(); ?>

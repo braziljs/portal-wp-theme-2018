@@ -204,12 +204,14 @@
 					bottom: 0;
 					padding: 0;
 					width: 160px;
+					height: 100%;
 					position: absolute;
 					display: inline-block;
 					@include rem(padding-right, 10px);
 
 					.card__title {
 						line-height: 267%;
+						text-transform: uppercase;
 						@include rem(font-size, 12px);
 
 						a {
