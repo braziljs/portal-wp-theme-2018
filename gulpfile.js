@@ -113,6 +113,11 @@ gulp.task('copy', function () {
   	.pipe(gulpCopy('assets/img', { prefix: 2}))
 });
 
+gulp.task('mp4', function () {
+	return gulp.src(['dev/media/**/*'], {base: 'assets'})
+  	.pipe(gulpCopy('assets/media', { prefix: 2}))
+});
+
 //CREATES REV VERSION
 gulp.task('rev', function () {
     // by default, gulp would pick `assets/css` as the base,
@@ -150,7 +155,7 @@ gulp.task('default', function() {
 //Build the complete site inside the "build" folder
 gulp.task('build', function(callback) {
 
- 	runSequence('clean', 'minifyCSS', 'scripts', 'webp', 'imageMin', 'copy', 'rev', function () {
+ 	runSequence('clean', 'minifyCSS', 'scripts', 'webp', 'imageMin', 'copy', 'rev', 'mp4', function () {
  		process.exit(0);
  	});
 

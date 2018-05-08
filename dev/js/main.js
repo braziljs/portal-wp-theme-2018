@@ -48,7 +48,7 @@
 
     PUBLIC.home = function () {
 
-        var main = document.getElementById('main');
+        var main = document.getElementById('home');
 
         if (main) {
             require(['home']);
@@ -107,7 +107,7 @@
 
     PUBLIC.conf = function () {
 
-        var confPageContainer = document.getElementById('js-conf-teaser');
+        var confPageContainer = document.getElementById('js-conf-page');
         
         if (confPageContainer) {
             require(['conf'])

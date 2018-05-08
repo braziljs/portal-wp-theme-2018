@@ -12,6 +12,8 @@ define(function () {
 
 			home.bindEvents();
 
+			// home.brjsReborn();
+
 		},
 
 		bindEvents: function () {
@@ -25,6 +27,16 @@ define(function () {
 			btn.click(function () {
 				elm.html('<iframe src=https://www.youtube.com/embed/'+ url +'?autoplay=1 frameborder="0" allowfullscreen>');
 			});
+		},
+
+		brjsReborn: function () {
+			$('body').attr("data-vine", true);
+
+			setTimeout(function() {
+
+				$('#brjs-opening-video').css({opacity: 0});
+				$('body').attr("data-vine", false);
+			}, 10000)
 		}
 	}
 

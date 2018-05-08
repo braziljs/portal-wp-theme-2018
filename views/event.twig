@@ -12,9 +12,11 @@
 	{% endif %}
 
 	<div id="js-conf-page" class="conf-wrapper {{ themeName }}">
+		
 		<div class="content">
 			<img class="header__logo" src="{{ function('asset_path', 'img/logos/braziljs.svg') }}" alt="BrazilJS" />
 		</div>
+
 		<main id="main">
 			<div class="conf-header" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0, 0, 0, 1)), url({{TimberImage(event.background).src}});">
 				<div class="center-elements">
@@ -83,9 +85,6 @@
 		</section>
 	{% endif %}
 
-
-
-
 	{% if event.habilitar_agenda == true %}
 		<section class="section-wrapper">
 			<div class="content">
@@ -145,7 +144,6 @@
 				</div>
 			</div>
 		</section>
-
 	{% endif %}
 
 	{% if event.sobre_habilitar == true %}
@@ -222,11 +220,8 @@
 
 			</div>
 		</section>
-
 	{% else %}
-
 		{{ function('get_template_part', 'sections/sponsors') }}
-
 	{% endif %}
 
 {% endfor %}

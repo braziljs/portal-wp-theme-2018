@@ -9,13 +9,13 @@ define(function () {
 
 		init: function () {
 
-			setInterval(function() {
-				conf.countDownClock();
-			}, 1000);
+			// setInterval(function() {
+			// 	conf.countDownClock();
+			// }, 1000);
 
-	    setInterval(function() {
-	      conf.avatarCall4Paper();
-	    }, 2000);
+	    // setInterval(function() {
+	    //   conf.avatarCall4Paper();
+	    // }, 2000);
 		},
 
 		countDownClock: function () {

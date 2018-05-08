@@ -7,7 +7,7 @@
 </section>
 <!-- END HEADER -->
 
-<main class="section-wrapper" id="main">
+<main id="home" class="section-wrapper">
 	<div class="content">
 		<?php get_template_part('sections/latest-news'); ?>
 		<?php get_template_part('sections/weekly-internal'); ?>
@@ -35,3 +35,11 @@
 <?php get_template_part('sections/sponsors'); ?>
 <?php get_template_part('sections/footer'); ?>
 <?php get_footer(); ?>
+
+<div id="brjs-opening-video" class="brjs-opening-video">
+  <video id="main-reborn-vine" loop autoplay muted>
+  	<source src="<?php asset_path('media/MAIN_1.mp4') ?>" type="video/mp4">
+ 	</video>
+
+
+</div>

@@ -1,12 +1,15 @@
-///*------------------------------------*\
-//    #HOME LAYOUT
-//\*------------------------------------*/
+/*
+*********************
+******* HOME ********
+*********************
+*/
 
-/* VARIABLES
-========================================================================== */
 
-/* VIDEOS
-========================================================================== */
+/*
+*
+* VIDEOS
+*
+*/
 
 .home-videos__wrapper {
 	min-height: 600px;
@@ -116,3 +119,52 @@
 	}
 
 }
+
+/*
+*
+* VINE OPENING
+*
+*/
+
+[data-vine="true"] {
+	overflow: hidden;
+
+	.brjs-opening-video {
+		display: block;
+	}
+}
+
+.brjs-opening-video {
+	top: 0;
+	z-index: 99;
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+	display: none;
+	position: fixed;
+	@include transition;
+	background-color: #000;
+	// transition-duration: 2s;
+	
+	video {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+// .modal-overlay {
+//   position: fixed;
+//   z-index: 999;
+//   top: 0;
+//   left: 0;
+//   bottom: 0;
+//   right: 0;
+//   height: 100%;
+//   width: 100%;
+//   opacity: .8;
+//   background: #000;
+//   will-change: opacity;
+//   @include transition;
+// }
+
+

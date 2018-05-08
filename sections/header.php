@@ -1,5 +1,5 @@
 <!-- HOME HEADER -->
-<header class="header-container l-page" data-id="glitch">
+<header class="header-container" data-id="glitch">
 	<div class="content">
 		
 		<h1 class="header__logo">

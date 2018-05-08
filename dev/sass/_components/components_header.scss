@@ -132,4 +132,12 @@
 		@include transition;
 		@include rem(font-size, 80px);
 	}
+
+	&.white {
+		color: #fff;
+	}
+
+	&.yellow {
+		color: $sunny-yellow;
+	}
 }

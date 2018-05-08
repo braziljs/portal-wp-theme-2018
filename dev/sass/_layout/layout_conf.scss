@@ -1,12 +1,109 @@
-///*------------------------------------*\
-//    #CONF
-//\*------------------------------------*/
+/*
+*********************
+******* CONF ********
+*********************
+*/
 
-/* VARIABLES
-========================================================================== */
 
-/* WRAPPER
-========================================================================== */
+/*
+*
+* WRAPPER
+*
+*/
+
+
+/*
+*
+* REBORN
+*
+*/
+
+
+/* HEADER */
+
+.l-page {
+	.header-wrapper {
+		.header__li {
+			.paragraph {
+				width: 173px;
+
+				&:after {
+					content: none;
+				}
+			}
+		}
+	}
+}
+
+
+/* CALL4 PAPER * BUY */
+
+.conf-wp-buy {
+	display: flex;
+	flex-flow: row;
+	padding: 64px 0;
+	justify-content: space-between;
+
+	.conf__description {
+		width: 240px;
+
+		p {
+			font-weight: 900;
+			line-height: 167%;
+			text-transform: uppercase;
+			@include rem(font-size, 24px);
+		}
+	}
+
+	.background-divisor {
+		width: 200px;
+		background-size: 100% 33px;
+		background-repeat: repeat-y;
+		background-image: linear-gradient(black 1px, white 0, white);
+	}
+
+	.conf__call-and-buy {
+		width: 200px;
+
+		.desc {
+			margin-bottom: 30px;
+
+			p {
+				font-weight: 900;
+				text-align: right;
+				margin-bottom: 0;
+			}
+		}
+
+		.conf__buttons {
+			display: flex;
+			flex-flow: column;
+			align-items: flex-end;
+
+			a {
+				margin-bottom: 30px;
+			}
+		}
+
+		.anchor-button {
+			color: #000;
+			border-color: #000;
+
+			&:hover {
+				color: #fff;
+				background-color: #000;
+			}
+		}
+	}
+}
+
+
+/*
+*
+* END REBORN
+*
+*/
+
 .conf-wrapper {
 	background-color: $color-mine-shaft;
 }
