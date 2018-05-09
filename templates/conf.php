@@ -1,8 +1,9 @@
-
 <?php
+
 /*
 Template Name: Conf
 */
+
 ?>
 
 <?php get_header(); ?>
@@ -68,9 +69,59 @@ Template Name: Conf
 <!-- END * SECTION BUY -->
 
 <!-- MAIN -->
-<main id="js-conf-page" class="conf-wrapper">
-	<?php get_template_part('sections/conf/speakers-list'); ?>
-	<?php get_template_part('sections/conf/hotels'); ?>
+<main id="js-conf-page" class="conf-wrapper brjs-conf-theme">
+	<?php //get_template_part('sections/conf/speakers-list'); ?>
+	
+	<!-- SPEAKERS LIST -->
+	<section class="section-wrapper">
+		<div class="content">
+			<h2 class="title" id="speakers-title">Keynotes</h2>
+
+			<div class="speakers-grid__wrapper">
+				<ul class="speakers-grid__list" aria-labelledby="speakers-title">
+					<li class="col-6-12 calendar-list__item">
+						<div class="card">
+							<div class="card__header">
+								<div class="card__thumb" style="background-image: url(<?php asset_path("img/conf/2018/ada-rose-cannon.jpeg"); ?>)"></div>
+							</div>
+							<div class="card__content">
+								<h3 class="card__title">Ada Rose Cannon</h3>
+								<p class="card__paragraph">Developer Advocate da Samsung para o navegador <a href="https://twitter.com/SamsungInternet">@SamsungInternet</a>. Web fangirl. Geralmente em Londres. WebXR Device API, Web Components, PWA.</p>
+							</div>
+						</div>
+					</li>
+
+					<li class="col-6-12 calendar-list__item">
+						<div class="card">
+							<div class="card__header">
+								<div class="card__thumb" style="background-image: url(<?php asset_path("img/conf/2018/kyle-simpson.jpeg"); ?>)"></div>
+							</div>
+							<div class="card__content">
+								<h3 class="card__title">Kyle Simpson</h3>
+								<p class="card__paragraph">É um escritor, palestrante, professor, e contribuidor em projeto open-source. Evangelista da open web, apaixonado por todas as coisas relacionadas ao javascript.</p>
+							</div>
+						</div>
+					</li>
+
+					<li class="col-6-12 calendar-list__item">
+						<div class="card">
+							<div class="card__header">
+								<div class="card__thumb" style="background-image: url(<?php asset_path("img/conf/2018/feross-aboukhadijeh.jpg"); ?>)"></div>
+							</div>
+							<div class="card__content">
+								<h3 class="card__title">Feross Aboukhadijeh</h3>
+								<p class="card__paragraph">Programador, designer, professor e cientista louco. Atualmente, construindo o <a href="https://webtorrent.io/">WebTorrent</a>, um cliente de streaming BitTorrent para o navegador, alimentado pela WebRTC. Antes disso, construiu o <a href="https://web.archive.org/web/20150810065820/https://peercdn.com/">PeerCDN</a>, uma rede de entrega de conteúdo peer-to-peer para tornar os sites mais rápidos e mais baratos.</p>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+	</section>
+	<!-- END SPEAKERS LIST -->
+
+	<?php //get_template_part('sections/conf/hotels'); ?>
 </main>
 <!-- END * MAIN -->
 
