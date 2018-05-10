@@ -12,13 +12,6 @@
 */
 
 
-/*
-*
-* REBORN
-*
-*/
-
-
 /* HEADER */
 
 .l-page {
@@ -35,14 +28,23 @@
 	}
 }
 
+/* END * HEADER */
 
-/* CALL4 PAPER * BUY */
+
+
+/* CALL4 PAPER */
 
 .conf-wp-buy {
 	display: flex;
-	flex-flow: row;
 	padding: 64px 0;
+	flex-flow: column;
+	align-items: center;
 	justify-content: space-between;
+
+	@include breakpoint(tablet-and-up) {
+		flex-flow: row;
+		align-items: normal;
+	}
 
 	.conf__description {
 		width: 240px;
@@ -60,6 +62,11 @@
 		background-size: 100% 33px;
 		background-repeat: repeat-y;
 		background-image: linear-gradient(black 1px, white 0, white);
+
+		@include breakpoint(small) {
+			height: 100px;
+			margin: 30px 0;
+		}
 	}
 
 	.conf__call-and-buy {
@@ -97,118 +104,171 @@
 	}
 }
 
-.brjs-conf-theme {
-	.speakers-grid__wrapper {
-		.speakers-grid__list {
-			display: flex;
-			flex-flow: row wrap;
-			justify-content: space-between;
+/* END * CALL4 PAPER */
 
-			.calendar-list__item {
-				display: inline-block;
 
-				.card {
-					height: 100%;
-					display: flex;
-					flex-flow: row;
+/*
+*
+* GRID SPEAKER
+*
+*/
 
-					.card__header {
-						width: 240px;
+.speakers-grid__wrapper {
+	.speakers-grid__list {
+		position: relative;
+
+		.speakers-list__item {
+			display: inline-block;
+
+			@include breakpoint(small) {
+				width: 100%;
+				margin-bottom: 40px;
+			}
+
+			.speakers-card {
+				display: flex;
+				flex-flow: row;
+
+				.speakers-card__header {
+					height: 320px;
+					min-width: 240px;
+					max-width: 240px;
+					display: inline-block;
+
+					@include breakpoint(small) {
+						margin-right: 70px;
+					}
+
+					.speakers-card__thumb {
+						width: 100%;
 						height: 100%;
-						max-height: 320px;
+						filter: grayscale(100%);
+						@include background-image(null, cover);
+					}
+				}
+
+				.speakers-card__content {
+					width: 210px;
+					text-align: left;
+					display: inline-block;
+					text-transform: uppercase;
+
+					.speakers-card__title	 {
+						line-height: 167%;
+						font-weight: 900;
+						margin-bottom: 15px;
+						@include rem(font-size, 24px);
+					}
+
+					.speakers-card__paragraph {
+						color: #000;
+						display: block;
+						font-weight: 900;
+						line-height: 270%;
+						text-transform: uppercase;
+						font-family: $font-primary;
+
+						@include rem(font-size, 12px);
+					}
+				}
+			}
+
+			&:nth-child(1) {
+
+				@include breakpoint(tablet-and-up) {
+					margin-bottom: 90px;
+				}
+
+				.speakers-card {
+					.speakers-card__header {
+						position: relative;
 						margin-right: 70px;
 
-						.card__thumb {
-							filter: grayscale(100%);
-							@include background-image(null, cover);
-						}
-					}
-
-					.card__content {
-						width: 210px;
-						margin: 0;
-
-						.card__title {
-							text-transform: uppercase;
-							@include rem(font-size, 24px);
-						}
-
-						.card__paragraph {
-							color: #000;
-							font-weight: 900;
-							line-height: 267%;
-							text-transform: uppercase;
-							font-family: $font-primary;
-
-							@include rem(font-size, 12px);
-						}
-					}
-				}
-
-				&:nth-child(1) {
-					.card__header {
-						position: relative;
-						&:before {
-							z-index: 2;
+						&:after {
 							content: '';
-							bottom: 30px;
-							left: -80px;
-							width: 235px;
-							height: 25px;
-							position: absolute;
-							background-color: $sunny-yellow;
+					    left: -35px;
+					    bottom: 30px;
+					    width: 230px;
+					    height: 25px;
+					    display: block;
+					    position: absolute;
+					    background-color: $sunny-yellow;
 						}
 					}
 				}
+			}
 
-				&:nth-child(2) {
-					height: auto;
-					padding-top: 100px;
+			&:nth-child(2) {
+				width: 100%;
+
+				@include breakpoint(desktop) {
+					top: 10%;
+					right: 0;
+					min-width: 280px;
+					position: absolute;
+				}
+
+				.speakers-card {
+					width: 100%;
+					float: left;
+					display: flex;
 
 					@include breakpoint(tablet-and-up) {
-						width: 300px;
+						width: 280px;
+						float: right;
+						flex-flow: column;
 					}
 
-					.card {
-				    width: 240px;
-				    height: 320px;
-				    display: inline-block;
-				    position: relative;
-				    border: 28px solid #ffee1f;
+					.speakers-card__header {
+						border: 30px solid $sunny-yellow;
 
-						.card__header {
-							width: 100%;
-							height: 100%;
+						@include breakpoint(tablet-and-up) {
 							margin-right: 0;
 						}
+					}
 
-						.card__content {
-					    margin: 0;
-					    width: 100%;
-					    position: absolute;
-					    text-align: right;
-					    max-width: 200px;
-					    right: -65px;
-					    display: flex;
-					    flex-flow: column;
-					    align-items: flex-end;
+					.speakers-card__content {
+						position: relative;
 
-					    .card__title {
-					    	width: 50%;
-					    }
+						@include breakpoint(tablet-and-up) {
+							left: 70px;
+							bottom: 30px;
+							text-align: right;
+						}
+
+						.speakers-card__title {
+							@include breakpoint(tablet-and-up) {
+								padding: 0 0 0 50px;
+							}
 						}
 					}
 				}
+			}
 
-				&:nth-child(3) {
-					.card {
+			&:nth-child(3) {
+				.speakers-card {
+
+					@include breakpoint(tablet-and-up) {
 						flex-flow: row-reverse;
+					}
 
-						.card__header {
-							margin-right: 0;
+					.speakers-card__header {
+						position: relative;
+						padding-top: 40px;
+
+						@include breakpoint(tablet-and-up) {
 							margin-left: 70px;
-							padding-top: 40px;
-							background-color: #000;
+						}
+
+						.speakers-card__thumb {
+							&:before {
+								content: '';
+								top: 0;
+								width: 100%;
+								height: 40px;
+								position: absolute;
+								background-color: #000;
+							}
 						}
 					}
 				}
@@ -220,177 +280,23 @@
 
 /*
 *
-* END REBORN
+* END * GRID SPEAKER
 *
 */
 
-// .conf-wrapper {
-// 	background-color: $color-mine-shaft;
-// }
+.hostels-wrapper {
+	
+}
 
-// .conf-container {
-
-// 	@include breakpoint(tablet-and-up) {
-// 		display: flex;
-// 	}
-
-// }
-
-// .conf-container__event {
-// 	position: relative; z-index: 5;
-// 	display: flex; flex-direction: column; justify-content: center; align-items: center;
-// 	@include rem(padding, 0 10px);
-// 	width: 50%; @include rem(height, 880px);
-// 	transform: translate3d(0,0,0);
-// 	text-align: center;
-
-// 	&:before {
-// 		content: '';
-// 		z-index: 5;
-// 		position: absolute; top: 0; left:0; width: 100%; height: 100%;
-// 		background-size: cover;
-// 		background-repeat: no-repeat;
-// 	}
-
-// 	&:after {
-// 		content: ''; z-index: 7;
-// 		position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-// 		background-color: #222;
-// 		opacity: .6;
-// 		transition: opacity ease $basic-transition;
-// 	}
-
-// 	&:hover, &:focus {
-// 		opacity:1;
-
-// 		&:after {
-// 			opacity: .1;
-// 			transition: opacity ease $basic-transition;
-// 		}
-
-// 	}
-
-// 	@include breakpoint(small) {
-// 		width: 100%; @include rem(height, 320px);
-// 	}
-
-// }
-
-// .conf-container__event--poa {
-// 	&:before {
-// 		background-image: url('../img/conf/poa-vertical--small.jpg');
-
-// 		@include breakpoint(tablet-and-up) {
-// 			background-image: url('../img/conf/poa-vertical.jpg');
-// 		}
-
-// 	}
-
-// }
-
-// .conf-container__event--recife {
-// 	&:before {
-// 		// background-image:: url('../img/conf/recife-vertical--small.jpg');
-// 		background-image:: url('../img/conf/fortaleza-vertical--small.jpg');
-
-// 		@include breakpoint(tablet-and-up) {
-// 			background-image:: url('../img/conf/fortaleza-vertical.jpg');
-// 		}
-
-// 	}
-
-// }
-
-// .conf__header {
-// 	@include breakpoint(small) {
-// 		position: static;
-// 		@include rem(padding, 100px 10px 0);
-// 	}
-
-// 	position: absolute; @include rem(top, 155px); z-index: $z-index-above;
-// 	margin: auto;
-// 	width: 100%;
-
-// }
-
-// .conf__slogan {
-// 	display: block;
-// 	@include rem(margin-bottom, 20px);
-// 	@include rem(font-size, 14px); color: $color-white; text-transform: uppercase;
-// }
-
-// .conf-container__title {
-// 	position: relative;
-// 	z-index: $z-index-jump;
-// 	@include rem(margin-bottom, 10px);
-// 	@include rem(font-size, 30px); line-height: 120%; color: $color-white; font-weight: 900; font-style: italic; text-transform: uppercase;
-
-// 	@include breakpoint(tablet-and-up) {
-// 		@include rem(font-size, 40px);
-// 	}
-
-// }
-
-// .conf-container__date {
-// 	position: relative;
-// 	z-index: $z-index-jump;
-// 	@include rem(margin-bottom, 35px);
-// 	@include rem(font-size, 20px); line-height: 120%; color: $color-white; text-transform: uppercase; font-style: italic;
-// }
-
-// .conf-container__anchor {
-// 	position: relative;
-// 	z-index: $z-index-jump;
-
-// 	.conf-container__event:hover &, .conf-container__event:focus & {
-// 		color: $color-mine-shaft;
-// 		border-color: $color-white;
-// 		background-color: $color-white;
-// 		will-change: transform, border-color;
-// 	}
-
-// }
+/*
+*
+* HOTEL
+*
+*/
 
 
-// /* COUNTER
-// ========================================================================== */
-// .countdown__data-wrapper {
-// 	display: inline-block;
-// 	@include rem(padding, 15px 15px);
-// 	border: 2px solid $color-white;
-
-// 	@include breakpoint(tablet-and-up) {
-// 		@include rem(margin, 0 0 40px 0); @include rem(padding, 15px 10px);
-// 	}
-
-// 	@include breakpoint(desktop-and-up) {
-// 		@include rem(margin, 0 0 40px 0); @include rem(padding, 35px 20px);
-// 		@include rem(height, 137px); @include rem(width, 100px);
-// 	}
-
-// }
-
-// .countdown__label {
-// 	display: block;
-// 	@include rem(font-size, 13px); line-height: 120%;
-// }
-
-// /* SPEAKERS LIST
-// ========================================================================== */
-// .speakers-list-container {
-// 	@include rem(margin-top, 80px);
-// }
-
-// /* HOTELS
-// ========================================================================== */
-// .hotels-container {
-
-// }
-
-// .hotels-container__link {
-// 	display: flex;
-// 	justify-content: center; align-items: center;
-// 	@include rem(height, 170px);
-// 	@include rem(font-size, 20px); line-height: 120%; color: $color-white; font-weight: 900; font-style: italic; text-transform: uppercase; text-decoration: none; text-align: center;
-// 	background-color: $color-cloud-burst;
-// }
+/*
+*
+* END * HOTEL
+*
+*/

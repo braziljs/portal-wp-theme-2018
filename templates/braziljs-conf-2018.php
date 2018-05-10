@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Conf 2018 Teaser
+Template Name: BrazilJS Conf 2018
 */
 ?>
 

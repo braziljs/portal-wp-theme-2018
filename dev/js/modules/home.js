@@ -12,7 +12,7 @@ define(function () {
 
 			home.bindEvents();
 
-			// home.brjsReborn();
+			home.brjsReborn();
 
 		},
 
