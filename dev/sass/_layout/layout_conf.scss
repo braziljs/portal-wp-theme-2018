@@ -123,20 +123,23 @@
 			@include breakpoint(small) {
 				width: 100%;
 				margin-bottom: 40px;
+				overflow-x: scroll;
 			}
 
 			.speakers-card {
 				display: flex;
-				flex-flow: row;
+				flex-flow: row wrap;
 
 				.speakers-card__header {
 					height: 320px;
 					min-width: 240px;
 					max-width: 240px;
+					margin-right: 70px;
 					display: inline-block;
 
 					@include breakpoint(small) {
-						margin-right: 70px;
+						margin: 0 auto;
+						padding: 0 15px;
 					}
 
 					.speakers-card__thumb {
@@ -182,7 +185,6 @@
 				.speakers-card {
 					.speakers-card__header {
 						position: relative;
-						margin-right: 70px;
 
 						&:after {
 							content: '';
@@ -257,7 +259,7 @@
 						padding-top: 40px;
 
 						@include breakpoint(tablet-and-up) {
-							margin-left: 70px;
+							margin-left: 50px;
 						}
 
 						.speakers-card__thumb {
@@ -285,7 +287,7 @@
 */
 
 .hostels-wrapper {
-	
+
 }
 
 /*
