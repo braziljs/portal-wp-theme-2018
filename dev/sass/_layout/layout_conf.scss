@@ -139,7 +139,6 @@
 
 					@include breakpoint(small) {
 						margin: 0 auto;
-						padding: 0 15px;
 					}
 
 					.speakers-card__thumb {
@@ -287,7 +286,37 @@
 */
 
 .hostels-wrapper {
+	display: flex;
+	min-height: 160px;
+	padding: 15px 50px;
+	flex-flow: row wrap;
+	align-items: center;
+	background-color: #000;
+	justify-content: space-between;
 
+	.hostel-legends {
+		color: #fff;
+		margin: 20px 0;
+		max-width: 485px;
+		font-weight: 900;
+		text-transform: uppercase;
+
+		strong {
+			display: block;
+			margin-bottom: 20px;
+			@include rem(font-size, 24px);
+		}
+
+		p {
+			@include rem(font-size, 12px);
+		}
+	}
+
+	.hostel-icon {
+		img {
+			min-width: 64px;
+		}
+	}
 }
 
 /*

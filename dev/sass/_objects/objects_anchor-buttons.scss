@@ -23,8 +23,6 @@
 	text-transform: lowercase;
 	font-family: $font-primary;
 	@include rem(font-size, 13px);
-	background-color: $color-white;
-	// @include rem(padding, 10px 20px);
 	border: 3px solid $sunny-yellow;
 	transition: color ease $basic-transition, 
 										border-color ease $basic-transition,
