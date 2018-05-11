@@ -88,18 +88,23 @@
 			align-items: flex-end;
 
 			a {
-				margin-bottom: 30px;
+				// margin-bottom: 30px;
 			}
 		}
 
 		.anchor-button {
 			color: #000;
+			margin: 0;
 			border-color: #000;
 
 			&:hover {
 				color: #fff;
 				background-color: #000;
 			}
+		}
+
+		.ingresse-widget {
+			margin-bottom: 30px;
 		}
 	}
 }
@@ -255,7 +260,7 @@
 
 					.speakers-card__header {
 						position: relative;
-						padding-top: 40px;
+						// padding-top: 40px;
 
 						@include breakpoint(tablet-and-up) {
 							margin-left: 50px;
@@ -282,6 +287,13 @@
 /*
 *
 * END * GRID SPEAKER
+*
+*/
+
+
+/*
+*
+* HOTEL
 *
 */
 
@@ -318,12 +330,6 @@
 		}
 	}
 }
-
-/*
-*
-* HOTEL
-*
-*/
 
 
 /*

@@ -1,24 +1,37 @@
-///*------------------------------------*\
-//    #POST
-//\*------------------------------------*/
+/*
+*********************
+******* POST ********
+*********************
+*/
 
 
-/* VARIABLES
-========================================================================== */
+/*
+*
+* VARIABLES
+*
+*/
+
 $post-header-background: $color-mine-shaft;
 $post-header-padding: 0 80px;
 $inner-border-space: 5px;
 $post-content-wrapper-width-medium: 600px;
 $post-content-wrapper-width-desktop: 800px;
 
-/* HEADER
-========================================================================== */
+
+/*
+*
+* HEADER
+*
+*/
+
 .post-header {
-	@include rem(margin-bottom, 30px); @include rem(padding, 90px 0 40px);
+	@include rem(margin-bottom, 30px);
+	@include rem(padding, 90px 0 40px);
 	background-color: $post-header-background;
 
 	@include breakpoint(tablet-and-up) {
-		@include rem(margin-bottom, 60px); @include rem(padding, 130px 0 50px);
+		@include rem(margin-bottom, 60px);
+		@include rem(padding, 130px 0 50px);
 	}
 
 }
@@ -27,24 +40,37 @@ $post-content-wrapper-width-desktop: 800px;
 	@include rem(padding, $post-header-padding);
 }
 
-/* WRAPPER
-========================================================================== */
+
+/*
+*
+* WRAPPER
+*
+*/
+
 .page-container {
 	@include rem(margin-bottom, 75px);
 }
 
 .header__meta-author {
+	line-height: 120%;
+	@include rem(font-size, 13px);
 	@include rem(margin-bottom, 10px);
-	@include rem(font-size, 13px); line-height: 120%;
 }
 
 .header__meta-author-anchor {
-	color: $color-lightning-yellow; text-transform: uppercase; font-weight: bold; font-style: italic;
+	color: #000;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 
-.header__meta {
-	display: block; vertical-align: top;
-	color: $color-white;
+.header__meta-wrapper {
+	a {
+		display: block; 
+		line-height: 267%;
+		vertical-align: top;
+		color: $color-white;
+		@include rem(font-size, 12px);
+	}
 }
 
 .post__time {
@@ -95,8 +121,13 @@ $post-content-wrapper-width-desktop: 800px;
 
 }
 
-/* POST CONTENT
-========================================================================== */
+
+/*
+*
+* POST CONTENT
+*
+*/
+
 .post-content-wrapper {
 	margin: auto;
 

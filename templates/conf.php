@@ -27,7 +27,7 @@ Template Name: Conf
 			<div class="row">
 				<div class="header__li">
 					<a href="<?php bloginfo('url'); ?>/sobre" class="anchor-button anchor-button--color-5" style="visibility: hidden;">Sobre a BrazilJS</a>
-					<a href="<?php bloginfo('url'); ?>/blog" class="paragraph" title="Explore os artigos disponíveis no Portal BrazilJS">24 e 24 de agosto porto alegre rs barra shopping sul</a>
+					<a href="javascript:void(0)" class="paragraph" title="24 e 25 de AGOSTO">24 e 25 de agosto porto alegre rs barra shopping sul</a>
 				</div>
 			</div>
 		</div>
@@ -60,8 +60,8 @@ Template Name: Conf
 				<p class="paragraph">Levamos conteúdo de qualidade para toda a comunidade, por meio da braziljs weekly, artigos, vídeos, screencast, cursos e muito mais.</p>
 			</div>
 			<div class="conf__buttons">
-				<a href="" class="anchor-button">comprar ingresso</a>
-				<a href="" class="anchor-button">call 4 papers</a>
+				<div class="anchor-button ingresse-widget" data-btntext="Comprar Ingressos" data-btnbgcolor="#ffc819" data-btntextcolor="#222" data-eventid="23468">comprar ingresso</div>
+				<a href="https://docs.google.com/forms/d/e/1FAIpQLScvM9sctUCe2vjbUxv3QzhRimn5ztB7JyPgbnpTDksS3eTpQw/viewform" class="anchor-button">call 4 papers</a>
 			</div>
 		</div>
 	</div>

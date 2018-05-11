@@ -1,12 +1,23 @@
-///*------------------------------------*\
-//    #PAGE
-//\*------------------------------------*/
+/*
+*********************
+****** ARTICLE ******
+*********************
+*/
 
-/* VARIABLES
-========================================================================== */
 
-/* HEADER WRAPPER
-========================================================================== */
+/*
+* 
+* HEADER
+*/
+
+/*
+*
+*/
+
+/* END * HEADER */
+
+
+
 .page-header {
 	position: relative;
 	@include rem(padding, 90px 0 20px);
@@ -17,9 +28,13 @@
 
 	&:before {
 		content: '';
-		position: absolute; top: 0; left: 0;
-		width: 100%; height: 60px;
-		background: url('../img/backgrounds/bg-wrapper--3.png') repeat-x;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 60px;
+		position: absolute;
+		// background-color: #fff;
+		// background: url('../img/backgrounds/bg-wrapper--3.png') repeat-x;
 	}
 
 	.header__logo {
@@ -30,7 +45,6 @@
 		}
 
 	}
-
 }
 
 .post-entry--page {

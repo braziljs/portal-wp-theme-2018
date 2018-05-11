@@ -1,16 +1,28 @@
-///*------------------------------------*\
-//    #NAVIGATION
-//\*------------------------------------*/
+/*
+*********************
+**** NAVIGATION *****
+*********************
+*/
 
-/* VARIABLES
-========================================================================== */
+
+/*
+*
+* VARIABLES
+*
+*/
+
 $navigation-item-color: $color-white;
 $navigation-border-margin: 8px;
 $navigation-hamburger-stick-height: 2px;
 $navigation-hamburger-stick-width: 12px;
 
-/* WRAPPER
-========================================================================== */
+
+/*
+*
+* WRAPPER
+*
+*/
+
 .navigation-wrapper {
 	@include rem(padding, 18px 0 15px);
 
@@ -22,17 +34,35 @@ $navigation-hamburger-stick-width: 12px;
 
 .nav__reborn {
 	background-color: $color-black;
+
+	&.type-2 {
+		background-color: #fff;
+
+		.header__logo {
+			max-width: 130px;
+		}
+
+		.menu-item {
+			color: #000;
+			font-weight: 900;
+		}
+	}
 }
 
 .navigation {
 
 	.is-open & {
-		position: fixed; top: 0; left: 0;
-		z-index: $z-index-sky;
-		display: flex; flex-direction: column; justify-content: center;
-		width: 100%; height: 100vh;
-		background-color: $color-white;
+		top: 0;
+		left: 0;
 		opacity: 0;
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		position: fixed;
+		z-index: $z-index-sky;
+		flex-direction: column;
+		justify-content: center;
+		background-color: rgba(0, 0, 0, 0.9215686274509803);
 		animation: openNavigationModal $basic-transition ease 1 normal forwards;
 	}
 
@@ -44,8 +74,13 @@ $navigation-hamburger-stick-width: 12px;
 	-webkit-overflow-scrolling: touch;
 }
 
-/* NAVIGATION LIST
-========================================================================== */
+
+/*
+*
+* NAVIGATION LIST
+*
+*/
+
 .navigation-list {
 	display: none;
 
@@ -59,14 +94,19 @@ $navigation-hamburger-stick-width: 12px;
 
 }
 
-/* NAVIGATION ITEMS
-========================================================================== */
+
+/*
+*
+* NAVIGATION ITEMS
+*
+*/
+
 .menu-item {
+	color: #fff;
+	line-height: 120%;
 	position: relative;
 	display: inline-block;
 	text-transform: lowercase;
-	line-height: 120%;
-	color: $navigation-item-color;
 	@include rem(font-size, 14px);
 
 	& + .menu-item {
@@ -78,14 +118,15 @@ $navigation-hamburger-stick-width: 12px;
 
 		&:after {
 			content: '';
-			display: block; 
-			position: absolute;
+			display: block;
 			width: 100%;
 			height: 3px;
+			position: absolute;
 			background-color: $color-lightning-yellow;
 			opacity: 0;
 			transform: translateY(0);
-			transition: opacity ease $basic-transition, transform ease $basic-transition;
+			transition: opacity ease $basic-transition,
+								transform ease $basic-transition;
 		}
 
 		&:hover, &:focus {
@@ -101,11 +142,12 @@ $navigation-hamburger-stick-width: 12px;
 	}
 
 	.is-open & {
+		color: #fff;
+		margin-left: 0;
 		display: block;
-		margin-left: 0; @include rem(margin-bottom, 25px);
-		// @include rem(font-size, 22px); text-align: center;
-		@include rem(font-size, 16px); text-align: center;
-		color: $color-mine-shaft;
+		text-align: center;
+		@include rem(font-size, 16px);
+		@include rem(margin-bottom, 25px);
 		animation: animateNavigationItems $basic-transition ease 1 normal forwards;
 
 		&:last-child {
