@@ -32,19 +32,25 @@
 			<div class="content">
 				<div class="post-content-wrapper">
 					<div class="header__meta-wrapper">
+						
 						<div class="header__meta-author">
-							<h3 class="header__meta-author-anchor"><?php the_author_posts_link(); ?></h3>
-							<figure class="author-container__thumb u-photo" itemprop="image">
-								<?php echo get_avatar(get_the_author_meta('email'), 80); ?>
-							</figure>
-							<time class="post__time dt-published" datetime="<?php echo date(DATE_W3C); ?>" itemprop="datePublished"><?php the_time(get_option('date_format')) ?></time>
+							<div class="header__author-info">
+								<h3 class="header__meta-name"><?php the_author_posts_link(); ?></h3>
+								<time class="header__meta-time" datetime="<?php echo date(DATE_W3C); ?>" itemprop="datePublished"><?php the_date('d/m/Y') ?></time>
+							</div>
+							<div class="header__author-social">
+								<figure class="author-container__thumb" itemprop="image">
+									<?php echo get_avatar(get_the_author_meta('email'), 80); ?>
+								</figure>
+								<a class="header__post-icon sharer" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank" rel="external"></a>
+								<a class="header__post-icon comment" href="#disqus"></a>
+							</div>
 						</div>
 							
 						<div class="header__meta-post">
 							<h1 class="post-name" itemprop="headline"><?php the_title(); ?></h1>
-							<p class="author-container__description"><?php echo the_author_meta('description'); ?></p>
-							<a href="<?php echo the_author_meta('user_url'); ?>" class="anchor u-url" itemprop="url"><?php echo the_author_meta('user_url'); ?></a>
-							<div class="post-categories-wrapper p-category"><?php the_category(); ?></div>
+							<div class="header__meta-category"><?php the_category(); ?></div>
+							<p class="header__author-description"><?php echo the_author_meta('description'); ?></p>
 						</div>
 					</div>
 				</div>

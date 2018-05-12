@@ -25,19 +25,19 @@ $post-content-wrapper-width-desktop: 800px;
 */
 
 .post-header {
-	@include rem(margin-bottom, 30px);
-	@include rem(padding, 90px 0 40px);
-	background-color: $post-header-background;
+	margin-bottom: 30px;
+	padding: 90px 0 40px;
+	background-color: #fff;
 
 	@include breakpoint(tablet-and-up) {
-		@include rem(margin-bottom, 60px);
-		@include rem(padding, 130px 0 50px);
+		margin-bottom: 60px;
+		padding: 130px 0 50px;
 	}
 
 }
 
 .post-header__content {
-	@include rem(padding, $post-header-padding);
+	padding: $post-header-padding;
 }
 
 
@@ -47,52 +47,128 @@ $post-content-wrapper-width-desktop: 800px;
 *
 */
 
+.header__meta-wrapper {
+	display: flex;
+	flex-flow: row;
+}
+
 .page-container {
-	@include rem(margin-bottom, 75px);
+	margin-bottom: 75px;
 }
 
 .header__meta-author {
+	display: flex;
+	flex-flow: row;
+	min-width: 200px;
 	line-height: 120%;
+	margin-right: 50px;
 	@include rem(font-size, 13px);
-	@include rem(margin-bottom, 10px);
-}
+	justify-content: space-between;
 
-.header__meta-author-anchor {
-	color: #000;
-	font-weight: bold;
-	text-transform: uppercase;
-}
+	.header__author-info {
+		margin-right: 30px;
 
-.header__meta-wrapper {
-	a {
-		display: block; 
-		line-height: 267%;
-		vertical-align: top;
-		color: $color-white;
-		@include rem(font-size, 12px);
-	}
-}
-
-.post__time {
-	position: relative;
-	display: block;
-	@include rem(margin-bottom, 10px);
-	@include rem(font-size, 13px); text-transform: uppercase;
-
-	@include breakpoint(tablet-and-up) {
-		display: inline-block;
-
-		&:after {
-			content: '|';
-			@include rem(padding, 0 5px 0 10px);
-			color: currentColor;
+		.header__meta-name {
+			color: #000;
+			font-weight: bold;
+			line-height: 267%;
+			text-transform: uppercase;
+			@include rem(font-size, 12px);
 		}
 
+		.header__meta-time {
+			width: 100%;
+			color: #888888;
+			display: block;
+			text-align: right;
+			position: relative;
+			margin-bottom: 10px;
+			text-transform: uppercase;
+			@include rem(font-size, 12px);
+
+			@include breakpoint(tablet-and-up) {
+				display: inline-block;
+			}
+		}
 	}
 
+	.header__author-social {
+    height: 160px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+
+		.author-container__thumb {
+			// margin: auto;
+			// flex: 1 0 auto;
+			margin: 0;
+			position: relative;
+
+			.avatar {
+				border-radius: 50%;
+			}
+
+			img {
+				width: 48px;
+				height: 48px;
+				filter: grayscale(100%);
+			}
+		}
+
+		// .header__author-link {
+		// 	display: flex;
+	 //    flex-flow: column;
+	 //    align-items: center;
+
+		.header__post-icon {
+			width: 32px;
+			height: 32px;
+			border-radius: 50%;
+			border: 1px solid #000;
+			background: transparent;
+
+			&.sharer,
+			&.comment {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			&.sharer {
+				&:before {
+					content: '';
+					width: 16px;
+					height: 16px;
+					display: block;
+					@include background-image('icons/icon-share.svg', contain);
+				}
+			}
+
+			&.comment {
+				&:before {
+					content: '';
+					width: 16px;
+					height: 16px;
+					display: block;
+					@include background-image('icons/icon-comment.svg', contain);
+				}
+			}
+		}
+		// }
+	}
 }
 
-.post-categories-wrapper {
+.header__meta-post {
+	.post-name {
+		font-weight: 900;
+		line-height: 150%;
+		@include rem(font-size, 48px);
+	}
+}
+
+.header__meta-category {
+	margin: 15px 0;
 	display: inline-block;
 
 	.post-categories {
@@ -113,14 +189,21 @@ $post-content-wrapper-width-desktop: 800px;
 		}
 
 		a {
+			font-weight: 900;
+			line-height: 267%;
 			position: relative;
-			@include rem(font-size, 13px); color: $color-lightning-yellow; text-transform: uppercase; font-weight: bold; font-style: italic;
+			text-transform: uppercase;
+			@include rem(font-size, 13px);
 		}
 
 	}
-
 }
 
+.header__author-description {
+	line-height: 267%;
+	font-weight: normal;
+	@include rem(font-size, 12px);
+}
 
 /*
 *
@@ -150,7 +233,12 @@ $post-content-wrapper-width-desktop: 800px;
 
 	//ANCHORS
 	a {
-		font-family: $font-primary; text-transform: uppercase; color: $color-cloud-burst; font-weight: 900; text-transform: uppercase; font-style: italic;
+		font-family: $font-primary;
+		text-transform: uppercase;
+		color: $color-cloud-burst;
+		font-weight: 900;
+		text-transform: uppercase;
+		font-style: italic;
 	}
 
 	//BLOCKQUOTE
@@ -186,8 +274,11 @@ $post-content-wrapper-width-desktop: 800px;
 
 	//PARAGRAPHS
 	p {
+		line-height: 267%;
+		color: $color-mine-shaft;
+		font-family: $font-primary;
+		@include rem(font-size, 12px);
 		@include rem(margin-bottom, 25px);
-		font-family: $font-special; @include rem(font-size, 16px); line-height: 1.5; color: $color-mine-shaft;
 	}
 
 	//HEADINGS
@@ -458,29 +549,6 @@ $post-content-wrapper-width-desktop: 800px;
 
 	@include breakpoint(desktop-and-up) {
 		@include rem(padding, 0 60px);
-	}
-
-}
-
-.author-container__thumb {
-	position: relative;
-	flex: 1 0 auto;
-	margin: auto;
-
-	@include breakpoint(tablet-and-up) {
-		@include rem(margin, 0 20px 0 0);
-	}
-
-	&:before {
-		content: '';
-		position: absolute; top: $inner-border-space; left: $inner-border-space;
-		width: calc(100% -  #{$inner-border-space} * 2); @include rem(height, 72px);
-		border: 1px solid rgba($color-white, .6);
-		border-radius: 35px;
-	}
-
-	.avatar {
-		border-radius: 50%;
 	}
 
 }

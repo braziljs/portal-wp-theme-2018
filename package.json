@@ -16,9 +16,10 @@
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.4",
     "gulp-sass": "2.3.2",
+    "gulp-shell": "^0.4.3",
     "gulp-sourcemaps": "1.6.0",
-    "path": "^0.12.7",
-    "gulp-shell": "^0.4.3"
+    "npm": "^6.0.1",
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "gulp-clean": "^0.3.2",
