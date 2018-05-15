@@ -189,7 +189,6 @@
 			&:nth-child(4),
 			&:nth-child(6),
 			&:nth-child(7) {
-				// margin: 0;
 				width: 312px;
 				height: 128px;
 
@@ -205,8 +204,8 @@
 					padding: 0;
 					width: 160px;
 					height: 100%;
+					display: flex;
 					position: absolute;
-					display: inline-block;
 					@include rem(padding-right, 10px);
 
 					.card__title {

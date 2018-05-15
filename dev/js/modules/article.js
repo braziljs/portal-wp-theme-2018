@@ -24,7 +24,7 @@ define(['disqusLoader', 'prism'], function () {
 			  	}
 			};
 
-			disqusLoader( '#disqus_thread', options );
+			// disqusLoader( '#disqus_thread', options );
 
 		}
 
