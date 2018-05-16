@@ -21,10 +21,8 @@ define(function () {
 		headerAnim: function () {
 			$(document).ready(function () {
 				$.getScript(window.THEME_PATH + '/media/particle.js', function () {
-					debugger
 					particlesJS.load('particles-js', window.THEME_PATH + '/media/particlesjs-config.json', function() {
 						// console.log('callback - particles.js config loaded');
-						debugger
 					});
 				})
 			})

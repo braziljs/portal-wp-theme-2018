@@ -59,6 +59,15 @@
 /* HEADER */
 
 .l-page {
+	position: relative;
+	
+	#particles-js {
+		position: absolute;
+		width: 100%;
+		// height: calc( 100% - 300px );
+		height: 100%;
+		top: 0;
+	}
 	.header-wrapper {
 		.header__li {
 			.paragraph {

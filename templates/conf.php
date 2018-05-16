@@ -14,14 +14,11 @@ Template Name: Conf
 
 <!-- CONF HEADER -->
 <header class="header-container l-page" data-id="glitch">
+	<!-- HEADER ANIMATION -->
+	<div id="particles-js"></div>
+	<!-- /HEADER ANIMATION -->
 	<div class="content">
-
 		<div class="header-wrapper">
-			<!-- HEADER ANIMATION -->
-			<div id="particles-js"></div>
-			<!-- <script src="/media/particles.js"></script> -->
-			<!-- /HEADER ANIMATION -->
-
 			<div class="row">
 				<div class="header__tp">
 					<h2 class="header__title yellow">The biggest freaking javascript conf in the world</h2>
