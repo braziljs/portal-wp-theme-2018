@@ -6,10 +6,13 @@ Template Name: Conf
 
 ?>
 
+<script>
+	window.THEME_PATH = "<?php echo asset_path('') ?>"
+</script>
 <?php get_header(); ?>
 <?php get_template_part('sections/navigation'); ?>
 
-<!-- HOME HEADER -->
+<!-- CONF HEADER -->
 <header class="header-container l-page" data-id="glitch">
 	<div class="content">
 		
@@ -18,9 +21,14 @@ Template Name: Conf
 		</h1>
 		
 		<div class="header-wrapper">
+			<!-- HEADER ANIMATION -->
+			<div id="particles-js"></div>
+			<!-- <script src="/media/particles.js"></script> -->
+			<!-- /HEADER ANIMATION -->
+
 			<div class="row">
 				<div class="header__tp">
-					<h2 class="header__title yellow">The biggest fucking javascript event in the world</h2>
+					<h2 class="header__title yellow">The biggest freaking javascript conf in the world</h2>
 				</div>
 			</div>
 			

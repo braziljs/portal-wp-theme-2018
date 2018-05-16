@@ -8,7 +8,7 @@ define(function () {
 	conf = {
 
 		init: function () {
-
+			conf.headerAnim()
 			// setInterval(function() {
 			// 	conf.countDownClock();
 			// }, 1000);
@@ -16,6 +16,18 @@ define(function () {
 	    // setInterval(function() {
 	    //   conf.avatarCall4Paper();
 	    // }, 2000);
+		},
+
+		headerAnim: function () {
+			$(document).ready(function () {
+				$.getScript(window.THEME_PATH + '/media/particle.js', function () {
+					debugger
+					particlesJS.load('particles-js', window.THEME_PATH + '/media/particlesjs-config.json', function() {
+						// console.log('callback - particles.js config loaded');
+						debugger
+					});
+				})
+			})
 		},
 
 		countDownClock: function () {
@@ -69,7 +81,6 @@ define(function () {
 
       const IMG_URL = "https://braziljs.org/wp-content/uploads/2018/02/icon-" + imageId + "-opt-avatar.svg";
    
-      
       img.onload = function () {
         el.css('backgroundImage', 'url(' + IMG_URL + ')');
       }
