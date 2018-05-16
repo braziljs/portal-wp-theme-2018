@@ -29,8 +29,8 @@ Template Name: Conf
 			<div class="row">
 				<div class="header__tp">
 					<h2 class="header__title yellow">
-						<span>The biggest<br/>freaking<br/></span>
-						<span class="title__main">javascript<br>       conference<br></span>
+						<span>The biggest<br/>freaking</span><br/>
+						<span class="title__main">javascript<br>       conference<br></span><br/>
 						<span class="title__secondary">in the world</span>
 					</h2>
 				</div>
