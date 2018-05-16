@@ -4,7 +4,6 @@ define(function () {
 		body = $('body'),
 		countdownContainer = $('#brjs-countdown');
 
-
 	conf = {
 
 		init: function () {
@@ -20,13 +19,14 @@ define(function () {
 
 		headerAnim: function () {
 			$(document).ready(function () {
-				$.getScript(window.THEME_PATH + '/media/particle.js', function () {
-					debugger
-					particlesJS.load('particles-js', window.THEME_PATH + '/media/particlesjs-config.json', function() {
-						// console.log('callback - particles.js config loaded');
-						debugger
-					});
+				$.getScript(window.THEME_PATH + '/media/terrain.js', function () {
+					window.applyHeaderEffect(document.getElementById('header-animation'))
 				})
+				// $.getScript(window.THEME_PATH + '/media/particle.js', function () {
+				// 	particlesJS.load('particles-js', window.THEME_PATH + '/media/particlesjs-config.json', function() {
+				// 		// console.log('callback - particles.js config loaded');
+				// 	});
+				// })
 			})
 		},
 

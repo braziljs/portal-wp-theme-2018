@@ -67,6 +67,30 @@
 /* HEADER */
 
 .l-page {
+	position: relative;
+	overflow: hidden;
+
+	#header-animation {
+		position: absolute;
+		width: 100%;
+		// height: calc( 100% - 300px );
+		pointer-events: none;
+		height: 100%;
+		top: 0;
+		filter: sepia();
+	}
+	.title__main {
+		position: relative;
+		z-index: 999;
+		text-shadow: 0 0 100px black, 0 0 1px red;
+		filter: drop-shadow(0 0 10px #000);
+		transform: scale(1.3);
+		display: inline-block;
+		white-space: pre;
+	}
+	.title__secondary {
+		padding-left: 30px;
+	}
 	.header-wrapper {
 		.header__li {
 			.paragraph {

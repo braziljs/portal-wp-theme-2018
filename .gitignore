@@ -48,6 +48,7 @@ node_modules/
 assets/
 .sass-cache/
 dev/img-min
+dev/css/
 .git/
 .jekyll-metadata
 .travis.yml.swp

@@ -14,17 +14,25 @@ Template Name: Conf
 
 <!-- CONF HEADER -->
 <header class="header-container l-page" data-id="glitch">
+	<!-- HEADER ANIMATION -->
+	<!-- <div id="particles-js"></div> -->
+	<div id="header-animation"></div>
+	<!-- Using Threejs & Jerome Etienne's Threex -->
+	<script src='https://jeromeetienne.github.io/threex.terrain/examples/vendor/three.js/build/three-min.js'></script>
+	<script src='https://jeromeetienne.github.io/threex.terrain/examples/vendor/three.js/examples/js/SimplexNoise.js'></script>
+	<script src='https://jeromeetienne.github.io/threex.terrain/threex.terrain.js'></script>
+
+
+	<!-- /HEADER ANIMATION -->
 	<div class="content">
-
 		<div class="header-wrapper">
-			<!-- HEADER ANIMATION -->
-			<div id="particles-js"></div>
-			<!-- <script src="/media/particles.js"></script> -->
-			<!-- /HEADER ANIMATION -->
-
 			<div class="row">
 				<div class="header__tp">
-					<h2 class="header__title yellow">The biggest freaking javascript conf in the world</h2>
+					<h2 class="header__title yellow">
+						<span>The biggest<br/>freaking</span><br/>
+						<span class="title__main">javascript<br>       conference<br></span><br/>
+						<span class="title__secondary">in the world</span>
+					</h2>
 				</div>
 			</div>
 			

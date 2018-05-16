@@ -144,6 +144,7 @@ gulp.task('default', function() {
 
 	//When a SASS file change, build the CSS
 	gulp.watch('dev/sass/**/*.scss', ['css']);
+	// gulp.watch(['dev/**/*.scss', 'dev/**/*.js', 'dev/**/*.scss', 'dev/**/*.html', 'dev/**/*.php'], ['build']);
 
 	//When any CSS, HMTL, or JS files change, reload the browser
 	gulp.watch(['dev/css/main.css', '**/*.html', '**/*.php', 'dev/js/**/*.js']).on('change', function(file) {
@@ -155,7 +156,7 @@ gulp.task('default', function() {
 //Build the complete site inside the "build" folder
 gulp.task('build', function(callback) {
 
- 	runSequence('clean', 'minifyCSS', 'scripts', 'webp', 'imageMin', 'copy', 'rev', 'mp4', function () {
+ 	runSequence('clean', 'css', 'minifyCSS', 'scripts', 'webp', 'imageMin', 'copy', 'rev', 'mp4', function () {
  		process.exit(0);
  	});
 
