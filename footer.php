@@ -7,7 +7,7 @@
 		<ul class="powered_link">
 			<li class="p__link"><a href="https://asgabe.github.io//?utm_source=braziljs" target="__blank" title="Made by gabe">gabe</a></li>
 			<li class="p__link"><a href="https://nasc.io/?utm_source=braziljs" target="__blank" title="Powered by Nasc">nasc</a></li>
-			<li class="p__link"><a href="http://www.dex01.com/?utm_source=braziljs" target="__blank" title="Design by Dex01"><img src="<?php asset_path('img/logos/dex01.svg') ?>" /><span class="visuallyhidden">Designer by Dex01</span></a></li>
+			<li class="p__link"><a href="http://www.dex01.com/?utm_source=braziljs" target="__blank" title="Design by Dex01"><img src="<?php asset_path('img/logos/logo-dex01.svg') ?>" /><span class="visuallyhidden">Designer by Dex01</span></a></li>
 		</ul>
 	</div>
 </div>
@@ -47,6 +47,8 @@
 
 
 <?php } ?>
+
+	<script src="https://embedstore.ingresse.com/ingresse-widget.js"></script>
 </body>
 
 </html>

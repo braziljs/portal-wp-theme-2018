@@ -193,6 +193,7 @@ $navigation-hamburger-stick-width: 12px;
 .navigation-toogler {
 	display: block;
 	border: none;
+	outline: none;
 	background-color: transparent;
 	transition: opacity ease .4s;
 	cursor: pointer;
