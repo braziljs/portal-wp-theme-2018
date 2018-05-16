@@ -7,6 +7,50 @@
 
 /*
 *
+* NAVIGATION
+*
+*/
+
+.nav-braziljs {
+	.nav-wp {
+		display: flex;
+		flex-flow: column;
+
+		@include breakpoint(tablet-and-up) {
+			flex-flow: row;
+		}
+
+		.navigation-list {
+			margin: 23px 30px 23px 0;
+		}
+
+		.anchor-button {
+			width: auto;
+			height: 30px;
+			border: none;
+			flex-flow: row;
+
+			@include breakpoint(desktop-and-up) {
+				display: flex;
+				flex-flow: column	;
+			}
+
+			.desc {
+				text-transform: uppercase;
+			}
+
+			.icon {
+				width: 18px;
+				height: 18px;
+				@include background-image("icons/icon-cart.svg", cover);
+			}
+		}
+	}
+}
+
+
+/*
+*
 * WRAPPER
 *
 */
@@ -93,14 +137,7 @@
 		}
 
 		.anchor-button {
-			color: #000;
 			margin: 0;
-			border-color: #000;
-
-			&:hover {
-				color: #fff;
-				background-color: #000;
-			}
 		}
 
 		.ingresse-widget {

@@ -12,7 +12,7 @@
 			<div class="newsletter-about">
 				<form id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" method="post" action="//braziljs.us5.list-manage.com/subscribe/post?u=77b6594f10bba05dcc722c80e&id=e6beed4270">
 					<input class="input" placeholder="e-mail" type="email" name="EMAIL" id="mce-EMAIL" required />
-					<button type="submit" class="anchor-button anchor-button--color-5">Assine a newsletter</button>
+					<button type="submit" class="anchor-button" data-color="yellow">Assine a newsletter</button>
 				</form>
 			</div>
 		</div>

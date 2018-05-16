@@ -7,16 +7,12 @@ Template Name: Conf
 ?>
 
 <?php get_header(); ?>
-<?php get_template_part('sections/navigation'); ?>
+<?php get_template_part('sections/conf/navigation'); ?>
 
 <!-- HOME HEADER -->
 <header class="header-container l-page" data-id="glitch">
 	<div class="content">
-		
-		<h1 class="header__logo">
-			<img src="<?php asset_path('img/logos/brjs-logo-vertical-72.png') ?>" alt="BrazilJS" />
-		</h1>
-		
+
 		<div class="header-wrapper">
 			<div class="row">
 				<div class="header__tp">
@@ -61,7 +57,7 @@ Template Name: Conf
 			</div>
 			<div class="conf__buttons">
 				<div class="anchor-button ingresse-widget" data-btntext="Comprar Ingressos" data-btnbgcolor="#ffc819" data-btntextcolor="#222" data-eventid="23468">comprar ingresso</div>
-				<a href="https://docs.google.com/forms/d/e/1FAIpQLScvM9sctUCe2vjbUxv3QzhRimn5ztB7JyPgbnpTDksS3eTpQw/viewform" class="anchor-button">call 4 papers</a>
+				<a class="anchor-button" href="https://docs.google.com/forms/d/e/1FAIpQLScvM9sctUCe2vjbUxv3QzhRimn5ztB7JyPgbnpTDksS3eTpQw/viewform">call 4 papers</a>
 			</div>
 		</div>
 	</div>

@@ -14,7 +14,6 @@
 
 .featured-wrapper {
 	padding: 64px 0;
-	background-color: #000;
 
 	.highlight__articles {
  
@@ -47,7 +46,7 @@
 		}
 
 		.highlight__info__articles {
-	    color: #fff;
+	    color: #000;
 	    font-family: "Lato";
 	    margin-top: 10px;
 	    margin-bottom: 10px;
@@ -67,7 +66,7 @@
 		    margin-bottom: 20px;
 		    margin-bottom: 1.25rem;
 		    font-family: "Lora", serif;
-		    color: white;
+		    color: #000;
 		    font-size: 15px;
 		    font-size: 0.9375rem;
 		    line-height: 135%;
@@ -78,7 +77,7 @@
 	.card__title__articles,
 	.card__paragraph__articles {
 		font-family: "Lato";
-		color: #fff;
+		color: #000;
 	}
 
 	.card__title__articles {
@@ -375,23 +374,19 @@
 	a {
 		line-height: 120%;
 		font-weight: 900;
-		font-style: italic;
-		color: $color-white;
-		transform: skew(-6deg);
 		text-transform: uppercase;
-		color: $color-cloud-burst;
-		font-family: $font-primary;
+		color: #000;
 		@include rem(font-size, 13px);
-		@include rem(padding, 10px 15px);
-		background-color: $color-white;
-		border: 1px solid $color-cloud-burst;
+		padding: 10px 15px;
+		background-color: #fff;
+		border: 1px solid #000;
 		transition: color ease $basic-transition, 
 								background-color ease $basic-transition;
 
 		&:hover, &:focus {
 			opacity: 1;
-			color: $color-white;
-			background-color: $color-cloud-burst;
+			color: #fff;
+			background-color: #000;
 			transition: color ease $basic-transition, 
 									background-color ease $basic-transition;
 		}
@@ -399,7 +394,7 @@
 	}
 
 	.current {
-		color: $color-cloud-burst;
+		// color: $color-cloud-burst;
 	}
 
 }

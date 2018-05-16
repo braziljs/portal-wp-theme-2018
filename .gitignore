@@ -45,6 +45,7 @@ Thumbs.db
 # User path specifics #
 ######################
 node_modules/
+assets/
 .sass-cache/
 dev/img-min
 .git/

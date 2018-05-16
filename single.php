@@ -1,28 +1,6 @@
 <?php get_header(); ?>
 
-<!-- NAVIGATION -->
-<div class="nav__reborn type-2">
-	<div class="content">
-		<img class="header__logo" src="<?php asset_path('img/logos/braziljs-horizontal.svg') ?>" alt="BrazilJS" />
-		<div id="js-navigation-wrapper" class="navigation-wrapper flow-opposite">
-			<button id="js-navigation-toogler" class="default-button navigation-toogler" type="button" aria-label="Abrir o menu de navegação">
-				<span class="navigation-toogler__text">menu</span><span class="navigation-toogler__burguer">&nbsp;</span>
-			</button>
-			<nav id="js-navigation" class="navigation" role="navigation">
-				<?php
-					$args = array(
-						'menu' => 'menu',
-						'container' => false,
-						'menu_class' => 'navigation-list',
-						'menu_id' => 'js-navigation-list'
-					);
-					wp_nav_menu($args);
-				?>
-			</nav>
-		</div>
-	</div>
-</div>
-<!-- END NAVIGATION -->
+<?php get_template_part('sections/navigations/nav-articles'); ?>
 
 <!-- SINGLE ARTICLE -->
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -93,44 +71,35 @@
 	?>
 
 	<!-- LEIA TAMBEM -->
-	<section class="section-wrapper">
+	<section class="home-videos__wrapper read-more">
 		<div class="content">
 			<div class="row">
-				<h2 class="title" id="related-links">Leia também</h2>
+				<h2 class="title white" id="related-links">Leia também</h2>
 			</div>
-		</div>
-		<div class="row">
+			<div class="row">
 
-			<ul class="home-videos__item-list">
-				<?php while ($query->have_posts()): $query->the_post(); ?>
+				<ul class="home-videos__item-list">
+					<?php while ($query->have_posts()): $query->the_post(); ?>
 
-					<?php
-						$postThumb = wp_get_attachment_image_src(get_post_thumbnail_id(), 'post-thumb');
-						if (empty($postThumb))  {
-							$postThumb[0] = get_template_directory_uri().'/dev/img/thumb-generica-2.jpg';
-						}
-					?>
+						<?php
+							$postThumb = wp_get_attachment_image_src(get_post_thumbnail_id(), 'post-thumb');
+							if (empty($postThumb))  {
+								$postThumb[0] = get_template_directory_uri().'/assets/img/thumb-generica-2.jpg';
+							}
+						?>
 
-					<li class="home-videos__item">
-						<div class="card">
-							<div class="card__header">
-								<a href="<?php the_permalink() ?>" class="media-wrapper" aria-hidden="true" role="presentation" tabindex="-1">
-									<img class="media-wrapper__thumb card__thumb" src="<?php echo $postThumb[0]; ?>" alt="<?php echo get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true); ?>" />
-								</a>
-							</div>
-							<div class="card__content">
-								<h3 class="card__title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
-								<div class="card__paragraph">
-									<?php the_excerpt(); ?>
-								</div>
-							</div>
-						</div>
-					</li>
-		 		<?php endwhile; ?>
-			</ul>
+						<li class="home-videos__item">
+							<a href="<?php the_permalink() ?>" class="media-wrapper media-wrapper--video" aria-hidden="true" role="presentation" tabindex="-1">
+								<img class="media-wrapper__thumb card__thumb" src="<?php echo $postThumb[0]; ?>" alt="<?php echo get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true); ?>" />
+							</a>
+							<p class="home-videos__info paragraph paragraph--color-2"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></p>
+						</li>
+			 		<?php endwhile; ?>
+				</ul>
 
-			<div class="center-elements">
-				<a href="<?php bloginfo('url'); ?>/blog" class="anchor-link">Confira todos os artigos</a>
+				<div class="center-elements">
+					<a href="<?php bloginfo('url'); ?>/blog" class="anchor-link">Confira todos os artigos</a>
+				</div>
 			</div>
 		</div>
 	</section>
