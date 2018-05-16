@@ -107,17 +107,11 @@
 }
 
 .home-videos__info {
-	width: 50%;
+	width: 100%;
 	float: left;
 	font-weight: 900;
 	font-family: $font-primary;
 	@include rem(font-size, 14px);
-
-	@include breakpoint(tablet-and-up) {
-		width: 100%;
-		@include rem(font-size, 14px);
-	}
-
 }
 
 /*

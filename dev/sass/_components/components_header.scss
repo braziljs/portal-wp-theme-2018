@@ -13,11 +13,7 @@
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	@include rem(margin-top, 62px);
-
-	@include breakpoint(tablet-and-up) {
-		@include rem(margin-top, 123px);
-	}
+	@include rem(margin-top, 50px);
 
 	.header__tp {
 		display: flex;
@@ -99,21 +95,6 @@
 * ELEMENTS
 *
 */
-
-.header__logo {
-	position: absolute;
-	@include rem(top, 10px);
-	z-index: $z-index-jump;
-	max-width: 72px;
-
-	@include breakpoint(tablet-and-up) {
-		@include rem(top, 5px);
-	}
-
-	@include breakpoint(desktop-and-up) {
-		@include rem(top, 25px);
-	}
-}
 
 .header__title {
 	margin: 0;

@@ -1,11 +1,6 @@
 <!-- HOME HEADER -->
 <header class="header-container" data-id="glitch">
 	<div class="content">
-		
-		<h1 class="header__logo">
-			<img src="<?php asset_path('img/logos/brjs-logo-vertical-72.png') ?>" alt="BrazilJS" />
-		</h1>
-		
 		<div class="header-wrapper">
 			<div class="row">
 				<div class="header__tp">
@@ -16,7 +11,7 @@
 			
 			<div class="row">
 				<div class="header__li">
-					<a href="<?php bloginfo('url'); ?>/sobre" class="anchor-button anchor-button--color-5">Sobre a BrazilJS</a>
+					<a href="<?php bloginfo('url'); ?>/sobre" class="anchor-button" data-color="yellow">Sobre a BrazilJS</a>
 					<a href="<?php bloginfo('url'); ?>/blog" class="paragraph" title="Explore os artigos disponíveis no Portal BrazilJS">Confira os últimos artigos</a>
 				</div>
 			</div>

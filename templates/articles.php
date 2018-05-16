@@ -5,8 +5,7 @@ Template Name: Artigos
 ?>
 
 <?php get_header(); ?>
-<?php get_template_part('sections/navigation'); ?>
-<?php get_template_part('sections/search-box'); ?>
+<?php get_template_part('sections/navigations/nav-articles'); ?>
 
 	<?php $paginationNumber = get_query_var('paged'); ?>
 	
@@ -78,7 +77,7 @@ Template Name: Artigos
 		</div>	
 	<?php endif ?>
 
-	<div class="section-wrapper article-list-wrapper" style="padding-top: 64px;">
+	<div class="section-wrapper article-list-wrapper">
 		<div class="content">
 			<h2 class="title">Últimos artigos</h2>
 			<ul class="article-list article-list__articles">
