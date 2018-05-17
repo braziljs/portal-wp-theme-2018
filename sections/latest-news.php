@@ -8,7 +8,7 @@
 		$tag = get_term_by('name', 'weekly', 'post_tag');
 		$args = array(
 			'post_type' => 'post',
-			'posts_per_page' => 7,
+			'posts_per_page' => 4,
 			'order' => 'DESC',
 			'tag__not_in' => $tag->term_id
 		);
