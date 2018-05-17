@@ -5,10 +5,6 @@ Template Name: Conf
 */
 
 ?>
-
-<script>
-	window.THEME_PATH = "<?php echo asset_path('') ?>"
-</script>
 <?php get_header(); ?>
 <?php get_template_part('sections/conf/navigation'); ?>
 

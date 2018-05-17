@@ -19,7 +19,7 @@ define(function () {
 
 		headerAnim: function () {
 			$(document).ready(function () {
-				$.getScript(window.THEME_PATH + '/media/terrain.js', function () {
+				$.getScript(window.THEME_PATH + '/assets/media/terrain.js', function () {
 					window.applyHeaderEffect(document.getElementById('header-animation'))
 				})
 				// $.getScript(window.THEME_PATH + '/media/particle.js', function () {

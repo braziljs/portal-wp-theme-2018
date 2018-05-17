@@ -301,4 +301,13 @@ if ( function_exists( 'add_theme_support' ) ) {
 
 	}
 
+	add_action('enqueue_scripts', 'header_animations');
+
+	function header_animations() {
+		// Be sure jQuery is loading
+		wp_enqueue_script('jquery');
+		// Load terrain script
+		wp_enqueue_script('terrain', get_template_directory_uri() . '/media/terrain.js', array('jquery'), FALSE, TRUE);
+	}
+
 ?>

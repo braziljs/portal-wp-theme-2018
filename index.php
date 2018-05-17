@@ -1,9 +1,6 @@
 <?php get_header(); ?>
 
 <!-- HEADER -->
-<script>
-	window.THEME_PATH = "<?php echo asset_path('') ?>"
-</script>
 <section class="section-wrapper header__reborn">
 	<?php get_template_part('sections/navigations/nav-default'); ?>
 	<?php get_template_part('sections/header'); ?>
