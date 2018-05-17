@@ -19,14 +19,10 @@ define(function () {
 
 		headerAnim: function () {
 			$(document).ready(function () {
+				// inspired on https://codepen.io/felipenmoura/pen/KRGQwR
 				$.getScript(window.THEME_PATH + '/assets/media/terrain.js', function () {
 					window.applyHeaderEffect(document.getElementById('header-animation'))
 				})
-				// $.getScript(window.THEME_PATH + '/media/particle.js', function () {
-				// 	particlesJS.load('particles-js', window.THEME_PATH + '/media/particlesjs-config.json', function() {
-				// 		// console.log('callback - particles.js config loaded');
-				// 	});
-				// })
 			})
 		},
 

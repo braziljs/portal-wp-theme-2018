@@ -25,7 +25,7 @@ Template Name: Conf
 			<div class="row">
 				<div class="header__tp">
 					<h2 class="header__title yellow">
-						<span>The biggest<br/>freaking</span><br/>
+						<span class="title__primary">The biggest<br/>freaking</span><br/>
 						<span class="title__main">javascript<br>       conference<br></span><br/>
 						<span class="title__secondary">in the world</span>
 					</h2>
@@ -34,8 +34,13 @@ Template Name: Conf
 			
 			<div class="row">
 				<div class="header__li">
-					<a href="<?php bloginfo('url'); ?>/sobre" class="anchor-button anchor-button--color-5" style="visibility: hidden;">Sobre a BrazilJS</a>
-					<a href="javascript:void(0)" class="paragraph" title="24 e 25 de AGOSTO">24 e 25 de agosto porto alegre rs barra shopping sul</a>
+					<!-- <a href="<?php bloginfo('url'); ?>/sobre" class="anchor-button anchor-button--color-5" style="visibility: hidden;">Sobre a BrazilJS</a> -->
+					<div class="header__date_venue">
+						<a href="https://www.google.com/maps/place/Barra+Shopping+Sul/@-30.0843929,-51.2475847,17z/data=!3m1!4b1!4m5!3m4!1s0x951978a0f03108f3:0x6d93ede7b30eb35f!8m2!3d-30.0843929!4d-51.245396"
+							class="paragraph"
+							target="braziljs_map"
+							title="24 e 25 de AGOSTO">24 e 25 de agosto porto alegre rs barra shopping sul</a>
+					</div>
 				</div>
 			</div>
 		</div>
