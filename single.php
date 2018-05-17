@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<?php get_template_part('sections/navigations/nav-articles'); ?>
+<?php get_template_part('sections/navigations/nav-default'); ?>
 
 <!-- SINGLE ARTICLE -->
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>

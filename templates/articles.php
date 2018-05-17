@@ -5,7 +5,7 @@ Template Name: Artigos
 ?>
 
 <?php get_header(); ?>
-<?php get_template_part('sections/navigations/nav-articles'); ?>
+<?php get_template_part('sections/navigations/nav-default'); ?>
 
 	<?php $paginationNumber = get_query_var('paged'); ?>
 	

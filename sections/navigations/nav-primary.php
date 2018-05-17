@@ -1,9 +1,9 @@
-<!-- NAVIGATION ARTICLES -->
-<div class="nav-braziljs" data-type="articles">
+<!-- NAVIGATION -->
+<div class="nav-braziljs">
 	<div class="content">
 		<div class="nav-wrapper">
 			<a href="<?php bloginfo('url'); ?>/" class="nav-logo">
-				<img class="nav-logo" src="<?php asset_path('img/logos/logo-brjs-horizontal.svg') ?>" alt="BrazilJS" />
+				<img class="nav-logo" src="<?php asset_path('img/logos/logo-brjs-vertical.svg') ?>" alt="BrazilJS" />
 			</a>
 			<div id="js-navigation-wrapper" class="nav-wrapper-list">
 				<button id="js-navigation-toogler" class="default-button navigation-toogler" type="button" aria-label="Abrir o menu de navegação">
@@ -24,4 +24,4 @@
 		</div>
 	</div>
 </div>
-<!-- END NAVIGATION ARTICLES -->
+<!-- END NAVIGATION -->

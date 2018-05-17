@@ -4,13 +4,12 @@ Template Name: Eventos
 */
 ?>
 <?php get_header(); ?>
-<?php get_template_part('sections/navigation'); ?>
+<?php get_template_part('sections/navigations/nav-default'); ?>
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
 		<header class="page-header">
 			<div class="content">
-				<img class="header__logo" src="<?php asset_path('img/logos/braziljs.svg') ?>" alt="BrazilJS" />
 				<div class="post-content-wrapper">
 					<div class="center-elements">
 						<h1 id="latest-events-title" class="title subtitle--color-2 title--type-2 title--type-4"><?php the_title(); ?></h1>
