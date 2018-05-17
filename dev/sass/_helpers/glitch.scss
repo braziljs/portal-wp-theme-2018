@@ -1,0 +1,109 @@
+// @import "compass/css3";
+
+// body{
+//   background:black;
+//   font-family: 'Varela', sans-serif;
+// }
+
+.glitch{
+    position: relative;
+    display: inline-block;
+    cursor: default;
+//   color:white;
+//   font-size:100px;
+//   position:relative;
+//   width:400px;
+//   margin:0 auto;
+  animation: noise-zoom 1s infinite linear alternate-reverse;
+}
+@keyframes noise-zoom{
+  0% {
+    // transform: scale(1 - random(10)/100)
+  }
+  10% {
+    // transform: scale(1 - random(3)/100)
+  }
+  20% {
+    transform: /*scale(1 - random(3)/100)*/ skew(-(random(10)-5)+deg, 0);
+  }
+  30% {
+    // transform: scale(1 - random(3)/100)
+  }
+  40% {
+    // transform: scale(1 - random(3)/100)
+  }
+  50% {
+    // transform: scale(1 - random(3)/100)
+  }
+  60% {
+    // transform: scale(1 - random(3)/100)
+  }
+  70% {
+    // transform: scale(1 - random(3)/100)
+  }
+  80% {
+    // transform: scale(1 - random(3)/100);
+    transform: /*scale(1 - random(3)/100)*/ skew(-random(10)+deg, 0);
+  }
+  90% {
+    // transform: scale(1 - random(3)/100)
+  }
+}
+@keyframes noise-anim{
+  $steps:20;
+  @for $i from 0 through $steps{
+    #{percentage($i*(1/$steps))}{
+      clip:rect(random(100)+px,9999px,random(100)+px,0);
+      text-shadow:(random(20)-10+px) (random(20)-10+px)  (random(40)+px) rgba(255,255,255,.8);
+    }
+  }
+}
+
+.glitch:before,
+.glitch:after {
+    color: inherit !important;
+}
+
+.glitch:after{
+  content:attr(data-text);
+  position:absolute;
+  left:2px;
+  text-shadow:-1px 0 red;
+  top:0;
+  color:white;
+//   background:black;
+  overflow:hidden;
+  clip:rect(0,900px,0,0); 
+  animation-name: noise-anim;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear alternate-reverse;
+//   animation:  2s infinite linear alternate-reverse;
+}
+
+@keyframes noise-anim-2{
+  $steps:20;
+  @for $i from 0 through $steps{
+    #{percentage($i*(1/$steps))}{
+      clip:rect(random(100)+px,9999px,random(100)+px,0);
+      text-shadow:(random(20)-10+px) (random(20)-10+px)  (random(40)+px) rgba(random(255),random(255),random(255),.6);
+    }
+  }
+}
+
+.glitch:before{
+  content:attr(data-text);
+  position:absolute;
+  left:-2px;
+  text-shadow:1px 0 blue; 
+  top:0;
+  color:white;
+//   background:black;
+  overflow:hidden;
+  clip:rect(0,900px,0,0); 
+//   animation: noise-anim-2 3s infinite linear alternate-reverse;
+  animation-name: noise-anim-2;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear alternate-reverse;
+}

@@ -1,10 +1,30 @@
 <!-- HOME HEADER -->
+<?php
+	function glitch($str, $auto=false) {
+		if ($auto) {
+			return '<span class="glitch" data-text="'.$str.'">'.$str.'</span>';
+		} else {
+			return '<span class="" data-text="'.$str.'" onmouseover="this.classList.toggle(\'glitch\')" onmouseout="this.classList.toggle(\'glitch\')">'.$str.'</span>';
+		}
+	}
+?>
 <header class="header-container" data-id="glitch">
 	<div class="content">
 		<div class="header-wrapper">
+			<div class="header-bg" style="background-image: url(<?php echo get_template_directory_uri() ?>/assets/img/backgrounds/header-portal.jpg);"></div>
 			<div class="row">
 				<div class="header__tp">
-					<h2 class="header__title">A BrazilJS é mais do que apenas uma conferência.</h2>
+					<h2 class="header__title">
+						<?php echo glitch('A') ?>
+						<?php echo glitch('BrazilJS', true) ?>
+						<?php echo glitch('é') ?>
+						<?php echo glitch('mais') ?>
+						<?php echo glitch('do') ?>
+						<?php echo glitch('que') ?>
+						<?php echo glitch('apenas') ?>
+						<?php echo glitch('uma') ?>
+						<?php echo glitch('conferência') ?>
+					</h2>
 					<p class="paragraph">Levamos conteúdo de qualidade para toda a comunidade.</p>
 				</div>
 			</div>
