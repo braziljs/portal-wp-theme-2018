@@ -110,6 +110,10 @@
 		}
 	}
 	.article-list {
+		@include breakpoint(desktop) {
+			padding-left: 60px;
+		}
+
 		.article-list__item {
 			height: auto;
 			display: flex;

@@ -1,9 +1,10 @@
 {
-  "css/main.css": "css/main-0cbc80428d.css",
+  "css/main.css": "css/main-3e5e472925.css",
   "img/backgrounds/bg-wrapper--3.png": "img/backgrounds/bg-wrapper--3-1c86696607.png",
   "img/backgrounds/bg-wrapper--5.png": "img/backgrounds/bg-wrapper--5-5559ad6cda.png",
   "img/backgrounds/header-bg-2.jpg": "img/backgrounds/header-bg-2-cd512cefaf.jpg",
   "img/backgrounds/header-bg.jpg": "img/backgrounds/header-bg-bc8bd97bd1.jpg",
+  "img/backgrounds/header-portal.jpg": "img/backgrounds/header-portal-2b46e26fb6.jpg",
   "img/backgrounds/ticker-corner-bg.svg": "img/backgrounds/ticker-corner-bg-e375aac645.svg",
   "img/conf/2018/ada-rose-cannon.jpeg": "img/conf/2018/ada-rose-cannon-c86009206b.jpeg",
   "img/conf/2018/feross-aboukhadijeh.jpg": "img/conf/2018/feross-aboukhadijeh-d96475f94d.jpg",
@@ -73,5 +74,5 @@
   "img/thumb-generica-2.jpg": "img/thumb-generica-2-d08ab00929.jpg",
   "img/thumb-generica.jpg": "img/thumb-generica-c80a3665cb.jpg",
   "img/thumb-generica.png": "img/thumb-generica-e6a8d8412e.png",
-  "js/main.js": "js/main-c91cc34cdb.js"
+  "js/main.js": "js/main-f1b38b46c6.js"
 }

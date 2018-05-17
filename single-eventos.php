@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<?php get_template_part('sections/navigation'); ?>
+<?php get_template_part('sections/navigations/nav-primary'); ?>
 
 <?php
 

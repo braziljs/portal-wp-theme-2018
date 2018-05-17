@@ -12,7 +12,7 @@ define(function () {
 
 			home.bindEvents();
 
-			// home.brjsReborn();
+			home.brjsReborn();
 
 		},
 
@@ -23,20 +23,62 @@ define(function () {
 		},
 
 		makeIframe: function (url) {
-			
 			btn.click(function () {
 				elm.html('<iframe src=https://www.youtube.com/embed/'+ url +'?autoplay=1 frameborder="0" allowfullscreen>');
 			});
 		},
 
 		brjsReborn: function () {
-			$('body').attr("data-vine", true);
+			var vdContainer = $('#brjs-opening-video')
+			if (vdContainer) {
 
-			setTimeout(function() {
+				var vd = vdContainer.find('video')[0]
 
-				$('#brjs-opening-video').css({opacity: 0});
-				$('body').attr("data-vine", false);
-			}, 10000)
+				if (!vd) {
+					return
+				}
+
+				var allowedVideoToPlay = 0
+				function canPlayVideo () {
+					allowedVideoToPlay++
+
+					if (allowedVideoToPlay >1) {
+						// both animation and buffer have ended
+						vd.style.visibility = 'visible'
+						vd.play()
+					}
+				}
+				function closeVideo () {
+					vdContainer.fadeOut('slow');
+					window.scrollTo(0,0)
+					document.body.dataset.vine = 0
+					localStorage.setItem('hasSeenVideo', 1)
+				}
+				
+				vd.oncanplaythrough = function () {
+					// video has buffered enought
+					canPlayVideo()
+				}
+				vd.onended = function () {
+					// video has finished
+					closeVideo()
+				}
+				setTimeout(function () {
+					canPlayVideo()
+				}, 4000);
+
+				vdContainer.css({ /* width: $(window).innerWidth() + 'px',*/ height: $(window).innerHeight() + 'px' });
+				$(window).resize(function(){
+					vdContainer.css({ /* width: $(window).innerWidth() + 'px',*/ height: $(window).innerHeight() + 'px' });
+				});
+			}
+			  
+
+			// setTimeout(function() {
+
+			// 	$('#brjs-opening-video').css({opacity: 0});
+			// 	$('body').attr("data-vine", false);
+			// }, 10000)
 		}
 	}
 
