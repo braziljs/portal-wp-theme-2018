@@ -51,6 +51,16 @@ $navigation-hamburger-stick-width: 12px;
 		@include breakpoint(tablet-and-up) {
 			margin-top: 60px;
 		}
+
+		.nav-logo {
+			width: 72px;
+			height: 107px;
+			position: relative;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
 	}
 }
 

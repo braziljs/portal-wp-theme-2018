@@ -1,9 +1,17 @@
 <!-- NAVIGATION -->
+<style>	
+:root {
+    --color-primary:#fff;
+    --color-secondary:#fff;
+    --transparent:rgba(0,0,0,0);
+}
+</style>
+
 <div class="nav-braziljs">
 	<div class="content">
 		<div class="nav-wrapper">
 			<a href="<?php bloginfo('url'); ?>/" class="nav-logo">
-				<img class="nav-logo" src="<?php asset_path('img/logos/logo-brjs-vertical.svg') ?>" alt="BrazilJS" />
+				<?php get_template_part('sections/logo-anim'); ?>
 			</a>
 			<div id="js-navigation-wrapper" class="nav-wrapper-list">
 				<button id="js-navigation-toogler" class="default-button navigation-toogler" type="button" aria-label="Abrir o menu de navegação">

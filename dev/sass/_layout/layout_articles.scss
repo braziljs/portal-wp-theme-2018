@@ -140,7 +140,18 @@
 		    	position: absolute;
 		    	filter: grayscale(100%);
 					@include background-image(null, cover);
+					@include transition;
+
+					&:hover {
+						filter: none;
+						opacity: 1;
+						@include transition;
+					}
 		    }
+
+				&:hover {
+					opacity: 1;
+				}
 			}
 
 			.article__title {

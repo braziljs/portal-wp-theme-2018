@@ -1,30 +1,18 @@
 <style>
-    body {
-        background: #444;
-    }
-    .wrapper {
+    .wrapper--anim {
+        top: -30px;
+        left: -3px;
+        width: 100%;
+        height: 135px;
         position: absolute;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-        width: 400px;
-        height: 400px;
-        display: flex;
-        justify-content: center;
     }
 </style>
 <style>
-    :root {
-        --color-primary:#ff0;
-        --color-secondary:#ff0;
-        --transparent:rgba(0,0,0,0);
-    }
 
     .logo-container {
+        height: 100%;
         color: var(--color-primary);
-        font-size: 10px;
+        font-size: 5px;
         fill: var(--color-primary);
         transition: all ease-in-out .5s;
     }
@@ -167,23 +155,8 @@
         height: 0;
     }
 </style>
-<script>
-    const defaultTheme = 'theme-3'
-    const hoverTheme = 'theme-2'
-    function toggleLogo (t) {
-        t = t.firstElementChild
-        if (t.classList.contains(defaultTheme)) {
-            t.classList.remove(defaultTheme)
-            t.classList.add(hoverTheme)
-        } else {
-            t.classList.add(defaultTheme)
-            t.classList.remove(hoverTheme)
-        }
-    }
-</script>
-<div class="wrapper"
-    onmouseover="toggleLogo(this)"
-    onmouseout="toggleLogo(this)">
+
+<div class="wrapper--anim">
     <div class="logo-container theme-3">
         <svg class="logo-brazil" version="1.0" xmlns="http://www.w3.org/2000/svg"
                 width="618.000000pt" height="436.000000pt" viewBox="0 0 618.000000 436.000000"
@@ -284,3 +257,24 @@
         </svg>
     </div>
 </div>
+
+
+<script>
+$(function () {
+    $('.nav-logo').hover(function () {
+        // debugger;
+        const defaultTheme = 'theme-3';
+        const primaryTheme = 'theme-2';
+
+        var elm = $('.logo-container');
+
+        if (elm.hasClass(defaultTheme)) {
+            elm.removeClass(defaultTheme);
+            elm.addClass(primaryTheme);
+        } else {
+            elm.addClass(defaultTheme);
+            elm.removeClass(primaryTheme);
+        }
+    });
+});
+</script>

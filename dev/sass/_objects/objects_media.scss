@@ -19,9 +19,20 @@ $inner-border-color: rgba($color-white, .6);
 	.media-wrapper__thumb {
 		width: 100%;
 		height: 100%;
+		@include transition;
 		filter: grayscale(100%);
 	}
 
+	&:hover {
+		.media-wrapper__thumb {
+			opacity: 1;
+			filter: none;
+		}
+	}
+
+	&:hover {
+		opacity: 1;
+	}
 }
 
 .media-wrapper--video {

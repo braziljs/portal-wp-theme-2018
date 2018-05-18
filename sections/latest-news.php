@@ -46,10 +46,10 @@
 			<?php $imageLink = wp_get_attachment_image_src(get_post_thumbnail_id(), 'highlight-thumb'); ?>
 
 			<li class="col-6-12 article-list__item">
-				<div class="card">
+				<a href="<?php the_permalink() ?>" class="card">
 					<div class="article-img" style="background-image: url(<?php echo $imageLink[0]; ?>)"></div>
 					<!-- <div class="after-shadow"></div> -->
-				</div>
+				</a>
 				<div class="article__title">
 					<h3 class="card__title">
 						<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>

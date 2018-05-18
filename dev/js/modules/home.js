@@ -12,8 +12,6 @@ define(function () {
 
 			home.bindEvents();
 
-			// home.brjsReborn();
-
 		},
 
 		bindEvents: function () {
@@ -28,15 +26,6 @@ define(function () {
 			});
 		},
 
-		
-			  
-
-			// setTimeout(function() {
-
-			// 	$('#brjs-opening-video').css({opacity: 0});
-			// 	$('body').attr("data-vine", false);
-			// }, 10000)
-		// }
 	}
 
 	home.init();

@@ -46,8 +46,7 @@
 
 						<li class="events-list__item">
 							<div class="card">
-								<div class="card__header" style="background-image: url(<?php echo $imageLink[0]; ?>)">
-								</div>
+								<a href="<?php the_permalink() ?>" class="card__header" style="background-image: url(<?php echo $imageLink[0]; ?>)"></a>
 								<div class="card__content">
 									<h3 class="card__title">
 										<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>

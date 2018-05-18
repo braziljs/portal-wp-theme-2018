@@ -5,8 +5,7 @@
  * @since HTML5 Reset 2.0
  */
  get_header(); ?>
-<?php get_template_part('sections/navigation'); ?>
-<?php get_template_part('sections/search-box'); ?>
+<?php get_template_part('sections/navigations/nav-default'); ?>
 
 		<div class="page-header">
 			<div class="content">
@@ -41,7 +40,7 @@
 									<div class="card__content">
 										<h2 class="card__title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
 										<div class="card__paragraph">
-											<?php the_excerpt(); ?>
+											<?php //the_excerpt(); ?>
 										</div>
 									</div>
 								</div>
@@ -50,12 +49,11 @@
 				 		<?php endwhile; ?>
 					</ul>
 					<div class="center-elements">
-						<a href="<?php bloginfo('url'); ?>/artigos" class="anchor-button">Confira todos os artigos</a>
+						<a href="<?php bloginfo('url'); ?>/artigos" class="anchor-link">Confira todos os artigos</a>
 					</div>
 				</div>
 			</div>
 		</div>
 <?php get_template_part('sections/weekly-internal'); ?>
-<?php get_template_part('sections/sponsors'); ?>
 <?php get_template_part('sections/footer'); ?>
 <?php get_footer(); ?>

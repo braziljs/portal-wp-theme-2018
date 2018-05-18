@@ -1,9 +1,18 @@
 <!-- NAVIGATION CONF -->
+<style>	
+:root {
+    --color-primary:#fff;
+    --color-secondary:#ff0;
+    --transparent:rgba(0,0,0,0);
+}
+</style>
+
+
 <div class="nav-braziljs">
 	<div class="content">
 		<div class="nav-wrapper">
 			<a href="<?php bloginfo('url'); ?>/" class="nav-logo">
-				<img class="nav-logo" src="<?php asset_path('img/logos/logo-brjs-vertical.svg') ?>" alt="BrazilJS" />
+				<?php get_template_part('sections/logo-anim'); ?>
 			</a>
 			<div class="nav-wp">
 				<div id="js-navigation-wrapper" class="nav-wrapper-list">

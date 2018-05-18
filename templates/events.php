@@ -11,9 +11,7 @@ Template Name: Eventos
 		<header class="page-header">
 			<div class="content">
 				<div class="post-content-wrapper">
-					<div class="center-elements">
-						<h1 id="latest-events-title" class="title subtitle--color-2 title--type-2 title--type-4"><?php the_title(); ?></h1>
-					</div>
+					<h1 id="latest-events-title" class="title"><?php the_title(); ?></h1>
 				</div>
 			</div>
 		</header>
@@ -27,14 +25,14 @@ Template Name: Eventos
 	</div>
 <?php endwhile; endif; ?>
 
-<?php $ticker = get_field('ticker_habilitado', 'option'); ?>
+<?php /*$ticker = get_field('ticker_habilitado', 'option'); ?>
 <?php if($ticker): ?>
 	<div class="section-wrapper top">
 		<div class="content">
 			<?php get_template_part('sections/ticker'); ?>
 		</div>
 	</div>
-<?php endif; ?>
+<?php endif;*/ ?>
 
 
 
@@ -50,9 +48,9 @@ Template Name: Eventos
  ?>
  <?php if (have_posts()): ?>
 	<main class="section-wrapper" id="main">
-		<div class="content">
-			<div class="post-content-wrapper">
-				<ul class="calendar-list center-elements--mobile" aria-labelledby="latest-events-title">
+		<div class="row">
+			<div class="content">
+				<ul class="event-list" aria-labelledby="latest-events-title">
 					<?php while ( have_posts() ) : the_post(); ?>
 						<?php
 							$eventDate = get_field('data');
@@ -66,17 +64,13 @@ Template Name: Eventos
 
 						?>
 
-						<li class="col-5-12 calendar-list__item">
+						<li class="events-list__item">
 							<div class="card card--type-2">
-								<div class="card__header">
-									<a href="<?php the_permalink() ?>" class="media-wrapper" aria-hidden="true" role="presentation" tabindex="-1">
-										<img class="card__thumb" src="<?php echo $imageLink[0]; ?>" alt="<?php echo $imageAlt ?>" />
-									</a>
-								</div>
+								<a href="<?php the_permalink() ?>" class="card__header" aria-hidden="true" role="presentation" tabindex="-1" style="background-image: url(<?php echo $imageLink[0]; ?>);">
+								</a>
 								<div class="card__content">
-									<span class="card__label"><?php echo $eventDay; ?> de <?php echo $eventMonth; ?> <?php echo $eventYear; ?></span>
 									<h2 class="card__title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-									<div class="card__paragraph"><?php the_content() ?></div>
+									<span class="card__label"><?php echo $eventDay; ?> de <?php echo $eventMonth; ?> <?php echo $eventYear; ?></span>
 								</div>
 							</div>
 						</li>
@@ -87,6 +81,6 @@ Template Name: Eventos
 	</main>
 <?php endif; ?>
 <?php get_template_part('sections/weekly-internal'); ?>
-<?php get_template_part('sections/sponsors'); ?>
+
 <?php get_template_part('sections/footer'); ?>
 <?php get_footer(); ?>

@@ -100,6 +100,7 @@ $post-content-wrapper-width-desktop: 800px;
 .header__meta-wrapper {
 	display: flex;
 	flex-flow: row;
+	justify-content: space-between;
 }
 
 .page-container {
@@ -111,7 +112,6 @@ $post-content-wrapper-width-desktop: 800px;
 	flex-flow: row;
 	min-width: 180px;
 	line-height: 120%;
-	margin-right: 40px;
 	@include rem(font-size, 13px);
 	justify-content: space-between;
 
@@ -192,6 +192,8 @@ $post-content-wrapper-width-desktop: 800px;
 */
 
 .header__meta-post {
+	max-width: 700px;
+
 	.post-name {
 		font-weight: 900;
 		line-height: 150%;
@@ -250,14 +252,11 @@ $post-content-wrapper-width-desktop: 800px;
 */
 
 .post-content-wrapper {
-	margin: auto;
+	width: 100%;
 
 	@include breakpoint(tablet-and-up) {
-		@include rem(max-width, $post-content-wrapper-width-medium);
-	}
-
-	@include breakpoint(desktop-and-up) {
-		@include rem(max-width, $post-content-wrapper-width-desktop);
+		// float: right;
+		// @include rem(max-width, 700px);
 	}
 
 }
@@ -266,6 +265,8 @@ $post-content-wrapper-width-desktop: 800px;
 	@include rem(margin-bottom, 40px);
 
 	@include breakpoint(tablet-and-up) {
+		float: right;
+		max-width: 700px;
 		@include rem(margin-bottom, 70px);
 	}
 
