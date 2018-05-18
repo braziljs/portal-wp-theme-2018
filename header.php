@@ -50,6 +50,13 @@
 
 <script>
 	(function (){
+		var finalDate = new Date("2018/07/20"); // will only show the video for first viewers up to that date
+		var today = new Date();
+		if (today > finalDate) {
+			return
+		}
+		// d.setMonth(d.getMonth() - 1);
+
 		var hasSeen = localStorage.getItem('hasSeenVideo')
 		if (!hasSeen) {
 			document.body.dataset.vine = 1
