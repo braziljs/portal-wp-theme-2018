@@ -67,7 +67,7 @@
 			<div
 				id="brjs-opening-video"
 				class="brjs-opening-video">
-				<div class="video-loading-message">Está preparado para<br/>a nova experiência BrazilJS?!</div>
+				<div class="video-loading-message">A BrazilJS tem uma surpresa<br/>preparada para você!</div>
 				<video id="main-reborn-vine" muted>
 					<source src="${window.THEME_PATH}/assets/media/braziljs-new-logo-2018.mp4" type="video/mp4">
 				</video>
