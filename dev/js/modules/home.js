@@ -28,50 +28,7 @@ define(function () {
 			});
 		},
 
-		brjsReborn: function () {
-			var vdContainer = $('#brjs-opening-video')
-			if (vdContainer) {
-
-				var vd = vdContainer.find('video')[0]
-
-				if (!vd) {
-					return
-				}
-
-				var allowedVideoToPlay = 0
-				function canPlayVideo () {
-					allowedVideoToPlay++
-
-					if (allowedVideoToPlay >1) {
-						// both animation and buffer have ended
-						vd.style.visibility = 'visible'
-						vd.play()
-					}
-				}
-				function closeVideo () {
-					vdContainer.fadeOut('slow');
-					window.scrollTo(0,0)
-					document.body.dataset.vine = 0
-					localStorage.setItem('hasSeenVideo', 1)
-				}
-				
-				vd.oncanplaythrough = function () {
-					// video has buffered enought
-					canPlayVideo()
-				}
-				vd.onended = function () {
-					// video has finished
-					closeVideo()
-				}
-				setTimeout(function () {
-					canPlayVideo()
-				}, 4000);
-
-				vdContainer.css({ /* width: $(window).innerWidth() + 'px',*/ height: $(window).innerHeight() + 'px' });
-				$(window).resize(function(){
-					vdContainer.css({ /* width: $(window).innerWidth() + 'px',*/ height: $(window).innerHeight() + 'px' });
-				});
-			}
+		
 			  
 
 			// setTimeout(function() {
@@ -79,7 +36,7 @@ define(function () {
 			// 	$('#brjs-opening-video').css({opacity: 0});
 			// 	$('body').attr("data-vine", false);
 			// }, 10000)
-		}
+		// }
 	}
 
 	home.init();

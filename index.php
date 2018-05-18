@@ -1,23 +1,5 @@
 <?php get_header(); ?>
 
-<script>
-	(function (){
-		var hasSeen = localStorage.getItem('hasSeenVideo')
-		if (!hasSeen) {
-			document.body.dataset.vine = 1
-			document.write(`
-			<div
-				id="brjs-opening-video"
-				class="brjs-opening-video">
-				<div class="video-loading-message">Está preparado para<br/>a nova experiência BrazilJS?!</div>
-				<video id="main-reborn-vine">
-					<source src="<?php asset_path('media/MAIN_1.mp4') ?>" type="video/mp4">
-				</video>
-			</div>`)
-		}
-	})()
-</script>
-
 <!-- HEADER -->
 <section class="section-wrapper header__reborn">
 	<?php get_template_part('sections/navigations/nav-primary'); ?>

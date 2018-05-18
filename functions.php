@@ -57,7 +57,7 @@ if ( !function_exists( 'core_mods' ) ) {
 		if ( !is_admin() ) {
 			wp_deregister_script( 'jquery' );
 			wp_deregister_script( 'wp-embed' );
-			wp_register_script( 'jquery', ( "//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js" ),  false, null, true);
+			wp_register_script( 'jquery', ( "//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js" ),  false, null, false);
 			wp_enqueue_script( 'jquery' );
 		}
 	}
