@@ -15,7 +15,7 @@
 			<div class="row">
 				<div class="header__tp">
 					<h2 class="header__title">
-						<!-- <?php echo glitch('A') ?>
+						<?php echo glitch('A') ?>
 						<?php echo glitch('BrazilJS', true) ?>
 						<?php echo glitch('é') ?>
 						<?php echo glitch('mais') ?>
@@ -23,16 +23,16 @@
 						<?php echo glitch('que') ?>
 						<?php echo glitch('apenas') ?>
 						<?php echo glitch('uma') ?>
-						<?php echo glitch('conferência') ?> -->
+						<?php echo glitch('conferência') ?>
 
 
-						<?php echo glitch('A') ?>
+						<!--<?php echo glitch('A') ?>
 						<?php echo glitch('BrazilJS', true) ?>
 						<?php echo glitch('não') ?>
 						<?php echo glitch('é') ?>
 						<?php echo glitch('apenas') ?>
 						<?php echo glitch('uma') ?>
-						<?php echo glitch('conferência') ?>
+						<?php echo glitch('conferência') ?>-->
 					</h2>
 					<div class="paragraph ">
 						<div class="diagonal-ballon">
