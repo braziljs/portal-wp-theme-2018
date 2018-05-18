@@ -47,9 +47,6 @@
 
 
 <?php } ?>
-	<script>
-		window.THEME_PATH = "<?php echo get_template_directory_uri() ?>"
-	</script>
 	<script src="https://embedstore.ingresse.com/ingresse-widget.js"></script>
 </body>
 

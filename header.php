@@ -49,6 +49,9 @@
 <body id="js-body" class="body">
 
 <script>
+	window.THEME_PATH = "<?php echo get_template_directory_uri() ?>"
+</script>
+<script>
 	(function (){
 		var finalDate = new Date("2018/07/20"); // will only show the video for first viewers up to that date
 		var today = new Date();

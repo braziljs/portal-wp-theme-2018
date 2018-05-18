@@ -8,7 +8,6 @@
     }
 </style>
 <style>
-
     .logo-container {
         height: 100%;
         color: var(--color-primary);
