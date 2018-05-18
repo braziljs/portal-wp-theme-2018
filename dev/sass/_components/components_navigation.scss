@@ -26,6 +26,16 @@ $navigation-hamburger-stick-width: 12px;
 .nav-braziljs {
 	background-color: $color-black;
 
+	.nav-logo {
+		width: 72px;
+		height: 107px;
+		position: relative;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
 	&[data-type="articles"] {
 		background-color: #fff;
 
@@ -36,6 +46,10 @@ $navigation-hamburger-stick-width: 12px;
 		.menu-item {
 			color: #000;
 			font-weight: 900;
+		}
+
+		.nav-logo {
+			width: 127px;
 		}
 	}
 
@@ -50,16 +64,6 @@ $navigation-hamburger-stick-width: 12px;
 
 		@include breakpoint(tablet-and-up) {
 			margin-top: 60px;
-		}
-
-		.nav-logo {
-			width: 72px;
-			height: 107px;
-			position: relative;
-
-			&:hover {
-				opacity: 1;
-			}
 		}
 	}
 }

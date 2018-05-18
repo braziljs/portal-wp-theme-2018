@@ -13,7 +13,7 @@
 	<div class="content">
 		<div class="nav-wrapper">
 			<a href="<?php bloginfo('url'); ?>/" class="nav-logo">
-				<?php get_template_part('sections/logo-anim'); ?>
+				<?php get_template_part('sections/logo-anim-2'); ?>
 			</a>
 			<div id="js-navigation-wrapper" class="nav-wrapper-list">
 				<button id="js-navigation-toogler" class="default-button navigation-toogler" type="button" aria-label="Abrir o menu de navegação">

@@ -12,19 +12,10 @@
 		<?php get_template_part('sections/latest-news'); ?>
 		<?php get_template_part('sections/weekly-internal'); ?>
 		<?php get_template_part('sections/events'); ?>
-		<?php // get_template_part('sections/ticker'); ?>
-		
-		<?php /* ?>
-		<div class="courses_recommended">
-			<?php get_template_part('sections/alura-course'); ?>
-		</div>
-		<?php */ ?>
 	
 	</div>
 	<?php get_template_part('sections/home-videos'); ?>
 </main>
-
-<?php //get_template_part('sections/courses'); ?>
 
 <section class="section-wrapper">
 	<div class="content">
