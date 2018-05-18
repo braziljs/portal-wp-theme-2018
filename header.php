@@ -65,7 +65,7 @@
 				id="brjs-opening-video"
 				class="brjs-opening-video">
 				<div class="video-loading-message">Está preparado para<br/>a nova experiência BrazilJS?!</div>
-				<video id="main-reborn-vine">
+				<video id="main-reborn-vine" muted>
 					<source src="<?php asset_path('media/MAIN_1.mp4') ?>" type="video/mp4">
 				</video>
 			</div>`)
