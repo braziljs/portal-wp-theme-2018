@@ -1,7 +1,7 @@
 # Logs and databases #
 ######################
 *.log
-=======
+
 # Compiled source #
 ###################
 *.com
@@ -29,7 +29,6 @@
 *.log
 *.sql
 *.sqlite
->>>>>>> 912b3bca44b75b84f34e4d362fc02b2f6026d871
 
 # OS generated files #
 ######################
@@ -39,7 +38,6 @@
 .Spotlight-V100
 .Trashes
 ehthumbs.db
-<<<<<<< HEAD
 Thumbs.db
 
 # User path specifics #
@@ -52,5 +50,4 @@ dev/css/
 .git/
 .jekyll-metadata
 .travis.yml.swp
-=======
 Thumbs.db
