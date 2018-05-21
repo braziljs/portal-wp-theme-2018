@@ -2,7 +2,7 @@
 <style>	
 :root {
     --color-primary:#fff;
-    --color-secondary:#fff;
+    --color-secondary:#ff0;
     --transparent:rgba(0,0,0,0);
 }
 </style>
