@@ -1,0 +1,71 @@
+///*------------------------------------*\
+//    #FORMS
+//\*------------------------------------*/
+
+
+/* VARIABLES
+========================================================================== */
+$input-border-color: $color-silver;
+
+/* ELEMENTS
+========================================================================== */
+.label {
+	display: block;
+	font-weight: bold;
+	color: $color-mine-shaft;
+	text-transform: uppercase;
+	@include rem(font-size, 13px);
+	@include rem(margin-bottom, 10px);
+}
+
+.input {
+	width: 100%;
+	outline: none;
+	display: block;
+	position: relative;
+	color: $color-white;
+	@include transition;
+	z-index: $z-index-ground;
+	@include rem(height, 64px);
+	@include rem(font-size, 16px);
+	background-color: transparent;
+	border: 3px solid $sunny-yellow;
+	@include rem(margin-bottom, 5px);
+	@include rem(padding-left, 15px);
+
+	+ .label {
+		@include rem(margin-top, 30px);
+	}
+
+	&:focus {
+		@include transition;
+		border-color: $color-gold;
+	}
+
+}
+
+.input--textarea {
+	@include rem(height, 180px);
+	@include rem(padding-top, 20px);
+}
+
+.input-wrapper {
+	position: relative;
+	z-index: $z-index-ground;
+
+	&:after {
+		content: '';
+		position: absolute; left: 10px; bottom: -10px;
+		z-index: $z-index-underground;
+		display: inline-block;
+		width: 0; height: 0;
+		border-style: solid; border-width: 13px 0 13px 130px; border-color: transparent transparent transparent rgba(0,0,0,.2);
+	}
+
+}
+
+/* VARIATIONS
+========================================================================== */
+.contact-form {
+	@include rem(margin-bottom, 70px);
+}

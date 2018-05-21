@@ -1,0 +1,137 @@
+/*
+*********************
+**** NEWSLETTER *****
+*********************
+*/
+
+
+/*
+*
+* WRAPPER
+*
+*/
+
+.newsletter-wrapper {
+	@include rem(margin-bottom, 64px);
+}
+
+.newsletter-about {
+	width: 100%;
+
+	@include breakpoint(desktop) {
+		width: 500px;
+	}
+
+	#mc-embedded-subscribe-form {
+		width: 100%;
+		display: flex;
+		flex-flow: row;
+		justify-content: center;
+
+		@include breakpoint(desktop) {
+			justify-content: flex-end;
+		}
+
+		@include breakpoint(small) {
+			flex-flow: column;
+
+			button {
+				width: 100%;
+			}
+		}
+
+		input[type="email"] {
+			max-width: 288px;
+			margin-right: 20px;
+			margin-bottom: 0;
+
+			@include breakpoint(small) {
+				width: 100%;
+				max-width: 100%;
+				margin-right: 0;
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+
+.newsletter-flex {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	padding: 10px;
+	margin: 0 auto;
+	max-width: 484px;
+	flex-flow: column;
+	align-items: center;
+  justify-content: space-around;
+
+  .center-elements--mobile {
+  	width: 240px;
+  	text-transform: uppercase;
+  }
+
+	@include breakpoint(desktop) {
+		max-width: 100%;
+		flex-flow: row;
+	}  
+}
+
+.newsletter-wrapper__top {
+	padding: 15px 0;
+	background-color: #000;
+
+	.title--type-2 {
+		color: #fff;
+	}
+
+	@include breakpoint(desktop) {
+		height: 200px;
+	}
+
+}
+
+.newsletter-icon_news {
+	margin: 0 15px;
+
+	img {
+		min-width: 64px;
+	}
+}
+
+.newsletter-wrapper__bottom {
+	background-color: $color-gold;
+	@include rem(padding, 40px 0);
+
+	@include breakpoint(tablet-and-up) {
+		@include rem(padding, 45px 0 10px);
+	}
+
+}
+
+.newsletter__title {
+	@include rem(font-size, 18px);line-height: 115%; font-weight: bold; color: rgba($color-mine-shaft, .7);
+
+	@include breakpoint(tablet-and-up) {
+		@include rem(font-size, 20px);
+	}
+
+
+}
+
+.newsletter__label {
+	display: inline-block;
+	@include rem(margin-bottom, 5px); @include rem(padding, 5px 10px);
+	@include rem(font-size, 13px); line-height: 110%; color: $color-white; text-transform: uppercase;
+	background-color: $color-mine-shaft;
+	border-radius: 4px;
+}
+
+.newsletter__thumb {
+	@include rem(margin-bottom, 10px);
+
+	@include breakpoint(desktop-and-up) {
+		@include rem(margin-top, -95px);
+	}
+
+}

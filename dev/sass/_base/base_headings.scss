@@ -1,0 +1,157 @@
+///*------------------------------------*\
+//    #HEADINGS
+//\*------------------------------------*/
+
+/* VARIABLES
+========================================================================== */
+$title-mobile-margin: 20px;
+$title-tablet-margin: 30px;
+$title-desktop-margin: 40px;
+$title-desktop-padding: 40px;
+
+$subtitle-mobile-margin: 20px;
+$subtitle-desktop-margin: 30px;
+
+/* RESETS
+========================================================================== */
+h1, h2, h3, h4, h5 {
+	font-weight: normal;
+}
+
+/* TITLES
+========================================================================== */
+.title {
+	width: 100%;
+	font-weight: 900;
+	line-height: 150%;
+	position: relative;
+	color: $color-black;
+	@include transition;
+	display: inline-block;
+	text-transform: uppercase;
+	text-decoration: underline;
+	font-family: $font-primary;
+
+	&.white {
+		color: white;
+	}
+
+	@include rem(font-size, 30px);
+	@include rem(margin-bottom, 64px);
+
+	@include breakpoint(tablet-and-up) {
+		width: auto;
+		@include transition;
+		@include rem(font-size, 48px);
+		@include rem(padding, 0 78px);
+		// @include rem(margin-bottom, $title-desktop-margin);
+	}
+
+}
+
+.title--type-2 {
+	font-weight: 900;
+	line-height: 165%;
+	color: $color-black;
+	text-transform: uppercase;
+
+	@include breakpoint(tablet-and-up) {
+		&:after {
+			margin: auto;
+		}
+	}
+}
+
+.title--type-3 {
+	&:after {
+		margin: auto;
+
+		@include breakpoint(tablet-and-up) {
+			margin: initial;
+		}
+
+	}
+}
+
+.title--type-4 {
+	@include rem(font-size, 30px); line-height: 110%; color: $color-white; text-transform: none;
+
+	@include breakpoint(desktop-and-up) {
+		@include rem(font-size, 40px);
+	}
+
+}
+
+/* SIZE VARIATIONS
+========================================================================== */
+.title--size-2 {
+	@include rem(font-size, 40px);
+
+	@include breakpoint(tablet-and-up) {
+		@include rem(font-size, 60px);
+	}
+}
+
+.title-size-24 {
+	@include rem(font-size, 24px);
+
+	@include breakpoint(tablet-and-up) {
+		// @include rem(font-size, 60px);
+	}
+}
+
+/* COLOR VARIATIONS
+========================================================================== */
+.title--color-2 {
+	color: $color-white;
+	&:after {
+		background-color: $color-lightning-yellow;
+	}
+}
+
+
+/* SUBTITLE
+========================================================================== */
+.subtitle {
+	position: relative;
+	@include rem(margin-bottom, $subtitle-mobile-margin);
+	@include rem(font-size, 16px); color: $color-white; font-weight: 900; font-style: italic; text-transform: uppercase;
+
+	@include breakpoint(desktop-and-up) {
+		@include rem(margin-bottom, $subtitle-desktop-margin);
+		@include rem(font-size, 20px);
+	}
+
+}
+
+.subtitle--type-2 {
+	@include rem(margin-bottom, 20px); @include rem(padding-bottom, 10px);
+	@include rem(font-size, 13px); color: $color-emperor;
+	border-bottom: 1px solid $color-alto;
+
+	@include breakpoint(tablet-and-up) {
+		@include rem(margin-bottom, 20px);
+	}
+
+	@include breakpoint(desktop-and-up) {
+		@include rem(margin-bottom, 40px);
+		@include rem(font-size, 16px);
+	}
+
+	&:after {
+		content: '';
+		position: absolute; right: 0; bottom: -2px; left: 0;
+		@include rem(width, 30px); @include rem(height, 3px);
+		background-color: currentColor;
+	}
+
+}
+
+.subtitle--color-2 {
+	color: $color-mine-shaft;
+}
+
+.subtitle--color-3 {
+	color: $color-mine-shaft;
+	border: none;
+}
