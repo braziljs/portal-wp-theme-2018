@@ -40,22 +40,24 @@
 				</div>
 			</div>
 
-			<div class="content">
-				<div class="post-content-wrapper">
-					<div class="post-entry">
-						<?php the_content(); ?>
-					</div>
-					<footer class="row">
-						<div class="tags-list-wrapper">
-							<div class="tags-list__title">Tags</div>
-							<?php the_tags('<ul class="tags-list"><li class="tags-list__item">', '</li><li class="tags-list__item">', '</li></ul>'); ?>
+			<div class="row">
+				<div class="content">
+					<div class="post-wrapper">
+						<div class="post-entry-ctt">
+							<?php the_content(); ?>
 						</div>
-						<ul class="post-share">
-							<a href="#disqus" class="post-share__item comment"></a>
-							<a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" class="post-share__item sharer" target="_blank" rel="external"> </a>
-							<?php /* ?><a href="https://twitter.com/share?via=BrazilJS&amp;text=<?php echo rawurlencode(get_the_title()); ?>&amp;url=<?php the_permalink(); ?>" class="post-share tweet" target="_blank" rel="external"></a><?php */ ?>
-						</ul>
-					</footer>
+						<div class="post-entry-tag">
+							<div class="tags-list-wrapper">
+								<div class="tags-list__title">Tags</div>
+								<?php the_tags('<ul class="tags-list"><li class="tags-list__item">', '</li><li class="tags-list__item">', '</li></ul>'); ?>
+							</div>
+							<ul class="post-share">
+								<a href="#disqus" class="post-share__item comment"></a>
+								<a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" class="post-share__item sharer" target="_blank" rel="external"> </a>
+								<?php /* ?><a href="https://twitter.com/share?via=BrazilJS&amp;text=<?php echo rawurlencode(get_the_title()); ?>&amp;url=<?php the_permalink(); ?>" class="post-share tweet" target="_blank" rel="external"></a><?php */ ?>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 		</article>

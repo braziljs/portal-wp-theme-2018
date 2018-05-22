@@ -4,7 +4,8 @@
  * @subpackage HTML5-Reset-WordPress-Theme
  * @since HTML5 Reset 2.0
  */
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 
 <html <?php language_attributes(); ?>>
 <head>
@@ -123,4 +124,5 @@
 		}
 	})()
 </script>
-<!-- <div class="full-wrapper"> -->
+
+<div class="full-wrapper">

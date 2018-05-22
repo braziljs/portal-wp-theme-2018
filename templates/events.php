@@ -15,10 +15,12 @@ Template Name: Eventos
 				</div>
 			</div>
 		</header>
-		<div class="content">
-			<div class="post-content-wrapper">
-				<div class="post-entry post-entry--page">
-					<?php the_content(); ?>
+		<div class="page-content">
+			<div class="content">
+				<div class="post-content-wrapper">
+					<div class="post-entry post-entry--page">
+						<?php the_content(); ?>
+					</div>
 				</div>
 			</div>
 		</div>

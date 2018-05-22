@@ -118,17 +118,16 @@ $product-color-3: $color-mine-shaft;
 
 				}
 			}
-			
-			@include breakpoint(tablet-and-up) {
-				// @include rem(margin-top, 30px);
-			}
 		}
 
 		.products-paragraph {
 			width: 240px;
+			display: flex;
 			font-weight: 900;
+			flex-flow: column;
 			padding-top: 10px;
 			text-transform: uppercase;
+			justify-content: space-between;
 			@include rem(font-size, 12px);
 
 			.paragraph {
