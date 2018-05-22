@@ -107,7 +107,7 @@
         top: 6.3em;
     }
     .theme-2 .logo-j-j:after {
-        height: 5em;
+        /*height: 5em;*/
     }
     .theme-2 .logo-s {
         left: 18em;

@@ -126,5 +126,3 @@
 		}
 	})()
 </script>
-
-<div class="full-wrapper">
