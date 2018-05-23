@@ -288,7 +288,6 @@ $inner-border-space: 5px;
 .header__meta-wrapper {
 	display: flex;
 	flex-flow: row;
-	justify-content: space-between;
 }
 
 .page-container {
@@ -300,6 +299,7 @@ $inner-border-space: 5px;
 	flex-flow: row;
 	min-width: 180px;
 	line-height: 120%;
+	margin-right: 60px;
 	@include rem(font-size, 13px);
 	justify-content: space-between;
 

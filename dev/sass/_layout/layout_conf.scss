@@ -12,6 +12,13 @@
 */
 
 .nav-braziljs {
+	z-index: 2;
+	position: relative;
+
+	&.nav-conf {
+		box-shadow: 0 30px 100px 15px #000;
+	}
+
 	.nav-wp {
 		display: flex;
 		flex-flow: column;

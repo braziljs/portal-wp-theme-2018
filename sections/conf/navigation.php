@@ -8,7 +8,7 @@
 </style>
 
 
-<div class="nav-braziljs">
+<div class="nav-braziljs nav-conf">
 	<div class="content">
 		<div class="nav-wrapper">
 			<a href="<?php bloginfo('url'); ?>/" class="nav-logo">

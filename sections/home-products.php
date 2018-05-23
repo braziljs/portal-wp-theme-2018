@@ -104,7 +104,7 @@
 					<div class="products-highlight">
 						<div class="products-highlight__item">
 							<strong class="products-highlight__value">100Mi+</strong>
-							<span class="products-highlight__key">devs/mês</span>
+							<span class="products-highlight__key">devs <br> por mês</span>
 						</div>
 						<div class="products-highlight__item">
 							<strong class="products-highlight__value">12K+</strong>
