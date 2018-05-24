@@ -36,6 +36,16 @@
 		float: none;
 	}
 
+	.media-wrapper:before {
+    content: '';
+    top: 5px;
+    left: 5px;
+    position: absolute;
+    width: calc(100% - 5px * 2);
+    height: calc(100% - 5px * 2);
+    border: 1px solid rgba(255,255,255,.6);
+	}
+
 }
 
 .card__header--list {
@@ -168,10 +178,11 @@
 .card__paragraph {
 	display: none;
 	line-height: 140%;
+	font-weight: 900;
 	color: $color-emperor;
-	font-family: $font-special;
+	text-transform: uppercase;
 
-	@include rem(font-size, 15px);
+	@include rem(font-size, 12px);
 
 	@include breakpoint(tablet-and-up) {
 		display: block;
@@ -187,8 +198,12 @@
 	color: white;
 }
 
-/* TYPE 2 VARIATION
-========================================================================== */
+/*
+*
+* TYPE 2 VARIATION
+*
+*/
+
 .card--type-2 {
 
 	.card__header {
@@ -202,13 +217,14 @@
 	.card__content {
 		margin: auto;
 		display: block;
+		background-color: #fff;
 		width: calc(100% - 20px);
 		@include rem(margin-top, -30px);
 		@include rem(padding, 10px 5px 10px 10px);
 
 		@include breakpoint(tablet-and-up) {
-			@include rem(padding, 10px 15px);
 			width: calc(100% - 40px);
+			@include rem(padding, 10px 15px);
 		}
 
 	}
@@ -218,7 +234,9 @@
 	}
 
 	.card__title {
-		margin: 0; @include rem(margin-top, -5px); @include rem(margin-bottom, 10px);
+		margin: 0;
+		@include rem(margin-top, -5px);
+		@include rem(margin-bottom, 10px);
 	}
 
 }

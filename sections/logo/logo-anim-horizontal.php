@@ -52,6 +52,7 @@
         bottom: 3em;
         width: 100%;
         height: 2em;
+        transition: all ease-in-out .5s;
     }
     .logo-j-j:before,
     .logo-j-j:after {
@@ -61,14 +62,17 @@
         bottom: 0;
         width: 2em;
         height: 0;
+        transition: all ease-in-out .5s;
     }
     .logo-j-j:before {
         left: 0;
         height: 3em;
+        transition: all ease-in-out .5s;
     }
     .logo-j-j:after {
         right: 0;
         height: 6em;
+        transition: all ease-in-out .5s;
     }
     .logo-dash {
         background-color: var(--color-secondary);
@@ -107,7 +111,8 @@
         top: 6.3em;
     }
     .theme-2 .logo-j-j:after {
-        /*height: 5em;*/
+        height: 5em;
+        transition: all ease-in-out .5s;
     }
     .theme-2 .logo-s {
         left: 18em;
@@ -143,12 +148,15 @@
     }
     .theme-4 .logo-j-j {
         bottom: 0;
+        transition: all ease-in-out .5s;
     }
     .theme-4 .logo-j-j:before {
         height: 6em;
+        transition: all ease-in-out .5s;
     }
     .theme-4 .logo-j-j:after {
         height: 5em;
+        transition: all ease-in-out .5s;
     }
     .theme-4 .logo-s {
         height: 0;
@@ -256,7 +264,6 @@
         </svg>
     </div>
 </div>
-
 
 <script>
 $(function () {

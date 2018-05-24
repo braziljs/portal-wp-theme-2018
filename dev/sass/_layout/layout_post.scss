@@ -174,15 +174,12 @@ $inner-border-space: 5px;
 	}
 
 	.size-large {
-		position: relative;
 		left: 50%;
+		height: auto;
 		display: block;
-		max-width: 115%; height: auto;
+		max-width: 100%;
+		position: relative;
 		transform: translateX(-50%);
-
-		@include breakpoint(desktop-and-up) {
-			max-width: 135%;
-		}
 
 	}
 

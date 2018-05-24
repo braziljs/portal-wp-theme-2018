@@ -36,7 +36,7 @@ $navigation-hamburger-stick-width: 12px;
 		}
 	}
 
-	&[data-type="articles"] {
+	&[data-type="default"] {
 		background-color: #fff;
 
 		.header__logo {
@@ -54,7 +54,13 @@ $navigation-hamburger-stick-width: 12px;
 	}
 
 	&[data-type="search"] {
-		@extend .nav-braziljs[data-type="articles"];
+		@extend .nav-braziljs[data-type="default"];
+	}
+
+	&[data-type="on-the-road"] {
+		.nav-logo {
+			width: 127px;
+		}
 	}
 
 	.nav-wrapper {
