@@ -11,6 +11,7 @@
         //configure our requireJS paths
         require.config({
             paths: {
+                'common': 'modules/common',
                 'home': 'modules/home',
                 'skipLinks': 'modules/skip-links',
                 'navigation': 'modules/navigation',
@@ -30,6 +31,8 @@
 
 	PUBLIC.init = function () {
 
+        PUBLIC.common();
+
         PUBLIC.home();
 		
         PUBLIC.skipLinks();
@@ -45,6 +48,14 @@
         PUBLIC.conf();
 
 	};
+
+    PUBLIC.common = function () {
+        var common = document.getElementsByClassName('full-wrapper')[0];
+
+        if (common) {
+            require(['common']);
+        }
+    }
 
     PUBLIC.home = function () {
 

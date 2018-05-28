@@ -8,22 +8,21 @@ define(function () {
 
 		init: function () {
 			conf.headerAnim()
-			// setInterval(function() {
-			// 	conf.countDownClock();
-			// }, 1000);
-
-	    // setInterval(function() {
-	    //   conf.avatarCall4Paper();
-	    // }, 2000);
+			conf.logoAnim();
 		},
 
 		headerAnim: function () {
 			$(document).ready(function () {
-				// inspired on https://codepen.io/felipenmoura/pen/KRGQwR
 				$.getScript(window.THEME_PATH + '/assets/media/terrain.js', function () {
 					window.applyHeaderEffect(document.getElementById('header-animation'))
 				})
 			})
+		},
+
+		logoAnim: function () {
+			setTimeout(function() {
+				window.logoAnim('2-3');
+			}, 1000)
 		},
 
 		countDownClock: function () {

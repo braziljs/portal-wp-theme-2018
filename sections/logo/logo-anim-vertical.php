@@ -267,8 +267,8 @@
 
 
 <script>
-$(function () {
-    $('.nav-logo').hover(function () {
+/*$(function () {
+    $('.nav-logo').click(function () {
         // debugger;
         const defaultTheme = 'theme-3';
         const primaryTheme = 'theme-2';
@@ -283,5 +283,5 @@ $(function () {
             elm.removeClass(primaryTheme);
         }
     });
-});
+});*/
 </script>

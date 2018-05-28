@@ -11,6 +11,7 @@ define(function () {
 		init: function () {
 
 			home.bindEvents();
+			home.logoAnim();
 
 		},
 
@@ -25,6 +26,25 @@ define(function () {
 				elm.html('<iframe src=https://www.youtube.com/embed/'+ url +'?autoplay=1 frameborder="0" allowfullscreen>');
 			});
 		},
+
+		logoAnim: function () {
+			setTimeout(function() {
+				window.logoAnim('3-4');
+
+				setTimeout(function() {
+					window.logoAnim('4-1');
+					
+					setTimeout(function() {
+						window.logoAnim('1-2');
+
+						setTimeout(function() {
+							window.logoAnim('2-3');
+						}, 1000);
+					}, 1000);
+				}, 1000);
+
+			}, 2000);
+		}
 
 	}
 

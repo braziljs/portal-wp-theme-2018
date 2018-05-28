@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <!-- HEADER -->
-<div class="full-wrapper">
+<div id="full-wrapper" class="full-wrapper">
 	<section class="section-wrapper header__reborn">
 		<?php get_template_part('sections/navigations/nav-primary'); ?>
 		<?php get_template_part('sections/header'); ?>

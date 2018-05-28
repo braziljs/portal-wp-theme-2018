@@ -10,6 +10,7 @@ define(['disqusLoader', 'prism'], function () {
 		init: function () {
 
 			article.loadDisqus();
+			article.logoAnim();
 
 		},
 
@@ -23,9 +24,13 @@ define(['disqusLoader', 'prism'], function () {
 			    	this.page.identifier = articleContainer.dataset.articleId - 1;
 			  	}
 			};
-
 			// disqusLoader( '#disqus_thread', options );
+		},
 
+		logoAnim: function () {
+			setTimeout(function() {
+				window.logoAnim('3-2');
+			}, 1000)
 		}
 
 	}

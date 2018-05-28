@@ -265,22 +265,23 @@
     </div>
 </div>
 
-<script>
-$(function () {
-    $('.nav-logo').hover(function () {
-        // debugger;
-        const defaultTheme = 'theme-2';
-        const primaryTheme = 'theme-3';
+<!-- <script>
+    $(function () {
+        setTimeout(function () {
+            var elm = $('.nav-logo');
 
-        var elm = $('.logo-container');
+            const defaultTheme = 'theme-2';
+            const primaryTheme = 'theme-3';
 
-        if (elm.hasClass(defaultTheme)) {
-            elm.removeClass(defaultTheme);
-            elm.addClass(primaryTheme);
-        } else {
-            elm.addClass(defaultTheme);
-            elm.removeClass(primaryTheme);
-        }
+            var elm = $('.logo-container');
+
+            if (elm.hasClass(defaultTheme)) {
+                elm.removeClass(defaultTheme);
+                elm.addClass(primaryTheme);
+            } else {
+                elm.addClass(defaultTheme);
+                elm.removeClass(primaryTheme);
+            }
+        }, 1000)
     });
-});
-</script>
+</script> -->

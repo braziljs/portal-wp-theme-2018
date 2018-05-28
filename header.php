@@ -54,7 +54,7 @@
 <script>
 	window.THEME_PATH = "<?php echo get_template_directory_uri() ?>"
 </script>
-<script>
+<!-- <script>
 	(function (){
 		var finalDate = new Date("2018/07/20"); // will only show the video for first viewers up to that date
 		var today = new Date();
@@ -116,13 +116,13 @@
 						canPlayVideo()
 					}, 4000);
 
-					vdContainer.css({ /* width: $(window).innerWidth() + 'px',*/ height: $(window).innerHeight() + 'px' });
+					vdContainer.css({ height: $(window).innerHeight() + 'px' });
 					$(window).resize(function(){
-						vdContainer.css({ /* width: $(window).innerWidth() + 'px',*/ height: $(window).innerHeight() + 'px' });
+						vdContainer.css({ height: $(window).innerHeight() + 'px' });
 					});
 				}
 			}
 			brjsReborn()
 		}
 	})()
-</script>
+</script> -->
