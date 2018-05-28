@@ -3,14 +3,14 @@ define(function () {
 
 	'use strict';
 
-	var common = {
-		elm: null
-	};
+	var common = {};
+	var elm = $('.nav-logo');
 
 	common = {
 
 		init: function () {
 			common.bindEvent();
+			common.initAnim();
 		},
 	
 		bindEvent: function () {
@@ -18,13 +18,8 @@ define(function () {
 		},
 
 		logoAnim: function (theme) {
-      	
-      	var elm = $('.nav-logo');
-
         var defaultTheme;
         var primaryTheme;
-
-        console.log(theme)
 
 				switch (theme) {
 					case '1-2':
@@ -73,6 +68,40 @@ define(function () {
             elm.addClass(defaultTheme);
             elm.removeClass(primaryTheme);
         }
+		},
+
+		initAnim: function () {
+
+			var p = new Promise (function (resolve, reject) {
+				setTimeout(function() {
+					common.logoAnim('3-4');
+
+					setTimeout(function() {
+						common.logoAnim('4-1');
+						
+						setTimeout(function() {
+							common.logoAnim('1-2');
+
+							setTimeout(function() {
+								common.logoAnim('2-3');
+ 								resolve("[#DONE!]");
+							}, 1000);
+						}, 1000);
+					}, 1000);
+				}, 2000);
+			}).then(function () {
+				return new Promise(function(resolve) {
+					setTimeout(function() {
+						elm.addClass('scale-shadow');
+						resolve();
+					}, 1000);
+				}).then(function () {
+					elm.hover(function() {
+						elm.removeClass('scale-shadow');
+						// common.initAnim();
+					});
+				});
+			});
 		}
 	};
 

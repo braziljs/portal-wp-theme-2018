@@ -264,24 +264,3 @@
     </svg>
 </div>
 </div>
-
-
-<script>
-/*$(function () {
-    $('.nav-logo').click(function () {
-        // debugger;
-        const defaultTheme = 'theme-3';
-        const primaryTheme = 'theme-2';
-
-        var elm = $('.logo-container');
-
-        if (elm.hasClass(defaultTheme)) {
-            elm.removeClass(defaultTheme);
-            elm.addClass(primaryTheme);
-        } else {
-            elm.addClass(defaultTheme);
-            elm.removeClass(primaryTheme);
-        }
-    });
-});*/
-</script>

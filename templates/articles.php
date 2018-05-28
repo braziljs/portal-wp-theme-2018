@@ -7,7 +7,7 @@ Template Name: Artigos
 <?php get_header(); ?>
 <?php get_template_part('sections/navigations/nav-default'); ?>
 	
-<div class='full-wrapper' id="article">
+<div class='full-wrappers'>
 	<?php $paginationNumber = get_query_var('paged'); ?>
 	
 	<?php if ($paginationNumber <= 0): ?>

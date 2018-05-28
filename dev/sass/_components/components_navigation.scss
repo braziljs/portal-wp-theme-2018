@@ -24,7 +24,7 @@ $navigation-hamburger-stick-width: 12px;
 */
 
 .nav-braziljs {
-  background-color: $color-black;
+  background-color: #000;
 
   .nav-logo {
     width: 127px;
@@ -43,13 +43,49 @@ $navigation-hamburger-stick-width: 12px;
       max-width: 130px;
     }
 
-    .menu-item {
-      color: #000;
-      font-weight: 900;
-    }
+    .nav-wrapper-list {
+      .menu-item {
+        color: #000;
+      }
 
-    .nav-logo {
-      width: 127px;
+      .nav-logo {
+        width: 127px;
+      }
+
+      &.is-open {
+        .menu-item {
+          color: #fff;
+        }
+
+        .navigation-toogler {
+          opacity: 1;
+
+          .navigation-toogler__text {
+            color: #fff;
+          }
+
+          .navigation-toogler__burguer {
+
+            &:before,
+            &:after {
+              background-color: #fff;
+            }
+          }
+        }
+      }
+
+      .navigation-toogler__text {
+        color: #000;
+      }
+
+      .navigation-toogler__burguer {
+        background-color: #000;
+
+        &:before,
+        &:after {
+          background-color: #000;
+        }
+      }
     }
   }
 

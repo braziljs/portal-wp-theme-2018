@@ -8,7 +8,7 @@ define(function () {
 
 		init: function () {
 			conf.headerAnim()
-			conf.logoAnim();
+			window.logoAnim();
 		},
 
 		headerAnim: function () {
@@ -17,12 +17,6 @@ define(function () {
 					window.applyHeaderEffect(document.getElementById('header-animation'))
 				})
 			})
-		},
-
-		logoAnim: function () {
-			setTimeout(function() {
-				window.logoAnim('2-3');
-			}, 1000)
 		},
 
 		countDownClock: function () {

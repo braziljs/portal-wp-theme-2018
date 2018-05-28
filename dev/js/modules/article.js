@@ -29,8 +29,29 @@ define(['disqusLoader', 'prism'], function () {
 
 		logoAnim: function () {
 			setTimeout(function() {
-				window.logoAnim('3-2');
-			}, 1000)
+				window.logoAnim('2-3');
+
+				setTimeout(function() {
+					window.logoAnim('3-4');
+					
+					setTimeout(function() {
+						window.logoAnim('4-1');
+
+						setTimeout(function() {
+							window.logoAnim('1-2');
+
+							setTimeout(function() {
+								common.elm.addClass('scale-shadow');
+								
+							}, 1000);
+						}, 1000);
+					}, 1000);
+				}, 1000);
+			}, 2000);
+
+			$('.nav-logo').on('click', function () {
+				window.logoAnim('2-3');
+			});
 		}
 
 	}
