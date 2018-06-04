@@ -129,6 +129,43 @@ Template Name: Conf
 								</div>
 							</div>
 						</li>
+
+						<li class="speakers-list__item">
+							<div class="speakers-card">
+								<div class="speakers-card__header">
+									<div class="speakers-card__thumb" style="background-image: url(<?php asset_path("img/conf/2018/mathias-bynens.jpeg"); ?>)"></div>
+								</div>
+								<div class="speakers-card__content">
+									<h3 class="speakers-card__title">Mathias Bynens</h3>
+									<p class="speakers-card__paragraph">Mathias works on the V8 JavaScript engine at Google and on the ECMAScript standard through TC39.</p>
+								</div>
+							</div>
+						</li>
+
+						<li class="speakers-list__item">
+							<div class="speakers-card">
+								<div class="speakers-card__header">
+									<div class="speakers-card__thumb" style="background-image: url(<?php asset_path("img/conf/2018/adam-baldwin.jpeg"); ?>)"></div>
+								</div>
+								<div class="speakers-card__content">
+									<h3 class="speakers-card__title">Adam Baldwin</h3>
+									<p class="speakers-card__paragraph">Adam Baldwin is the Head of Security at npm inc. He is the Founder of the Node Security Project & talks about javascript security non-stop. In his free time Adam enjoys doing basically the exact same stuff he does for work, also raising chickens, and spending as much time as possible with his wife and 2 children.</p>
+								</div>
+							</div>
+						</li>
+
+						<li class="speakers-list__item">
+							<div class="speakers-card">
+								<div class="speakers-card__header">
+									<div class="speakers-card__thumb" style="background-image: url(<?php asset_path("img/conf/2018/feross-aboukhadijeh.jpg"); ?>)"></div>
+								</div>
+								<div class="speakers-card__content">
+									<h3 class="speakers-card__title">Gabriel Corrêa</h3>
+									<p class="speakers-card__paragraph">Como funciona o fluxo de ideia da NASC</p>
+								</div>
+							</div>
+						</li>
+
 					</ul>
 				</div>
 			</div>

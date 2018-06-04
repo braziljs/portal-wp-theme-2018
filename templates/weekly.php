@@ -39,7 +39,7 @@ Template Name: Weekly
 					<?php
 						$postThumb = wp_get_attachment_image_src(get_post_thumbnail_id(), 'post-thumb');
 						if (empty($postThumb))  {
-							$postThumb[0] = get_template_directory_uri().'/dev/img/thumb-generica-2.jpg';
+							$postThumb[0] = get_template_directory_uri().'/dev/img/thumb-generica-portal.png';
 						}
 					?>
 					<li class="col-4-12 article-list__item">

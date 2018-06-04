@@ -17,7 +17,7 @@ define(function () {
 		init: function () {
 			common.bindEvent();
 			common.initAnim();
-			common.initWelcome();
+			common.initWelcome(false);
 		},
 
 		bindEvent: function () {
@@ -144,7 +144,6 @@ define(function () {
 				vdContainer.css({ height: $(window).innerHeight() + 'px' });
 			});
 		},
-
 		endWelcome: function (done) {
 			$('.full-wrapper').css({
 				opacity: 1,
