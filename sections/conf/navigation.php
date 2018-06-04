@@ -8,11 +8,11 @@
 </style>
 
 
-<div class="nav-braziljs">
+<div class="nav-braziljs nav-conf">
 	<div class="content">
 		<div class="nav-wrapper">
 			<a href="<?php bloginfo('url'); ?>/" class="nav-logo">
-				<?php get_template_part('sections/logo-anim'); ?>
+				<?php get_template_part('sections/logo/logo-anim-vertical'); ?>
 			</a>
 			<div class="nav-wp">
 				<div id="js-navigation-wrapper" class="nav-wrapper-list">

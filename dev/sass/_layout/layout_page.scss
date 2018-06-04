@@ -20,10 +20,10 @@
 
 .page-header {
 	position: relative;
-	@include rem(padding, 90px 0 20px);
+	margin-top: 50px;
 
 	@include breakpoint(tablet-and-up) {
-		@include rem(padding, 130px 0 30px);
+		margin-top: 100px;
 	}
 
 	&:before {
@@ -47,10 +47,22 @@
 	}
 }
 
-.post-entry--page {
+.page-content {
+	@extend .text-format;
 
 	p:first-child {
-		@include rem(font-size, 20px); line-height: 150%;
+		font-size: 18px;
+
+		@include breakpoint(tablet-and-up) {
+			@include rem(font-size, 20px);
+		}
+	}
+}
+
+.post-entry--page {
+	p:first-child {
+		line-height: 150%;
+		@include rem(font-size, 20px);
 	}
 
 }

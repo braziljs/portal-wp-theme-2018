@@ -10,6 +10,7 @@ define(['disqusLoader', 'prism'], function () {
 		init: function () {
 
 			article.loadDisqus();
+			article.logoAnim();
 
 		},
 
@@ -23,9 +24,29 @@ define(['disqusLoader', 'prism'], function () {
 			    	this.page.identifier = articleContainer.dataset.articleId - 1;
 			  	}
 			};
-
 			// disqusLoader( '#disqus_thread', options );
+		},
 
+		logoAnim: function () {
+			setTimeout(function() {
+				window.logoAnim('2-3');
+
+				setTimeout(function() {
+					window.logoAnim('3-4');
+					
+					setTimeout(function() {
+						window.logoAnim('4-1');
+
+						setTimeout(function() {
+							window.logoAnim('1-2');
+						}, 1000);
+					}, 1000);
+				}, 1000);
+			}, 2000);
+
+			$('.nav-logo').on('click', function (e) {
+				window.logoAnim('2-3');
+			});
 		}
 
 	}

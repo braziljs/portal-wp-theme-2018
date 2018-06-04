@@ -70,7 +70,6 @@
 				</h3>
 			</div>
 		</li>
-
 		<?php endwhile; ?>
 	</ul>
 

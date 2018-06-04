@@ -6,7 +6,8 @@ Template Name: Artigos
 
 <?php get_header(); ?>
 <?php get_template_part('sections/navigations/nav-default'); ?>
-
+	
+<div class='full-wrappers'>
 	<?php $paginationNumber = get_query_var('paged'); ?>
 	
 	<?php if ($paginationNumber <= 0): ?>
@@ -138,10 +139,8 @@ Template Name: Artigos
 
 	<div class="weekly-wrapper-articles">
 		<?php get_template_part('sections/weekly-internal'); ?>
-		<?php //get_template_part('sections/weekly'); ?>
 	</div>
+</div>
 
-
-<?php //get_template_part('sections/sponsors'); ?>
 <?php get_template_part('sections/footer'); ?>
 <?php get_footer(); ?>

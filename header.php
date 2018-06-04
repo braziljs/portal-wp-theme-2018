@@ -4,7 +4,8 @@
  * @subpackage HTML5-Reset-WordPress-Theme
  * @since HTML5 Reset 2.0
  */
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 
 <html <?php language_attributes(); ?>>
 <head>
@@ -53,76 +54,3 @@
 <script>
 	window.THEME_PATH = "<?php echo get_template_directory_uri() ?>"
 </script>
-<script>
-	(function (){
-		var finalDate = new Date("2018/07/20"); // will only show the video for first viewers up to that date
-		var today = new Date();
-		if (today > finalDate) {
-			return
-		}
-		// d.setMonth(d.getMonth() - 1);
-
-		var hasSeen = localStorage.getItem('hasSeenVideo')
-		if (!hasSeen) {
-			document.body.dataset.vine = 1
-			document.write(`
-			<div
-				id="brjs-opening-video"
-				class="brjs-opening-video">
-				<div class="video-loading-message">A BrazilJS tem uma surpresa<br/>preparada para você!</div>
-				<video id="main-reborn-vine" muted>
-					<source src="${window.THEME_PATH}/assets/media/braziljs-new-logo-2018.mp4" type="video/mp4">
-				</video>
-			</div>`)
-
-			function brjsReborn () {
-				var $ = window.$ || window.JQuery
-				var vdContainer = $('#brjs-opening-video')
-				if (vdContainer) {
-
-					var vd = vdContainer.find('video')[0]
-
-					if (!vd) {
-						return
-					}
-
-					var allowedVideoToPlay = 0
-					function canPlayVideo () {
-						allowedVideoToPlay++
-
-						if (allowedVideoToPlay >1) {
-							// both animation and buffer have ended
-							vd.style.visibility = 'visible'
-							vd.play()
-						}
-					}
-					function closeVideo () {
-						vdContainer.fadeOut('slow');
-						window.scrollTo(0,0)
-						document.body.dataset.vine = 0
-						localStorage.setItem('hasSeenVideo', 1)
-					}
-					
-					vd.oncanplaythrough = function () {
-						// video has buffered enought
-						canPlayVideo()
-					}
-					vd.onended = function () {
-						// video has finished
-						closeVideo()
-					}
-					setTimeout(function () {
-						canPlayVideo()
-					}, 4000);
-
-					vdContainer.css({ /* width: $(window).innerWidth() + 'px',*/ height: $(window).innerHeight() + 'px' });
-					$(window).resize(function(){
-						vdContainer.css({ /* width: $(window).innerWidth() + 'px',*/ height: $(window).innerHeight() + 'px' });
-					});
-				}
-			}
-			brjsReborn()
-		}
-	})()
-</script>
-<!-- <div class="full-wrapper"> -->

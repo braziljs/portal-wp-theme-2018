@@ -52,6 +52,7 @@
         bottom: 3em;
         width: 100%;
         height: 2em;
+        transition: all ease-in-out .5s;
     }
     .logo-j-j:before,
     .logo-j-j:after {
@@ -61,14 +62,17 @@
         bottom: 0;
         width: 2em;
         height: 0;
+        transition: all ease-in-out .5s;
     }
     .logo-j-j:before {
         left: 0;
         height: 3em;
+        transition: all ease-in-out .5s;
     }
     .logo-j-j:after {
         right: 0;
         height: 6em;
+        transition: all ease-in-out .5s;
     }
     .logo-dash {
         background-color: var(--color-secondary);
@@ -108,6 +112,7 @@
     }
     .theme-2 .logo-j-j:after {
         height: 5em;
+        transition: all ease-in-out .5s;
     }
     .theme-2 .logo-s {
         left: 18em;
@@ -143,12 +148,15 @@
     }
     .theme-4 .logo-j-j {
         bottom: 0;
+        transition: all ease-in-out .5s;
     }
     .theme-4 .logo-j-j:before {
         height: 6em;
+        transition: all ease-in-out .5s;
     }
     .theme-4 .logo-j-j:after {
         height: 5em;
+        transition: all ease-in-out .5s;
     }
     .theme-4 .logo-s {
         height: 0;
@@ -156,7 +164,7 @@
 </style>
 
 <div class="wrapper--anim">
-    <div class="logo-container theme-3">
+    <div class="logo-container theme-2">
         <svg class="logo-brazil" version="1.0" xmlns="http://www.w3.org/2000/svg"
                 width="618.000000pt" height="436.000000pt" viewBox="0 0 618.000000 436.000000"
                 preserveAspectRatio="xMidYMid meet">
@@ -256,24 +264,3 @@
         </svg>
     </div>
 </div>
-
-
-<script>
-$(function () {
-    $('.nav-logo').hover(function () {
-        // debugger;
-        const defaultTheme = 'theme-3';
-        const primaryTheme = 'theme-2';
-
-        var elm = $('.logo-container');
-
-        if (elm.hasClass(defaultTheme)) {
-            elm.removeClass(defaultTheme);
-            elm.addClass(primaryTheme);
-        } else {
-            elm.addClass(defaultTheme);
-            elm.removeClass(primaryTheme);
-        }
-    });
-});
-</script>

@@ -1,5 +1,7 @@
 /*
+ *
  * @MIXIN'S
+ *
 */
 
 @mixin transition($duration:0.2s, $ease:ease-in) {
@@ -23,7 +25,9 @@
 }
 
 /*
+ *
  * @GLOBAL CLASS
+ *
 */
 
 .hr {
@@ -57,10 +61,30 @@
   animation: bounce 4s 2s infinite;
 }
 
+.scale-shadow {
+  animation: scale-shadow 4s infinite;
+}
+
 
 /*
+ * 
  * @KEYFRAME'S
+ *
 */
+
+@keyframes scale-shadow {
+  0%, 10%, 25%, 40%, 50% {
+    transform: none;
+  }
+
+  20% {
+    transform: scale(1.05);
+  }
+
+  30% {
+    transform: scale(1.05);
+  }
+}
 
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {

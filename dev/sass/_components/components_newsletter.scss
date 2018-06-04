@@ -59,7 +59,6 @@
 	width: 100%;
 	height: 100%;
 	display: flex;
-	padding: 10px;
 	margin: 0 auto;
 	max-width: 484px;
 	flex-flow: column;
@@ -80,6 +79,10 @@
 .newsletter-wrapper__top {
 	padding: 15px 0;
 	background-color: #000;
+
+	.content {
+		height: 100%;
+	}
 
 	.title--type-2 {
 		color: #fff;

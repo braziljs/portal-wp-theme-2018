@@ -1,12 +1,13 @@
 <!-- ALURA + BRAZILJS -->
-<section id="braziljs_alura">
-	<div class="center-elements--mobile">
-		<h2 class="title">Cursos recomendados pela BrazilJS</h2>
+<div class="section-wrapper">
+	<div class="courses-alura">
+		<h2 class="title">Cursos recomendados</h2>
+		<div class="row">
+			<ul class="card-wrapper" id="card-wrapper-list"></ul>
+		</div>
+		<div class="row">
+			<a class="anchor-link" target="__blank" href="https://www.alura.com.br/braziljs">veja todos os cursos</a>
+		</div>
 	</div>
-	<ul class="row card-wrapper" id="card-wrapper-list"></ul>
-	<div class="center-elements row">
-		<a class="anchor-button" href="https://www.alura.com.br/braziljs">veja todos os cursos</a>
-	</div>
-</section>
-
+</div>
 <!-- END ALURA + BRAZILJS -->

@@ -11,7 +11,234 @@
 *
 */
 
-/* ====== */
+$post-header-background: $color-mine-shaft;
+$post-header-padding: 0 80px;
+$inner-border-space: 5px;
+
+.text-format {
+	@include rem(margin-bottom, 40px);
+
+	@include breakpoint(tablet-and-up) {
+		@include rem(margin-bottom, 70px);
+	}
+
+	//ANCHORS
+	a {
+		color: #000;
+		font-weight: 900;
+		text-transform: uppercase;
+		text-decoration: underline;
+	}
+
+	iframe {
+		@include breakpoint(small) {
+			width: 100%;
+		}
+	}
+
+	pre {
+		@include rem(font-size, 12px);
+	}
+
+	//BLOCKQUOTE
+	blockquote {
+		position: relative;
+		font-style: italic;
+		text-transform: uppercase;
+		@include rem(padding, 25px 0);
+		@include rem(margin, 25px 0 25px 10px);
+
+		@include breakpoint(tablet-and-up) {
+			@include rem(margin, 55px 0 55px 80px);
+		}
+
+		&:before, &:after {
+			content: '';
+			left: 0;
+			position: absolute;
+			@include rem(width, 44px);
+			@include rem(height, 3px);
+			background-color: currentColor;
+		}
+
+		&:before {
+			top: 0;
+		}
+
+		&:after {
+			bottom: 0;
+		}
+
+		p {
+			margin-bottom: 0 !important;
+			line-height: 200%;
+		}
+
+	}
+
+	//PARAGRAPHS
+	p {
+		line-height: 267%;
+		color: $color-mine-shaft;
+		font-family: $font-primary;
+		@include rem(font-size, 12px);
+		@include rem(margin-bottom, 25px);
+	}
+
+	//HEADINGS
+	h2, h3 {
+		font-weight: 900;
+		margin-top: 80px;
+		line-height: 120%;
+		position: relative;
+		text-transform: uppercase;
+	}
+
+	h2 {
+ 		@include rem(margin-bottom, 15px);
+		@include rem(font-size, 16px);
+
+		@include breakpoint(tablet-and-up) {
+			@include rem(font-size, 20px); color: $color-mine-shaft;
+		}
+
+	}
+
+	h3 {
+		color: #000;
+		height: 50px;
+		margin-bottom: 15px;
+		border-bottom: 1px solid #000;
+		@include rem(font-size, 12px);
+
+		@include breakpoint(tablet-and-up) {
+			@include rem(margin-bottom, 30px);
+		}
+
+		&:after {
+			content: '';
+	    width: 100%;
+	    margin-top: 10px;
+	    display: block;
+	    border-bottom: 1px solid #000;
+		}
+	}
+
+	//YOUTUBE EMBED
+	.embed-figure__container {
+		position: relative;
+		overflow: hidden;
+		@include rem(margin-bottom, 20px);
+		padding-bottom: 56.25%;
+		height: 0; height: auto;
+
+		iframe, object, embed {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border: none;
+		}
+	}
+
+	//CAPTIONS
+	.wp-caption {
+		max-width: 100%;
+		text-align: center;
+	}
+
+	.wp-caption-text {
+		@include rem(margin-top, -35px);
+		@include rem(font-size, 14px); line-height: 130%; color: $color-emperor; font-style: italic;
+	}
+
+	//IMAGES
+	img {
+		@include rem(margin, 35px auto 40px auto);
+	}
+
+	.alignleft {
+		float: left;
+
+
+		@include breakpoint(tablet-and-up) {
+			@include rem(margin, 5px 30px 0 -80px);
+		}
+
+	}
+
+	.aligncenter {
+		display: block;
+		@include rem(margin, 35px auto 40px auto);
+	}
+
+	.size-large {
+		left: 50%;
+		height: auto;
+		display: block;
+		max-width: 100%;
+		position: relative;
+		transform: translateX(-50%);
+
+	}
+
+	//LIST
+	ul {
+		@include rem(margin-top, -10px);
+		@include rem(margin-bottom, 20px);
+		@include rem(padding-left, 20px);
+
+		@include breakpoint(desktop-and-up) {
+			@include rem(padding-left, 50px);
+		}
+	}
+
+	li {
+		list-style: disc;
+		font-weight: 900;
+		line-height: 120%;
+		position: relative;
+		@include rem(font-size, 12px);
+		@include rem(margin-bottom, 10px);
+
+	}
+}
+
+/*
+*
+* HEADER
+*
+*/
+
+.post-header {
+	padding-top: 150px;
+	background-color: #fff;
+}
+
+.post-thumb {
+	width: 100%;
+	height: 500px;
+	margin: 60px 0;
+
+	.header__thumb {
+		width: 100%;
+		height: 100%;
+		filter: grayscale(100%);
+		@include background-image(null, cover);
+	}
+}
+
+.post-header__content {
+	padding: $post-header-padding;
+}
+
+
+/*
+*
+* WRAPPER
+*
+*/
 
 .wrapper__post-icon {
 	width: 32px;
@@ -54,53 +281,10 @@
 	}
 }
 
-$post-header-background: $color-mine-shaft;
-$post-header-padding: 0 80px;
-$inner-border-space: 5px;
-$post-content-wrapper-width-medium: 600px;
-$post-content-wrapper-width-desktop: 800px;
-
-
-/*
-*
-* HEADER
-*
-*/
-
-.post-header {
-	padding-top: 150px;
-	background-color: #fff;
-
-}
-
-.post-thumb {
-	width: 100%;
-	height: 500px;
-	margin: 60px 0;
-
-	.header__thumb {
-		width: 100%;
-		height: 100%;
-		filter: grayscale(100%);
-		@include background-image(null, cover);
-	}
-}
-
-.post-header__content {
-	padding: $post-header-padding;
-}
-
-
-/*
-*
-* WRAPPER
-*
-*/
 
 .header__meta-wrapper {
 	display: flex;
 	flex-flow: row;
-	justify-content: space-between;
 }
 
 .page-container {
@@ -112,6 +296,7 @@ $post-content-wrapper-width-desktop: 800px;
 	flex-flow: row;
 	min-width: 180px;
 	line-height: 120%;
+	margin-right: 60px;
 	@include rem(font-size, 13px);
 	justify-content: space-between;
 
@@ -251,211 +436,37 @@ $post-content-wrapper-width-desktop: 800px;
 *
 */
 
-.post-content-wrapper {
-	width: 100%;
+.post-wrapper {
+	display: flex;
+	flex-flow: column;
 
 	@include breakpoint(tablet-and-up) {
-		// float: right;
-		// @include rem(max-width, 700px);
+		align-items: flex-end;
 	}
+
+	.post-entry-ctt {
+		display: flex;
+		max-width: 700px;
+		flex-flow: column;
+
+		@extend .text-format;
+	}
+
+	.post-entry-tag {
+		width: 100%;
+		max-width: 700px;
+	}
+
 
 }
 
-.post-entry {
-	@include rem(margin-bottom, 40px);
+.post-entry-single {
+	// @extend .post-entry;
 
-	@include breakpoint(tablet-and-up) {
-		float: right;
-		max-width: 700px;
-		@include rem(margin-bottom, 70px);
-	}
-
-	//ANCHORS
-	a {
-		color: #000;
-		font-weight: 900;
-		text-transform: uppercase;
-		text-decoration: underline;
-	}
-
-	iframe {
-		@include breakpoint(small) {
-			width: 100%;
-		}
-	}
-
-	pre {
-		@include rem(font-size, 12px);
-	}
-
-	//BLOCKQUOTE
-	blockquote {
-		position: relative;
-		font-style: italic;
-		text-transform: uppercase;
-		@include rem(padding, 25px 0);
-		@include rem(margin, 25px 0 25px 10px);
-
-		@include breakpoint(tablet-and-up) {
-			@include rem(margin, 55px 0 55px 80px);
-		}
-
-		&:before, &:after {
-			content: '';
-			left: 0;
-			position: absolute;
-			@include rem(width, 44px);
-			@include rem(height, 3px);
-			background-color: currentColor;
-		}
-
-		&:before {
-			top: 0;
-		}
-
-		&:after {
-			bottom: 0;
-		}
-
-		p {
-			margin-bottom: 0 !important;
-			line-height: 200%;
-		}
-
-	}
-
-	//PARAGRAPHS
-	p {
-		line-height: 267%;
-		color: $color-mine-shaft;
-		font-family: $font-primary;
-		@include rem(font-size, 12px);
-		@include rem(margin-bottom, 25px);
-	}
-
-	//HEADINGS
-	h2, h3 {
-		font-weight: 900;
-		margin-top: 80px;
-		line-height: 120%;
-		position: relative;
-		text-transform: uppercase;
-	}
-
-	h2 {
-		font-style: italic;
- 		@include rem(margin-bottom, 15px);
-		@include rem(font-size, 16px);
-
-		@include breakpoint(tablet-and-up) {
-			@include rem(font-size, 20px); color: $color-mine-shaft;
-		}
-
-	}
-
-	h3 {
-		color: #000;
-		height: 50px;
-		margin-bottom: 15px;
-		border-bottom: 1px solid #000;
-		@include rem(font-size, 12px);
-
-		@include breakpoint(tablet-and-up) {
-			@include rem(margin-bottom, 30px);
-		}
-
-		&:after {
-			content: '';
-	    width: 100%;
-	    margin-top: 10px;
-	    display: block;
-	    border-bottom: 1px solid #000;
-		}
-	}
-
-	//YOUTUBE EMBED
-	.embed-figure__container {
-		position: relative;
-		overflow: hidden;
-		@include rem(margin-bottom, 20px);
-		padding-bottom: 56.25%;
-		height: 0; height: auto;
-
-		iframe, object, embed {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			border: none;
-		}
-	}
-
-	//CAPTIONS
-	.wp-caption {
-		max-width: 100%;
-		text-align: center;
-	}
-
-	.wp-caption-text {
-		@include rem(margin-top, -35px);
-		@include rem(font-size, 14px); line-height: 130%; color: $color-emperor; font-style: italic;
-	}
-
-	//IMAGES
-	img {
-		@include rem(margin, 35px auto 40px auto);
-	}
-
-	.alignleft {
-		float: left;
-
-
-		@include breakpoint(tablet-and-up) {
-			@include rem(margin, 5px 30px 0 -80px);
-		}
-
-	}
-
-	.aligncenter {
-		display: block;
-		@include rem(margin, 35px auto 40px auto);
-	}
-
-	.size-large {
-		position: relative;
-		left: 50%;
-		display: block;
-		max-width: 115%; height: auto;
-		transform: translateX(-50%);
-
-		@include breakpoint(desktop-and-up) {
-			max-width: 135%;
-		}
-
-	}
-
-	//LIST
-	ul {
-		@include rem(margin-top, -10px);
-		@include rem(margin-bottom, 20px);
-		@include rem(padding-left, 20px);
-
-		@include breakpoint(desktop-and-up) {
-			@include rem(padding-left, 50px);
-		}
-	}
-
-	li {
-		list-style: disc;
-		font-weight: 900;
-		line-height: 120%;
-		position: relative;
-		@include rem(font-size, 12px);
-		@include rem(margin-bottom, 10px);
-
-	}
-
+	// @include breakpoint(tablet-and-up) {
+	// 	float: right;
+	// 	max-width: 700px;
+	// }
 }
 
 .entry-title {
@@ -478,11 +489,6 @@ $post-content-wrapper-width-desktop: 800px;
 	text-transform: uppercase;
 
 	@include rem(font-size, 12px);
-
-
-	@include breakpoint(desktop-and-up) {
-		@include rem(margin-top, -30px);
-	}
 
 	.tags-list__title {
 		color: #000;
@@ -542,6 +548,17 @@ $post-content-wrapper-width-desktop: 800px;
 		@extend .wrapper__post-icon;
 	}
 }
+
+
+/* @gEND */
+
+
+
+
+
+
+
+
 
 .read-more {
 	margin-top: 64px;

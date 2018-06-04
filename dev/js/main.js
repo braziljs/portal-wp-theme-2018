@@ -11,6 +11,7 @@
         //configure our requireJS paths
         require.config({
             paths: {
+                'common': 'modules/common',
                 'home': 'modules/home',
                 'skipLinks': 'modules/skip-links',
                 'navigation': 'modules/navigation',
@@ -19,8 +20,7 @@
                 'disqusLoader': 'plugins/disqusloader',
                 'confSchedule': 'modules/conf-schedule',
                 'prism': 'plugins/prism',
-                'trap': 'plugins/trap',
-                'brjsAlura': 'modules/brjsAlura'
+                'trap': 'plugins/trap'
             }
         });
 
@@ -29,6 +29,8 @@
     };
 
 	PUBLIC.init = function () {
+
+        PUBLIC.common();
 
         PUBLIC.home();
 		
@@ -40,11 +42,17 @@
 
         PUBLIC.confSchedule();
 
-        PUBLIC.brjsAlura();
-
         PUBLIC.conf();
 
 	};
+
+    PUBLIC.common = function () {
+        var common = document.getElementsByClassName('full-wrapper')[0];
+
+        if (common) {
+            require(['common']);
+        }
+    }
 
     PUBLIC.home = function () {
 
@@ -96,15 +104,6 @@
 
     };
 
-    PUBLIC.brjsAlura = function () {
-
-        var brjsAlura = document.getElementById('braziljs_alura');
-
-        if (brjsAlura) {
-            require(['brjsAlura'])
-        }
-    };
-
     PUBLIC.conf = function () {
 
         var confPageContainer = document.getElementById('js-conf-page');
@@ -116,5 +115,4 @@
     };
 
     return PRIVATE.init();
-
 })();

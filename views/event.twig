@@ -9,79 +9,84 @@
 		{% if theme %}
 			<link rel="stylesheet" href="{{theme.get_field('arquivo_css')}}" />
 		{% endif %}
-
 	{% endif %}
 
-	<div id="js-conf-page" class="conf-wrapper {{ themeName }}">
-		
+	<style>
+		:root {
+			--color-secondary: {{event.cor}};
+		}
+	</style>
+
+	<div class="header-container e-single">
 		<div class="content">
-			<img class="header__logo" src="{{ function('asset_path', 'img/logos/braziljs.svg') }}" alt="BrazilJS" />
-		</div>
-
-		<main id="main">
-			<div class="conf-header" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0, 0, 0, 1)), url({{TimberImage(event.background).src}});">
-				<div class="center-elements">
-					<h1 class="conf-header__title title title--type-2 title--size-2 title--color-2">{{event.name}}</h1>
+			<div class="e-title">
+				<span class="e-l" style="color: {{event.cor}} ">[</span>
+				<span class="e-n">{{ event.logo }}</span>
+				<span class="e-r" style="color: {{event.cor}} ">]</span>
+			</div>
+			<div class="header-wrapper">
+				<div class="header-bg">
 				</div>
-				<div class="content">
-					<div class="conf-container__events">
-						<div class="conf-container__logo">
-							<img src="{{TimberImage(event.logo).src}}" alt="{{TimberImage(event.logo).alt}}" />
-						</div>
-						<div class="conf-info-wrapper">
-							<div class="conf-info-container">
-								<strong class="conf-info-container__info">{{event.informacao_extra}}</strong>
-								<strong class="conf-info-container__info conf-info-container__info--locale">{{event.cidade}}</strong>
+				<div class="row">
+					<div class="header__tp">
+						<h1 class="header__title">{{event.nome_evento}}</h1>
+						<div class="paragraph ">
+							<div class="diagonal-ballon">
+								<span>{{event.cidade}}</span>
 							</div>
-
-							{% if event.habilitar_ingresso %}
-								<div class="conf-container__ticket">
-									<script src="https://embedstore.ingresse.com/ingresse-widget.js"></script>
-									<div class="ingresse-widget" data-eventid="{{event.id_ingresse}}">
-										<button id="embedstore-btn" type="button" class="anchor-button anchor-button--size-2 anchor-button--color-5 conf-container__date">Comprar Ingressos</button>
-									</div>
-								</div>
-							{% endif %}
-
 						</div>
-
+					</div>
+				</div>
+				<div class="row">
+					<div class="header__li">
+						{% if event.habilitar_ingresso %}
+							<script src="https://embedstore.ingresse.com/ingresse-widget.js"></script>
+							<div class="ingresse-widget" data-eventid="{{event.id_ingresse}}"></div>
+						{% endif %}
+						<strong class="paragraph">
+							<p>
+								{{event.informacao_extra}}
+								{{event.cidade}}
+							</p>
+						</strong>
 					</div>
 				</div>
 			</div>
-		</main>
+		</div>
 	</div>
 
 	{% if event.palestrantes %}
-		<section class="section-wrapper speakers-list-container">
-			<div class="content">
-				<div class="center-elements">
-					<h2 class="title title--type-2" id="speakers-title">Palestrantes</h2>
-				</div>
-				<ul class="post-content-wrapper center-elements--mobile" aria-labelledby="speakers-title">
+		<section class="section-wrapper e-single" style="padding-top: 60px">
+			<div class="row">
+				<div class="content">
+					<h2 class="title" id="speakers-title">Palestrantes</h2>
+					
+					<ul class="single-event__list" aria-labelledby="speakers-title">
 
-					{% set speakers = event.get_field('palestrantes') %}
+						{% set speakers = event.get_field('palestrantes') %}
 
-					{% for speaker in speakers %}
-						<li class="col-5-12 calendar-list__item">
-							<div class="card card--type-2">
-								<div class="card__header">
-									<div class="media-wrapper">
-										<img class="card__thumb" src="{{ speaker.thumbnail.src()}}" alt="{{ speaker.thumbnail.alt}}" />
+						{% for speaker in speakers %}
+							<li class="col-5-12 calendar-list__item">
+								<div class="card card--type-2">
+									<div class="card__header">
+										<div class="media-wrapper">
+											<img class="card__thumb" src="{{ speaker.thumbnail.src()}}" alt="{{ speaker.thumbnail.alt}}" />
+										</div>
+										{% if speaker.keynote %}
+											<strong class="card__ribbon"><span class="card__ribbon-text">Keynote</span></strong>
+										{% endif %}
 									</div>
-									{% if speaker.keynote %}
-										<strong class="card__ribbon"><span class="card__ribbon-text">Keynote</span></strong>
-									{% endif %}
+									<div class="card__content">
+										<h3 class="card__title">{{speaker.title}}</h3>
+										<strong class="card__subtitle">{{speaker.empresa}}</strong>
+										<div class="card__paragraph">{{speaker.content}}</div>
+									</div>
 								</div>
-								<div class="card__content">
-									<h3 class="card__title">{{speaker.title}}</h3>
-									<strong class="card__subtitle">{{speaker.empresa}}</strong>
-									<div class="card__paragraph">{{speaker.content}}</div>
-								</div>
-							</div>
-						</li>
+							</li>
 
-					{% endfor %}
-				</ul>
+						{% endfor %}
+					</ul>
+				</div>
 			</div>
 		</section>
 	{% endif %}
@@ -148,12 +153,10 @@
 	{% endif %}
 
 	{% if event.sobre_habilitar == true %}
-		<section class="section-wrapper--type-3">
-			<div class="content center-elements--mobile">
-				<div class="col-8-12">
-					<h2 class="title">Sobre o evento</h2>
-					<p class="paragraph">{{ event.sobre_descricao }}</p>
-				</div>
+		<section class="section-wrapper">
+			<div class="content">
+				<h2 class="title">Sobre o evento</h2>
+				<p class="paragraph">{{ event.sobre_descricao }}</p>
 				<div class="col-4-12">
 					<h2 class="subtitle subtitle--color-2">Endereço</h2>
 					<div class="paragraph">{{event.get_field('sobre_endereco')}}</div>
@@ -164,65 +167,47 @@
 	{% endif %}
 
 	{% if event.pappers_habilitar == true %}
-		<section class="section-wrapper--type-3">
+		<section class="section-wrapper">
 			<div class="content">
-				<div class="center-elements">
-					<h2 class="title title--type-2">Call For Papers</h2>
+				<h2 class="title">Call For Papers</h2>
 
-					<div class="sponsor-list__paragraph paragraph paragraph--font-2 paragraph--size-2 paragraph--color-3">{{event.get_field('pappers_descricao')}}</div>
+				<div class="sponsor-list__paragraph paragraph paragraph--font-2 paragraph--size-2 paragraph--color-3">{{event.get_field('pappers_descricao')}}</div>
 
-					<a class="anchor-button" href="{{event.pappers_url}}">Saiba mais <span class="visuallyhidden">sobre o call for papers</span></a>
-				</div>
+				<a class="anchor-link" href="{{event.pappers_url}}">Saiba mais <span class="visuallyhidden">sobre o call for papers</span></a>
 			</div>
 		</section>
 	{% endif %}
 
+	<!-- PATROCINADORES -->
+
 	{% if event.patrocinio_habilitar == true %}
-		<section class="section-wrapper--type-3">
+		<section class="section-wrapper sponsor">
 			<div class="content">
-				<div class="center-elements">
-					<h2 class="title title--type-2">Patrocinadores {{event.title}}</h2>
-					<p class="sponsor-list__paragraph paragraph paragraph--font-2 paragraph--size-2 paragraph--color-3">{{event.patrocinio_mensagem_apoio}}</p>
-				</div>
-
+				<h2 class="title">Patrocinadores</h2>
 				{% if event.patrocinio_cotas %}
-
-					<ul>
-
+					<ul class="sponsor-wrapper" style="justify-content: start;">
 						{% for cota in event.get_field('patrocinio_cotas') %}
-
-							<li>
-
-								<h3 class="subtitle subtitle--type-2">{{cota.patrocinio_cotas_nome}}</h3>
-
+							<li class="sponsor-category">
+								<h3 class="subtitle">{{cota.patrocinio_cotas_nome}}</h3>
 								{% if cota.patrocinio_cotas_patrocinios %}
-
-									<ul>
-
+									<ul class="sponsor-list">
 										{% for sponsor in cota.patrocinio_cotas_patrocinios[0].patrocinio_cotas_patrocinios_patrocinio %}
-
 											<li class="sponsor-list__item">
 												<a class="sponsor-list__anchor" href="{{sponsor.url}}"><img class="sponsor-list__thumb" src="{{sponsor.thumbnail.src()}}" alt="{{sponsor.title}}"/></a>
 											</li>
-
 										{% endfor %}
-
 									</ul>
-
 								{% endif %}
-
 							</li>
-
 						{% endfor %}
-
 					</ul>
-
 				{% endif %}
-
 			</div>
 		</section>
 	{% else %}
 		{{ function('get_template_part', 'sections/sponsors') }}
 	{% endif %}
+
+	<!-- END * PATROCINADORES -->
 
 {% endfor %}

@@ -9,11 +9,11 @@
 </style>
 
 
-<div class="nav-braziljs" data-type="articles">
+<div class="nav-braziljs" data-type="default">
 	<div class="content">
 		<div class="nav-wrapper">
 			<a href="<?php bloginfo('url'); ?>/" class="nav-logo">
-				<?php get_template_part('sections/logo-anim-2'); ?>
+				<?php get_template_part('sections/logo/logo-anim-horizontal'); ?>
 			</a>
 			<div id="js-navigation-wrapper" class="nav-wrapper-list">
 				<button id="js-navigation-toogler" class="default-button navigation-toogler" type="button" aria-label="Abrir o menu de navegação">

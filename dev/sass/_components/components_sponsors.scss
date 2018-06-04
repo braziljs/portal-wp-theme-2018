@@ -19,7 +19,7 @@
 .sponsor-wrapper {
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: space-between;
+	justify-content: space-around;
 
 	.sponsor-category {
 		margin: 15px;
@@ -40,7 +40,7 @@
 
 			.sponsor-list__anchor {
 				.sponsor-list__thumb {
-					width: 120px;
+					max-width: 110px;
 					filter: grayscale(100%);
 				}
 			}
