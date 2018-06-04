@@ -41,21 +41,35 @@
 	</div>
 
 	<ul class="row card-wrapper article-list">
-		<?php while (have_posts()) : the_post(); ?>
-	
-			<?php $imageLink = wp_get_attachment_image_src(get_post_thumbnail_id(), 'highlight-thumb'); ?>
 
-			<li class="col-6-12 article-list__item">
-				<a href="<?php the_permalink() ?>" class="card">
-					<div class="article-img" style="background-image: url(<?php echo $imageLink[0]; ?>)"></div>
-					<!-- <div class="after-shadow"></div> -->
-				</a>
-				<div class="article__title">
-					<h3 class="card__title">
-						<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
-					</h3>
-				</div>
-			</li>
+		<?php while (have_posts()) : the_post(); ?>
+		<?php
+			$articleCounter = 0
+		?>
+	
+		<?php $imageLink = wp_get_attachment_image_src(get_post_thumbnail_id(), 'highlight-thumb'); ?>
+
+		<li class="col-6-12 article-list__item">
+			<a href="<?php the_permalink() ?>" class="card">
+				<div class="article-img" style="background-image: url(<?php echo $imageLink[0]; ?>)"></div>
+			</a>
+			<div class="article__title">
+				<h3 class="card__title">
+					<a href="<?php the_permalink() ?>">
+						<?php
+							$articleCounter++;
+							$titleLimit = 130;
+							$theTitle = get_the_title();
+							if ($articleCounter > 2 && strlen($theTitle) > $titleLimit) {
+								echo substr($theTitle, 0, $titleLimit - 3) . '...';
+							} else {
+								echo $theTitle;
+							}
+						?>
+					</a>
+				</h3>
+			</div>
+		</li>
 
 		<?php endwhile; ?>
 	</ul>
