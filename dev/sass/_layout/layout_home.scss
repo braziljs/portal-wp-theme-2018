@@ -133,26 +133,18 @@
 }
 
 .brjs-opening-video {
-	// top: 0;
-	// z-index: 99;
-	// // width: 100%;
-	// height: 100%;
-	// opacity: 1;
-	// display: none;
-	// position: fixed;
-	// display: none;
 	position: fixed;
 	top: 0;
-    bottom: 0;
-    left: 0;
+  bottom: 0;
+  left: 0;
 	right: 0;
 	width: 100%;
 	height: 100%;
 	margin: auto;
-	background: #000;
+	background: #fff;
 	z-index: 99999995;
 	@include transition;
-	background-color: #000;
+	background-color: #fff;
 	// transition-duration: 2s;
 
 	.video-loading-message {
@@ -160,14 +152,25 @@
 		width: 100%;
 		max-width: 650px;
 		height: 100%;
-		display: flex;
+		// display: flex;
 		justify-content: center;
 		align-items: center;
-		margin: auto;
-		color: #fff;
+		color: #000;
 		font-size: 2rem;
 		font-weight: bold;
-		animation: fade-and-zoom-in 1 4s ease-out;
+		// animation: fade-and-zoom-in 1 4s ease-out;
+
+		.p-1 {
+			animation: fade-and-zoom-in 1 1s ease-out;
+		}
+
+		.p-2 {
+			animation: fade-and-zoom-in 2 2s ease-out;
+		}
+
+		.p-3 {
+			animation: fade-and-zoom-in 1 3s ease-out;
+		}
 	}
 	
 	video {

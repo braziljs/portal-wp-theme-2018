@@ -39,17 +39,12 @@ define(['disqusLoader', 'prism'], function () {
 
 						setTimeout(function() {
 							window.logoAnim('1-2');
-
-							setTimeout(function() {
-								common.elm.addClass('scale-shadow');
-								
-							}, 1000);
 						}, 1000);
 					}, 1000);
 				}, 1000);
 			}, 2000);
 
-			$('.nav-logo').on('click', function () {
+			$('.nav-logo').on('click', function (e) {
 				window.logoAnim('2-3');
 			});
 		}

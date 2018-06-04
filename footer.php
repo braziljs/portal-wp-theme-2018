@@ -5,9 +5,18 @@
 	<div class="powered force-font">
 		<span class="powered__title">BrazilJS é uma iniciativa <a href="https://nasc.io/?utm_source=braziljs" target="__blank"><strong>NASC</strong></a></span>
 		<ul class="powered_link">
-			<li class="p__link"><a href="https://asgabe.github.io//?utm_source=braziljs" target="__blank" title="Made by gabe">gabe</a></li>
-			<li class="p__link"><a href="https://nasc.io/?utm_source=braziljs" target="__blank" title="Powered by Nasc">nasc</a></li>
-			<li class="p__link"><a href="http://www.dex01.com/?utm_source=braziljs" target="__blank" title="Design by Dex01"><img src="<?php asset_path('img/logos/logo-dex01.svg') ?>" /><span class="visuallyhidden">Designer by Dex01</span></a></li>
+			<?php  ?>
+			<li class="p__link">
+				<a href="https://nasc.io/?utm_source=braziljs" target="__blank" title="Made by NASC">
+					we<p>are all</p>
+				</a>
+				<a href="https://nasc.io/?utm_source=braziljs" target="__blank" title="Made by NASC">
+					NASC
+				</a>
+			</li>
+			<li class="p__link"><a href="http://www.dex01.com/?utm_source=braziljs" target="__blank" title="Design by Dex01">
+				<img src="<?php asset_path('img/logos/logo-dex01.svg') ?>" /><span class="visuallyhidden">Designer by Dex01</span></a>
+			</li>
 		</ul>
 	</div>
 </div>

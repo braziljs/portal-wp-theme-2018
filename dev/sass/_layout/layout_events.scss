@@ -106,6 +106,12 @@
 				text-decoration: underline;
 			}
 		}
+
+		[data-bg="none"] {
+	    background-size: 100% 33px;
+	    background-repeat: repeat-y;
+			background-image: linear-gradient(black 1px, white 0, white);
+		}
 	}
 }
 

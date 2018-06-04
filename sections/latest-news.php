@@ -48,7 +48,6 @@
 			<li class="col-6-12 article-list__item">
 				<a href="<?php the_permalink() ?>" class="card">
 					<div class="article-img" style="background-image: url(<?php echo $imageLink[0]; ?>)"></div>
-					<!-- <div class="after-shadow"></div> -->
 				</a>
 				<div class="article__title">
 					<h3 class="card__title">

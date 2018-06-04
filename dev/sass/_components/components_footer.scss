@@ -6,9 +6,9 @@
 
 
 /*
-*
-* FOOTER WAPPER
-*
+ *
+ * FOOTER WAPPER
+ *
 */
 
 .footer {
@@ -119,25 +119,25 @@
 			display: flex;
 
 			&:nth-child(1) {
-		    padding: 0 5px;
-		    align-items: center;
-				border-right: 2px solid;
-
-				a {
-					font-family: $font-special;
-					@include rem(font-size, 15px);
-				}
-			}
-			&:nth-child(2) {
 				margin-right: 15px;
 				align-items: flex-end;
 
 				a {
 					padding: 0 5px;
-					margin-bottom: 5px;
+					text-transform: uppercase;
+					font-family: $font-special;
+					@include rem(font-size, 14px);
+
+					&:first-child {
+						text-align: right;
+						border-right: 2px solid;
+						font-family: $font-primary;
+						@include rem(font-size, 13px);
+					}
 				}
 			}
-			&:nth-child(3) {
+
+			&:nth-child(2) {
 				a {
 					width: 20px;
 					display: block;

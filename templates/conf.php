@@ -6,59 +6,60 @@ Template Name: Conf
 
 ?>
 <?php get_header(); ?>
-<?php get_template_part('sections/conf/navigation'); ?>
 
-<!-- CONF HEADER -->
-<header class="header-container l-page" data-id="glitch">
-	<!-- HEADER ANIMATION -->
-	<!-- <div id="particles-js"></div> -->
-	<div id="header-animation"></div>
-	<!-- Using Threejs & Jerome Etienne's Threex -->
-	<script src='https://jeromeetienne.github.io/threex.terrain/examples/vendor/three.js/build/three-min.js'></script>
-	<script src='https://jeromeetienne.github.io/threex.terrain/examples/vendor/three.js/examples/js/SimplexNoise.js'></script>
-	<script src='https://jeromeetienne.github.io/threex.terrain/threex.terrain.js'></script>
+<div class="full-wrapper">
+	<?php get_template_part('sections/conf/navigation'); ?>
+
+	<!-- CONF HEADER -->
+	<header class="header-container l-page" data-id="glitch">
+		<!-- HEADER ANIMATION -->
+		<!-- <div id="particles-js"></div> -->
+		<div id="header-animation"></div>
+		<!-- Using Threejs & Jerome Etienne's Threex -->
+		<script src='https://jeromeetienne.github.io/threex.terrain/examples/vendor/three.js/build/three-min.js'></script>
+		<script src='https://jeromeetienne.github.io/threex.terrain/examples/vendor/three.js/examples/js/SimplexNoise.js'></script>
+		<script src='https://jeromeetienne.github.io/threex.terrain/threex.terrain.js'></script>
 
 
-	<!-- /HEADER ANIMATION -->
-	<div class="content">
-		<div class="header-wrapper">
-			<div class="row">
-				<div class="header__tp">
-					<h2 class="header__title yellow">
-						<span class="title__primary">The biggest<br/>freaking</span><br/>
-						<span class="title__main">javascript<br>       conference<br></span><br/>
-						<span class="title__secondary">in the world</span>
-					</h2>
+		<!-- /HEADER ANIMATION -->
+		<div class="content">
+			<div class="header-wrapper">
+				<div class="row">
+					<div class="header__tp">
+						<h2 class="header__title yellow">
+							<span class="title__primary">The biggest<br/>freaking</span><br/>
+							<span class="title__main">javascript<br>       conference<br></span><br/>
+							<span class="title__secondary">in the world</span>
+						</h2>
+					</div>
 				</div>
-			</div>
-			
-			<div class="row">
-				<div class="header__li">
-					<!-- <a href="<?php bloginfo('url'); ?>/sobre" class="anchor-button anchor-button--color-5" style="visibility: hidden;">Sobre a BrazilJS</a> -->
-					<div class="header__date_venue">
-						<a href="https://www.google.com/maps/place/Barra+Shopping+Sul/@-30.0843929,-51.2475847,17z/data=!3m1!4b1!4m5!3m4!1s0x951978a0f03108f3:0x6d93ede7b30eb35f!8m2!3d-30.0843929!4d-51.245396"
-							class="paragraph"
-							target="braziljs_map"
-							title="24 e 25 de AGOSTO">24 e 25 de agosto porto alegre rs barra shopping sul</a>
+				
+				<div class="row">
+					<div class="header__li">
+						<!-- <a href="<?php bloginfo('url'); ?>/sobre" class="anchor-button anchor-button--color-5" style="visibility: hidden;">Sobre a BrazilJS</a> -->
+						<div class="header__date_venue">
+							<a href="https://www.google.com/maps/place/Barra+Shopping+Sul/@-30.0843929,-51.2475847,17z/data=!3m1!4b1!4m5!3m4!1s0x951978a0f03108f3:0x6d93ede7b30eb35f!8m2!3d-30.0843929!4d-51.245396"
+								class="paragraph"
+								target="braziljs_map"
+								title="24 e 25 de AGOSTO">24 e 25 de agosto porto alegre rs barra shopping sul</a>
+						</div>
 					</div>
 				</div>
 			</div>
+			
+			<?php $headerWarning = get_field('header_habilitar_aviso', 'option'); ?>
+			<?php if($headerWarning): ?>
+				<?php
+					$headerTitle = get_field('header_titulo', 'option');
+					$headerDescription = get_field('header_descrição', 'option');
+					$headerLink = get_field('header_link', 'option');
+					$headerLinkText = get_field('header_valor-link', 'option');
+				?>
+			<?php endif; ?>
 		</div>
-		
-		<?php $headerWarning = get_field('header_habilitar_aviso', 'option'); ?>
-		<?php if($headerWarning): ?>
-			<?php
-				$headerTitle = get_field('header_titulo', 'option');
-				$headerDescription = get_field('header_descrição', 'option');
-				$headerLink = get_field('header_link', 'option');
-				$headerLinkText = get_field('header_valor-link', 'option');
-			?>
-		<?php endif; ?>
-	</div>
-</header>
-<!-- END * HOME HEADER -->
+	</header>
+	<!-- END * HOME HEADER -->
 
-<div class=full-wrapper>
 	<!-- SECTION BUY -->
 	<section class="content">
 		<div class="conf-wp-buy">
@@ -137,7 +138,6 @@ Template Name: Conf
 		<?php get_template_part('sections/conf/hotels'); ?>
 	</div>
 	<!-- END * MAIN -->
+	<?php get_template_part('sections/footer'); ?>
+	<?php get_footer(); ?>
 </div>
-
-<?php get_template_part('sections/footer'); ?>
-<?php get_footer(); ?>

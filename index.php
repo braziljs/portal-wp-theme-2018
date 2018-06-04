@@ -13,7 +13,7 @@
 			<?php get_template_part('sections/latest-news'); ?>
 			<?php get_template_part('sections/weekly-internal'); ?>
 			<?php get_template_part('sections/events'); ?>
-		
+			<?php get_template_part('sections/alura-course'); ?>
 		</div>
 		<?php get_template_part('sections/home-videos'); ?>
 	</main>

@@ -6,7 +6,7 @@ $context = Timber::get_context();
 $context['events'] = Timber::get_posts();
 
 // echo '<pre>';
-// print_r($context);
+// print_r($context['events']);
 // echo '</pre>';
 // die();
 ?>
