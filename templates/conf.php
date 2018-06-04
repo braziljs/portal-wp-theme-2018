@@ -130,7 +130,7 @@ Template Name: Conf
 							</div>
 						</li>
 
-						<li class="speakers-list__item">
+						<!-- <li class="speakers-list__item">
 							<div class="speakers-card">
 								<div class="speakers-card__header">
 									<div class="speakers-card__thumb" style="background-image: url(<?php asset_path("img/conf/2018/mathias-bynens.jpeg"); ?>)"></div>
@@ -164,7 +164,7 @@ Template Name: Conf
 									<p class="speakers-card__paragraph">Como funciona o fluxo de ideia da NASC</p>
 								</div>
 							</div>
-						</li>
+						</li> -->
 
 					</ul>
 				</div>
