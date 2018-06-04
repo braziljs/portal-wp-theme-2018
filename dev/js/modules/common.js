@@ -17,7 +17,7 @@ define(function () {
 		init: function () {
 			common.bindEvent();
 			common.initAnim();
-			common.initWelcome();
+			common.initWelcome(false);
 		},
 	
 		bindEvent: function () {
@@ -150,7 +150,13 @@ define(function () {
 			});
 		},
 
-		initWelcome: function () {
+		initWelcome: function (flag) {
+			if (flag === false) {
+				$('.full-wrapper').css({display: 'block'});
+
+				return
+			}
+
 			if (window.innerWidth < 768) {
 				$('.full-wrapper').css({display: 'block'});
 				
@@ -159,7 +165,7 @@ define(function () {
 
 			if (!localStorage.getItem('hasSeenVideo')) {
 				body.append('<div id="brjs-opening-video" class="brjs-opening-video">' +
-														'<div class="video-loading-message"><p class="p-1">BEM VINDOS</p> <p class="p-2">A NOVA</p><p class="p-3">BRAZILJS</p></div>' +
+														'<div class="video-loading-message"><p class="p-1">BEM VINDOS</p> <p class="p-2">FELIPE MALA</p></div>' +
 														'<video id="main-reborn-vine" controls> <source src=" ' + window.THEME_PATH + '/assets/media/MAIN_1.mp4" type="video/mp4"> </video>' +
 														'<button id="start-vine" style="display: none;position: absolute;top: 20px;z-index: 999999; background: white; margin: auto; left: 0; right: 0; width: 100px; height: 50px">START</button>' +
 												 '</div>');

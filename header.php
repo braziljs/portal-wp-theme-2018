@@ -42,7 +42,7 @@
 	<link rel="search" type="application/opensearchdescription+xml" title="BrazilJS.org" href="/wp-content/themes/braziljs-portal-theme/assets/media/omnisearch.xml" >
 
 	<?php if (is_home()) { ?>
-		<meta property="og:image" content="<?php asset_path('img/social-networks/braziljs.jpg') ?>" />
+		<meta property="og:image" content="<?php asset_path('img/thumb-generica-portal.png') ?>" />
 	<?php } ?>
 
 	<?php wp_head(); ?>
