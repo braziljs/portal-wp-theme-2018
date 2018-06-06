@@ -2,7 +2,7 @@
 
 <?php get_template_part('sections/navigations/nav-default'); ?>
 
-<div class="full-wrapper">
+<div class="full-wrappesr">
 	<!-- SINGLE ARTICLE -->
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		

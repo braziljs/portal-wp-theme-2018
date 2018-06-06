@@ -7,6 +7,7 @@ define(function () {
 	var common = {};
 	var elm = $('.nav-logo');
 	var body = $('body');
+	var flag = false;
 
 	var vd;
 	var vdContainer;
@@ -17,11 +18,11 @@ define(function () {
 		init: function () {
 			common.bindEvent();
 			common.initAnim();
-			common.initWelcome(false);
+			common.initWelcome();
 		},
 
 		bindEvent: function () {
-			window.logoAnim = common.logoAnim;
+			window.initLogo = common.initAnim;
 		},
 
 		logoAnim: function (theme) {
@@ -32,37 +33,31 @@ define(function () {
 				case '1-2':
 					defaultTheme = 'theme-1';
 					primaryTheme = 'theme-2';
-					// common.logoAnim();
 					break;
 
 				case '2-1':
 					defaultTheme = 'theme-2';
 					primaryTheme = 'theme-1';
-					// common.logoAnim();
 					break;
 
 				case '2-3':
 					defaultTheme = 'theme-2';
 					primaryTheme = 'theme-3';
-					// common.logoAnim();
 					break;
 
 				case '3-2':
 					defaultTheme = 'theme-3';
 					primaryTheme = 'theme-2';
-					// common.logoAnim();
 					break;
 
 				case '3-4':
 					defaultTheme = 'theme-3';
 					primaryTheme = 'theme-4';
-					// common.logoAnim();
 					break;
 
 				case '4-1':
 					defaultTheme = 'theme-4';
 					primaryTheme = 'theme-1';
-					// common.logoAnim();
 					break;
 			}
 
@@ -79,6 +74,13 @@ define(function () {
 
 		initAnim: function () {
 			$(document).ready(function () {
+
+				if (flag === true) {
+					return;
+				} else {
+					flag = true;
+				}
+
 				var p = new Promise(function (resolve, reject) {
 					setTimeout(function () {
 						common.logoAnim('3-4');
@@ -91,6 +93,7 @@ define(function () {
 
 								setTimeout(function () {
 									common.logoAnim('2-3');
+									flag = false;
 								}, 1000);
 							}, 1000);
 						}, 1000);
@@ -119,6 +122,7 @@ define(function () {
 			}
 
 			$('#skip-intro-btn').click(common.endWelcome).fadeIn();
+
 			vd.oncanplaythrough = function () {
 				$('#intro-loading-message').fadeOut('fast');
 				$('#start-vine').fadeIn('slow');
@@ -144,27 +148,34 @@ define(function () {
 				vdContainer.css({ height: $(window).innerHeight() + 'px' });
 			});
 		},
+
 		endWelcome: function (done) {
 			$('.full-wrapper').css({
 				opacity: 1,
-				filter: 'none'
+				filter: 'none',
+				WebkitFilter: 'none'
 			});
+
 			if (done) {
 				window.scrollTo(0, 0);
 				vdContainer.fadeOut('slow');
+
 				setTimeout(function () {
 					localStorage.setItem('hasSeenVideo', 1);
 					document.body.removeAttribute('data-showing-intro')
-					common.initAnim('1-2');
+					vd.remove();
+
+					common.initAnim();
 				}, 1000);
 			} else {
-				common.initAnim('1-2');
+				// debugger;
+				// common.initAnim('1-2');
 			}
 		},
 
 		initWelcome: function () {
+
 			if (window.innerWidth < 768) {
-				// $('.full-wrapper').css({display: 'block'});
 				common.endWelcome()
 				return;
 			}
@@ -178,8 +189,10 @@ define(function () {
 					'<span id="skip-intro-btn">Pular intro »</span>' +
 					'<button id="start-vine" class="highlight_button-play" title="Avançar"></button>' +
 					'</div>');
+				
 				vdContainer = $('#brjs-opening-video')
 				vd = vdContainer.find('video')[0];
+				
 				common.welcome();
 			} else {
 				common.endWelcome();

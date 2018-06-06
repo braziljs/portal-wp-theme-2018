@@ -1,4 +1,4 @@
-<section class="featured-wrapper_home latest-news">
+<section class="featured-wrapper_home latest-news" id='latest-news-anchor'>
 	<div class="center-elements--mobile">
 		<h2 class="title">Últimos artigos</h2>
 	</div>
@@ -41,11 +41,11 @@
 	</div>
 
 	<ul class="row card-wrapper article-list">
-
-		<?php while (have_posts()) : the_post(); ?>
 		<?php
 			$articleCounter = 0
 		?>
+
+		<?php while (have_posts()) : the_post(); ?>
 	
 		<?php $imageLink = wp_get_attachment_image_src(get_post_thumbnail_id(), 'highlight-thumb'); ?>
 
@@ -58,7 +58,7 @@
 					<a href="<?php the_permalink() ?>">
 						<?php
 							$articleCounter++;
-							$titleLimit = 130;
+							$titleLimit = 40;
 							$theTitle = get_the_title();
 							if ($articleCounter > 2 && strlen($theTitle) > $titleLimit) {
 								echo substr($theTitle, 0, $titleLimit - 3) . '...';

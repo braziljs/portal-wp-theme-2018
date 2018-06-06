@@ -13,23 +13,28 @@
 
 	<style>
 		:root {
-			--color-secondary: {{event.cor}};
+			--color-secondary: {{event.cor_evento}};
+		}
+
+		.nav-braziljs,
+		.header-container {
+			background: #000;
 		}
 	</style>
 
 	<div class="header-container e-single">
 		<div class="content">
 			<div class="e-title">
-				<span class="e-l" style="color: {{event.cor}} ">[</span>
-				<span class="e-n">{{ event.logo }}</span>
-				<span class="e-r" style="color: {{event.cor}} ">]</span>
+				<span class="e-l" style="color: {{event.cor_evento}} ">[</span>
+				<span class="e-n">{{ event.titulo_evento }}</span>
+				<span class="e-r" style="color: {{event.cor_evento}} ">]</span>
 			</div>
 			<div class="header-wrapper">
 				<div class="header-bg">
 				</div>
 				<div class="row">
 					<div class="header__tp">
-						<h1 class="header__title">{{event.nome_evento}}</h1>
+						<h1 class="header__title">{{event.name}}</h1>
 						<div class="paragraph ">
 							<div class="diagonal-ballon">
 								<span>{{event.cidade}}</span>

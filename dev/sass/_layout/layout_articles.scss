@@ -138,9 +138,9 @@
 		    	width: 100%;
 		    	height: 100%;
 		    	position: absolute;
+		    	@include transition;
 		    	filter: grayscale(100%);
 					@include background-image(null, cover);
-					@include transition;
 
 					&:hover {
 						filter: none;
@@ -211,25 +211,30 @@
 					border: none;
 					min-height: 100%;
 				}
+				.article-list__item {
+					.article__title {
+						right: 0;
+						bottom: 0;
+						padding: 0;
+						width: 160px;
+						height: 100%;
+						display: flex;
+						position: absolute;
+						@include rem(padding-right, 10px);
 
-				.article__title {
-					right: 0;
-					bottom: 0;
-					padding: 0;
-					width: 160px;
-					height: 100%;
-					display: flex;
-					position: absolute;
-					@include rem(padding-right, 10px);
+						.card__title {
+							line-height: 267%;
+							text-transform: uppercase;
+							@include rem(font-size, 12px);
 
-					.card__title {
-						line-height: 267%;
-						text-transform: uppercase;
-						@include rem(font-size, 12px);
-
-						a {
-							text-decoration: underline;
+							a {
+								text-decoration: underline;
+							}
 						}
+					}
+
+					.article-img {
+						border: 1px solid #eee;
 					}
 				}
 			}

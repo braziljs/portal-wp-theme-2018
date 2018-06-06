@@ -11,7 +11,7 @@
 <header class="header-container" data-id="glitch">
 	<div class="content">
 		<div class="header-wrapper">
-			<div class="header-bg" style="background-image: url(<?php echo get_template_directory_uri() ?>/assets/img/backgrounds/header-portal.jpg);"></div>
+			<div class="header-bg"></div>
 			<div class="row">
 				<div class="header__tp">
 					<h2 class="header__title">
@@ -45,7 +45,7 @@
 			<div class="row">
 				<div class="header__li">
 					<a href="<?php bloginfo('url'); ?>/sobre" class="anchor-button" data-color="yellow">Sobre a BrazilJS</a>
-					<a href="<?php bloginfo('url'); ?>/blog" class="paragraph" title="Explore os artigos disponíveis no Portal BrazilJS">Confira os últimos artigos</a>
+					<a href="#latest-news-anchor" class="paragraph anch-articles" data-scroll-header title="Explore os artigos disponíveis no Portal BrazilJS">Confira os últimos artigos</a>
 				</div>
 			</div>
 		</div>
