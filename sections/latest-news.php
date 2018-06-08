@@ -60,7 +60,10 @@
 							$articleCounter++;
 							$titleLimit = 40;
 							$theTitle = get_the_title();
-							if ($articleCounter > 2 && strlen($theTitle) > $titleLimit) {
+
+							if ($articleCounter == 1) {
+								echo substr($theTitle, 0, 80 - 3) . '...';
+							} else if ($articleCounter > 2 && strlen($theTitle) > $titleLimit) {
 								echo substr($theTitle, 0, $titleLimit - 3) . '...';
 							} else {
 								echo $theTitle;

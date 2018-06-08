@@ -211,7 +211,6 @@
 					border: none;
 					min-height: 100%;
 				}
-				.article-list__item {
 					.article__title {
 						right: 0;
 						bottom: 0;
@@ -236,6 +235,7 @@
 					.article-img {
 						border: 1px solid #eee;
 					}
+				.article-list__item {
 				}
 			}
 

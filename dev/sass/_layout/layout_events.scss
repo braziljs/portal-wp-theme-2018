@@ -47,10 +47,22 @@
 	.header__title {
 		max-width: 400px;
 	}
+
 	.header__li {
+		@include breakpoint(small) {
+			padding: 0 15px;
+			flex-flow: column;
+			align-items: flex-end;
+		}
+
 		.paragraph {
 			width: 300px;
 			color: #fff;
+
+			@include breakpoint(small) {
+				width: 100%;
+				margin: 15px 0 15px 0; 
+			}
 
 			&:after {
 				content: none;
@@ -62,6 +74,10 @@
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-around;
+	}
+
+	.ingresse-widget {
+		display: block;
 	}
 }
 
@@ -77,7 +93,7 @@
 	display: flex;
 	flex-flow: column;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: space-around;
 	@include rem(margin-bottom, 64px);
 
 	@include breakpoint(tablet-and-up) {

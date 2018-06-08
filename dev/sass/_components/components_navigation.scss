@@ -181,6 +181,9 @@ $navigation-hamburger-stick-width: 12px;
 
   a {
     position: relative;
+    /* text-transform: uppercase; */
+    font-weight: bold;
+    text-shadow: 0px 2px 5px #000;
 
     &:after {
       content: '';
