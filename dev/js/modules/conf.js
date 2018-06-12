@@ -7,8 +7,7 @@ define(function () {
 	conf = {
 
 		init: function () {
-			conf.headerAnim()
-			window.logoAnim();
+			conf.headerAnim();
 		},
 
 		headerAnim: function () {

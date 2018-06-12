@@ -37,7 +37,7 @@ $inner-border-space: 5px;
 	}
 
 	pre {
-		@include rem(font-size, 12px);
+		@include rem(font-size, 14px);
 	}
 
 	//BLOCKQUOTE
@@ -81,7 +81,7 @@ $inner-border-space: 5px;
 		line-height: 267%;
 		color: $color-mine-shaft;
 		font-family: $font-primary;
-		@include rem(font-size, 12px);
+		@include rem(font-size, 14px);
 		@include rem(margin-bottom, 25px);
 	}
 
@@ -95,8 +95,8 @@ $inner-border-space: 5px;
 	}
 
 	h2 {
- 		@include rem(margin-bottom, 15px);
-		@include rem(font-size, 16px);
+ 		@include rem(margin-bottom, 16px);
+		@include rem(font-size, 18px);
 
 		@include breakpoint(tablet-and-up) {
 			@include rem(font-size, 20px); color: $color-mine-shaft;
@@ -107,9 +107,9 @@ $inner-border-space: 5px;
 	h3 {
 		color: #000;
 		height: 50px;
-		margin-bottom: 15px;
+		margin-bottom: 14px;
 		border-bottom: 1px solid #000;
-		@include rem(font-size, 12px);
+		@include rem(font-size, 14px);
 
 		@include breakpoint(tablet-and-up) {
 			@include rem(margin-bottom, 30px);
@@ -199,7 +199,7 @@ $inner-border-space: 5px;
 		font-weight: 900;
 		line-height: 120%;
 		position: relative;
-		@include rem(font-size, 12px);
+		@include rem(font-size, 14px);
 		@include rem(margin-bottom, 10px);
 
 	}
@@ -297,7 +297,7 @@ $inner-border-space: 5px;
 	min-width: 180px;
 	line-height: 120%;
 	margin-right: 60px;
-	@include rem(font-size, 13px);
+	@include rem(font-size, 14px);
 	justify-content: space-between;
 
 	@include breakpoint(small) {
@@ -318,7 +318,7 @@ $inner-border-space: 5px;
 			font-weight: bold;
 			line-height: 267%;
 			text-transform: uppercase;
-			@include rem(font-size, 12px);
+			@include rem(font-size, 14px);
 		}
 
 		.header__meta-time {
@@ -328,7 +328,7 @@ $inner-border-space: 5px;
 			position: relative;
 			margin-bottom: 10px;
 			text-transform: uppercase;
-			@include rem(font-size, 12px);
+			@include rem(font-size, 14px);
 
 			@include breakpoint(tablet-and-up) {
 				text-align: right;
@@ -427,7 +427,7 @@ $inner-border-space: 5px;
 .header__author-description {
 	line-height: 267%;
 	font-weight: normal;
-	@include rem(font-size, 12px);
+	@include rem(font-size, 14px);
 }
 
 /*
@@ -488,14 +488,14 @@ $inner-border-space: 5px;
 	margin-bottom: 40px;
 	text-transform: uppercase;
 
-	@include rem(font-size, 12px);
+	@include rem(font-size, 14px);
 
 	.tags-list__title {
 		color: #000;
 		height: 50px;
 		margin: 0 5px 30px 0;
 		border-bottom: 1px solid #000;
-		@include rem(font-size, 12px);
+		@include rem(font-size, 14px);
 
 		@include breakpoint(tablet-and-up) {
 			@include rem(margin-bottom, 30px);
@@ -529,7 +529,7 @@ $inner-border-space: 5px;
 		padding: 10px;
 		border: 1px solid #000;
 		background-color: #000;
-		@include rem(font-size, 12px);
+		@include rem(font-size, 14px);
 	}
 }
 

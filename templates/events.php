@@ -27,16 +27,6 @@ Template Name: Eventos
 	</div>
 <?php endwhile; endif; ?>
 
-<?php /*$ticker = get_field('ticker_habilitado', 'option'); ?>
-<?php if($ticker): ?>
-	<div class="section-wrapper top">
-		<div class="content">
-			<?php get_template_part('sections/ticker'); ?>
-		</div>
-	</div>
-<?php endif;*/ ?>
-
-
 
 <?php
 	$args = array(
@@ -68,7 +58,7 @@ Template Name: Eventos
 
 						<li class="events-list__item">
 							<div class="card card--type-2">
-								<a href="<?php the_permalink() ?>" class="card__header" aria-hidden="true" role="presentation" tabindex="-1" style="background-image: url(<?php echo $imageLink[0]; ?>);">
+								<a href="<?php the_permalink() ?>" class="card__header" aria-hidden="true" role="presentation" tabindex="-1" <?php if (isset($imageLink[0])) : echo 'style="background-image: url(' . $imageLink[0] . ')"'; else : echo 'data-bg="none"'; endif; ?>>
 								</a>
 								<div class="card__content">
 									<h2 class="card__title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>

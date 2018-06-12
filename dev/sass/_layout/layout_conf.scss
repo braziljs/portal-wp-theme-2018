@@ -16,7 +16,12 @@
 	position: relative;
 
 	&.nav-conf {
+		background-color: #000;
 		box-shadow: 0 30px 100px 15px #000;
+
+		.header-container {
+			background-color: #000;
+		}
 	}
 
 	.nav-wp {
@@ -74,8 +79,9 @@
 /* HEADER */
 
 .l-page {
-	position: relative;
 	overflow: hidden;
+	position: relative;
+	background-color: #000;
 
 	#header-animation {
 		position: absolute;

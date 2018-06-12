@@ -24,7 +24,7 @@ $navigation-hamburger-stick-width: 12px;
 */
 
 .nav-braziljs {
-  background-color: #000;
+  background-color: transparent;
 
   .nav-logo {
     width: 127px;
@@ -181,6 +181,9 @@ $navigation-hamburger-stick-width: 12px;
 
   a {
     position: relative;
+    /* text-transform: uppercase; */
+    font-weight: bold;
+    text-shadow: 0px 2px 5px #000;
 
     &:after {
       content: '';

@@ -2,7 +2,7 @@
 
 <!-- HEADER -->
 <div id="full-wrapper" class="full-wrapper">
-	<section class="section-wrapper header__reborn">
+	<section class="section-wrapper hBG" style="background-image: url(<?php echo get_template_directory_uri() ?>/assets/img/backgrounds/header-portal.jpeg);">
 		<?php get_template_part('sections/navigations/nav-primary'); ?>
 		<?php get_template_part('sections/header'); ?>
 	</section>

@@ -8,7 +8,15 @@
 	width: 100%;
 	z-index: 1;
 	position: relative;
-	background-color: $color-black;
+	background-color: transparent;
+}
+
+.hBG {
+	padding-bottom: 0;
+	background-color: #000;
+	margin-bottom: 64px;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 .header-wrapper {
