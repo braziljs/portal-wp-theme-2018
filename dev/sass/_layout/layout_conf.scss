@@ -108,13 +108,16 @@
 		}
 	}
 
-	.title__primary, .title__secondary {
+	.title__primary,
+	.title__secondary {
 		position: relative;
 	}
+
 	.title__secondary {
 		padding-left: 30px;
 		white-space: nowrap;
 	}
+
 	.header-wrapper {
 		.header__li {
 			flex-flow: row-reverse;
@@ -420,12 +423,45 @@
 	}
 }
 
-
 /*
 *
 * END * GRID SPEAKER
 *
 */
+
+
+.speakers {
+
+}
+
+.speaker-list-content {
+	.pt01,
+	.pt02 {
+		text-align: center;
+		@include transition;
+
+		a, b {
+			font-weight: bold;
+		}
+	}
+
+	.pt01 {
+		@include rem(font-size, 20px);
+
+		@include breakpoint(tablet-and-up) {
+			@include rem(font-size, 24px);
+		}
+	}
+
+	.pt02 {
+		@include rem(font-size, 12px);
+
+		@include breakpoint(tablet-and-up) {
+			@include rem(font-size, 16px);
+		}
+	}
+}
+
 
 
 /*

@@ -130,7 +130,7 @@ Template Name: Conf
 							</div>
 						</li>
 
-						<!-- <li class="speakers-list__item">
+						<li class="speakers-list__item">
 							<div class="speakers-card">
 								<div class="speakers-card__header">
 									<div class="speakers-card__thumb" style="background-image: url(<?php asset_path("img/conf/2018/mathias-bynens.jpeg"); ?>)"></div>
@@ -164,7 +164,7 @@ Template Name: Conf
 									<p class="speakers-card__paragraph">Como funciona o fluxo de ideia da NASC</p>
 								</div>
 							</div>
-						</li> -->
+						</li>
 
 					</ul>
 				</div>
@@ -172,7 +172,46 @@ Template Name: Conf
 		</section>
 		<!-- END * SPEAKERS LIST -->
 
+			<section class="section-wrapper">
+			  <div class="content">
+			  	<div class="speakers">
+				    <div class="speaker-list-content">
+				    	<div class="pt01">
+					    	<a href="">Andreia Carvalho</a> <b>/</b>
+					    	<a href="">Amanda Santos</a> <b>/</b>
+					    	<a href="">Nathalia Alves</a> <b>/</b>
+					    	<a href="">Otavio Avila</a>
+					    	<br>
+					    	<br>
+					      <a href="">Sandro Peres</a> <b>/</b>
+					      <a href="">Cristiano Fernandes</a> <b>/</b>
+					      <a href="">Fernanda Shaun</a> <b>/</b>
+					      <a href="">Thais Oliveira</a>
+				    	</div>
+				    	<br>
+				    	<div class="pt02">
+								<a href="">Andrei Carvalho</a> <b>/</b>
+								<a href="">Amanda Santos</a> <b>/</b>
+								<a href="">Nathalia Alves</a> <b>/</b>
+								<a href="">Otavio Avila</a> <b>/</b>
+								<a href="">Sandro Peres</a> <b>/</b>
+								<a href="">Cristiano Fernandes</a> 
+								<br>
+								<br>
+								<a href="">Fernanda Shaun</a> <b>/</b>
+								<a href="">Thais Oliveira</a> <b>/</b>
+								<a href="">Andreia Carvalho</a> <b>/</b>
+								<a href="">Amanda Santos</a> <b>/</b>
+								<a href="">Andrigo Tostoiesq</a> <b>/</b>
+								<a href="">Laurindo Evetes</a> 
+				    	</div>
+				    </div>
+					</div>
+			  </div>
+			</section>
+
 		<?php get_template_part('sections/conf/hotels'); ?>
+		<?php get_template_part('sections/sponsors'); ?>
 	</div>
 	<!-- END * MAIN -->
 	<?php get_template_part('sections/footer'); ?>
