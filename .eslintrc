@@ -1,0 +1,24 @@
+{
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 8,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "rules": {
+        "semi": 0,
+        "no-unused-vars": 2,
+        "no-undef": 2,
+        "no-undef-init": 2
+    },
+    "globals": {
+        "Promise": true,
+        "fetch": true,
+        "require": true
+    }
+}
