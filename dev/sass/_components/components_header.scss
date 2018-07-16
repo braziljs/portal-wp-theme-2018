@@ -14,7 +14,7 @@
 .hBG {
 	padding-bottom: 0;
 	background-color: #000;
-	margin-bottom: 64px;
+	margin-bottom: 80px;
 	background-position: center;
 	background-repeat: no-repeat;
 }
@@ -71,36 +71,86 @@
 		flex-flow: row;
 		margin-top: 32px;
 		min-height: 120px;
-		border-right: 1px solid #fff;
+		// border-right: 1px solid #fff;
 		justify-content: space-between;
 
 		a {
-			color: white;
-		}
+      color: white;
 
-    .paragraph {
-    	width: 145px;
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .home-about {
+      @include breakpoint(small) {
+        display: none;
+      }
+    }
+
+    .default .paragraph {
+
+
+      // background: #ffee1f;
+      color: #000;
+      width: 300px;
+      height: 160px;
+      position: absolute;
+      right: 0;
+      font-family: Anton,san-serif;
+      font-size: 40px;
+      padding-right: 10px;
+      line-height: 190%;
+      padding-top: 8px;
+
+
+
+    	// width: 145px;
     	font-weight: 900;
     	text-align: right;
-    	line-height: 200%;
+    	// line-height: 200%;
     	margin-right: 20px;
-    	position: relative;
+    	// position: relative;
     	padding-left: 10px;
     	@include transition;
     	text-transform: uppercase;
-    	@include rem(font-size, 12px);
+    	// @include rem(font-size, 12px);
 
-    	&:after {
-    		content: "";
-	    	right: 0;
-	    	bottom: 0;
-	    	width: 28px;
-	    	height: 17px;
-	    	@extend .bounce;
-	    	position: absolute;
-	    	display: inline-block;
-				background: url('../img/icons/icon-arrow.svg') transparent no-repeat top center;
-    	}
+    	// &:after {
+    	// 	content: "";
+	    // 	right: 0;
+	    // 	bottom: 0;
+	    // 	width: 28px;
+      //   height: 17px;
+      //   color: #444;
+	    // 	@extend .bounce;
+	    // 	position: absolute;
+	    // 	display: inline-block;
+			// 	background: url('../img/icons/icon-arrow.svg') transparent no-repeat top center;
+      // }
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 50px;
+        top: 1px;
+        width: 90%;
+        height: 110%;
+        background: #ffee1f;
+        z-index: 0;
+        transform: skew(-10deg,-10deg) translate(-8px,-4px) scale(1);
+      }
+    }
+
+    .ir-para,
+    .conferencia {
+      transform: scale(1,1.5);
+      letter-spacing: 2px;
+    }
+
+    .ir-para {
+      text-shadow: 0 0 1px #000, 0 0 1px #000, 0 0 1px #000, 0 0 1px #000, 0 0 1px #000;
+      color: #ffee1f;
     }
 
     @include breakpoint(tablet-and-up) {
@@ -112,7 +162,7 @@
 				padding-left: 0;
 				margin-right: 30px;
 				@include transition;
-				@include rem(font-size, 16px);
+				// @include rem(font-size, 16px);
 			}
 		}
 	}

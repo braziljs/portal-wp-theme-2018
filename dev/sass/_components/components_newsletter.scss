@@ -15,12 +15,22 @@
 	@include rem(margin-bottom, 64px);
 }
 
+.newsletter-slack {
+  color: #fff;
+  padding-left: 10px;
+  margin: 10px;
+
+  a {
+    text-decoration: underline;
+  }
+}
+
 .newsletter-about {
 	width: 100%;
 
 	@include breakpoint(desktop) {
 		width: 500px;
-	}
+  }
 
 	#mc-embedded-subscribe-form {
 		width: 100%;
@@ -73,7 +83,7 @@
 	@include breakpoint(desktop) {
 		max-width: 100%;
 		flex-flow: row;
-	}  
+	}
 }
 
 .newsletter-wrapper__top {

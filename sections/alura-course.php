@@ -1,5 +1,5 @@
 <!-- ALURA + BRAZILJS -->
-<div class="section-wrapper">
+<div class="section-wrapper" id="cursos">
 	<div class="courses-alura">
 		<h2 class="title">Cursos recomendados</h2>
 		<div class="row">

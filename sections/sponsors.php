@@ -1,4 +1,4 @@
-<section class="section-wrapper sponsor">
+<section class="section-wrapper sponsor" id="patrocinadores">
 	<div class="content">
 		<div class="">
 			<h2 class="title">Patrocinadores</h2>

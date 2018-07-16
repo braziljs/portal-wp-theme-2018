@@ -1,5 +1,5 @@
 <!-- WEEKLY CONTENT -->
-<div class="newsletter-wrapper__top">
+<div class="newsletter-wrapper__top" id="weekly">
 	<div class="content">
 		<div class="newsletter-flex">
 			<div class="newsletter-icon_news">
@@ -14,6 +14,10 @@
 					<input class="input" placeholder="e-mail" type="email" name="EMAIL" id="mce-EMAIL" required />
 					<button type="submit" class="anchor-button" data-color="yellow">Assine a newsletter</button>
 				</form>
+        <div class="newsletter-slack">
+          <br/>
+          Entre na discussão no <a href="https://now-examples-slackin-vvjogtwzcf.now.sh/" target="slack">slack</a>
+        </div>
 			</div>
 		</div>
 	</div>

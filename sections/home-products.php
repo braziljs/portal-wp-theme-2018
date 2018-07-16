@@ -1,14 +1,14 @@
 <!-- HOME PRODUCTS -->
-<div class="product__wrapper">
+<div class="product__wrapper" id="braziljs-numbers">
 	<div class="products__title">
 		<h2>Nossas iniciativas</h2>
 	</div>
 
 	<div class="product">
-		
+
 		<div class="products-highlight__wrapper">
 			<h3 class="products__name">Eventos</h3>
-			
+
 			<div class="products-highlight__info">
 				<div class="products-highlight">
 					<div class="products-highlight__item">
@@ -54,7 +54,7 @@
 	<hr class="hr double-line">
 
 	<div class="products-list__type-2">
-		
+
 		<div class="product">
 
 			<div class="products-highlight__wrapper">
@@ -103,7 +103,7 @@
 				<div class="products-highlight__info">
 					<div class="products-highlight">
 						<div class="products-highlight__item">
-							<strong class="products-highlight__value">100Mi+</strong>
+							<strong class="products-highlight__value">100K+</strong>
 							<span class="products-highlight__key">devs <br> por mês</span>
 						</div>
 						<div class="products-highlight__item">

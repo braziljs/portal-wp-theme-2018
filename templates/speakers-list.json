@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Ada Rose Cannon",
+    "pic": "ada-rose-cannon.jpeg",
+    "bio": "Developer Advocate da Samsung para o navegador <a href=\"https://twitter.com/SamsungInternet\">@SamsungInternet</a>. Web fangirl. Geralmente em Londres. WebXR Device API, Web Components, PWA."
+  },
+  {
+    "name": "Kyle Simpson",
+    "pic": "kyle-simpson.jpeg",
+    "bio": "É um escritor, palestrante, professor, e contribuidor em projeto open-source. Evangelista da open web, apaixonado por todas as coisas relacionadas ao javascript."
+  },
+  {
+    "name": "Feross Aboukhadijeh",
+    "pic": "feross-aboukhadijeh.jpg",
+    "bio": "Programador, designer, professor e cientista louco. Atualmente, construindo o <a href=\"https://webtorrent.io/\">WebTorrent</a>, um cliente de streaming BitTorrent para o navegador, alimentado pela WebRTC. Antes disso, construiu o <a href=\"https://web.archive.org/web/20150810065820/https://peercdn.com/\">PeerCDN</a>, uma rede de entrega de conteúdo peer-to-peer para tornar os sites mais rápidos e mais baratos."
+  },
+  {
+    "name": "Mathias Bynens",
+    "pic": "mathias-bynens.jpeg",
+    "bio": "Mathias works on the V8 JavaScript engine at Google and on the ECMAScript standard through TC39."
+  },
+  {
+    "name": "Adam Baldwin",
+    "pic": "adam-baldwin.jpeg",
+    "bio": "Adam Baldwin is the Head of Security at npm inc. He is the Founder of the Node Security Project & talks about javascript security non-stop. In his free time Adam enjoys doing basically the exact same stuff he does for work, also raising chickens, and spending as much time as possible with his wife and 2 children."
+  },
+  {
+    "name": "Fulano da Silva",
+    "pic": "feross-aboukhadijeh.jpg",
+    "bio": "Some nicely crafted random text."
+  },
+  {
+    "name": "",
+    "pic": "",
+    "bio": ""
+  },
+  {
+    "name": "",
+    "pic": "",
+    "bio": ""
+  },
+  {
+    "name": "",
+    "pic": "",
+    "bio": ""
+  },
+  {
+    "name": "",
+    "pic": "",
+    "bio": ""
+  },
+  {
+    "name": "",
+    "pic": "",
+    "bio": ""
+  },
+  {
+    "name": "",
+    "pic": "",
+    "bio": ""
+  },
+  {
+    "name": "",
+    "pic": "",
+    "bio": ""
+  },
+  {
+    "name": "",
+    "pic": "",
+    "bio": ""
+  },
+  {
+    "name": "",
+    "pic": "",
+    "bio": ""
+  },
+  {
+    "name": "",
+    "pic": "",
+    "bio": ""
+  },
+  {
+    "name": "",
+    "pic": "",
+    "bio": ""
+  },
+  {
+    "name": "",
+    "pic": "",
+    "bio": ""
+  }
+]

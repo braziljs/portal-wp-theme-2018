@@ -1,5 +1,5 @@
 <!-- WEEKLY NEWSLETTER -->
-<section class="newsletter-wrapper">
+<section class="newsletter-wrapper" id="weekly">
 	<?php get_template_part('sections/weekly-content'); ?>
 	<?php
 		$weeklyGroup = get_field('weekly_cartola', 'option');

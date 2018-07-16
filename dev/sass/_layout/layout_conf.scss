@@ -20,7 +20,7 @@
 		box-shadow: 0 30px 100px 15px #000;
 
 		.header-container {
-			background-color: #000;
+			// background-color: #000;
 		}
 	}
 
@@ -52,10 +52,10 @@
 	.embedstore-powered {
 		display: none;
 	}
-	
+
 	button {
 		@extend .anchor-button;
-		
+
 		color: #fff !important;
 		background-color: #000 !important;
 		border-color: $sunny-yellow;
@@ -101,7 +101,7 @@
 		display: inline-block;
 		white-space: pre;
 		@include transition;
-		
+
 		@include breakpoint(tablet-and-up) {
 			transform: scale(1.3);
 			@include transition;
@@ -132,7 +132,7 @@
 					width: 100%;
 					height: 100%;
 					background: #000;
-					z-index: 0;
+					z-index: -1;
 					transform: skew(-10deg, -10deg) translate(-20px, -20px) scale(1.1);
 				}
 			}
@@ -142,8 +142,11 @@
 			}
 
 			.paragraph {
-				width: 173px;
+        width: 173px;
+        color: #fff;
+        border-radius: solid 1px #fff;
 
+				&:before,
 				&:after {
 					content: none;
 				}
