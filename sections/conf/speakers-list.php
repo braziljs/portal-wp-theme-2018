@@ -7,20 +7,20 @@
 		'meta_key' => 'keynote',
 		'orderby' => 'meta_value_num'
 	);
-    $keynote_query = new WP_Query($args); ?>
+    $keynote_query = new WP_Query($args);
 
-  <?php if ($keynote_query->have_posts()): ?>
-  	<?php //if (get_field('keynote')): ?>
+  if ($keynote_query->have_posts()): ?>
+    <?php //if (get_field('keynote')): ?>
 			<section class="section-wrapper speakers-list-container">
 				<div class="content">
 					<div>
 						<h2 class="title" id="speakers-title">Keynotes</h2>
 					</div>
-					
+
 					<ul class="post-content-wrapper center-elements--mobile" aria-labelledby="speakers-title">
-						
+
 						<?php while ($keynote_query->have_posts()): $keynote_query->the_post(); ?>
-							
+
 							<?php
 								// echo "<pre>";
 								// print_r($keynote_query);
@@ -55,12 +55,12 @@
 
 						<?php  endwhile; ?>
 					</ul>
-					
+
 					<div class="content">
 						<ul>
-							
+
 							<?php while ($keynote_query->have_posts()): $keynote_query->the_post(); ?>
-								
+
 								<?php
 									$imageLink = wp_get_attachment_image_src(get_post_thumbnail_id(), 'event-thumb-small');
 									$imageAlt = get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true);

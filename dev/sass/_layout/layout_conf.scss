@@ -255,24 +255,87 @@
 		position: relative;
 
 		.speakers-list__item {
-			display: inline-block;
+      display: inline-block;
 
 			@include breakpoint(small) {
 				width: 100%;
 				margin-bottom: 40px;
 				overflow-x: scroll;
-			}
+      }
+
+      &.effect-border {
+        .speakers-card .speakers-card__header {
+          border: 30px solid $sunny-yellow;
+        }
+      }
+      &.effect-dash-yellow {
+        .speakers-card {
+          &:after {
+            content: '';
+            left: -35px;
+            top: 260px;
+            width: 230px;
+            height: 25px;
+            display: block;
+            position: absolute;
+            background-color: $sunny-yellow;
+          }
+					.speakers-card__header {
+            position: relative;
+
+            .speakers-card__thumb {
+              transform-origin: left center;
+            }
+          }
+        }
+      }
+      &.effect-dash-black {
+        .speakers-card {
+
+          &:after {
+            content: '';
+            top: -30px;
+            left: -20px;
+            width: 15%;
+            height: 60px;
+            position: absolute;
+            background-color: #000;
+            z-index: 9;
+          }
+
+					.speakers-card__header {
+            z-index: 0;
+            position: relative;
+
+            .speakers-card__thumb {
+              transform-origin: center top;
+            }
+
+						&:before {
+              content: '';
+              bottom: 0;
+              width: 100%;
+              height: 40px;
+              position: absolute;
+              background-color: #000;
+              z-index: 9;
+            }
+          }
+        }
+      }
 
 			.speakers-card {
 				display: flex;
-				flex-flow: row wrap;
+        flex-flow: row wrap;
+        margin-bottom: 40px;
 
 				.speakers-card__header {
 					height: 320px;
 					min-width: 240px;
 					max-width: 240px;
 					margin-right: 70px;
-					display: inline-block;
+          display: inline-block;
+          overflow: hidden;
 
 					@include breakpoint(small) {
 						margin: 0 auto;
@@ -282,7 +345,13 @@
 						width: 100%;
 						height: 100%;
 						filter: grayscale(100%);
-						@include background-image(null, cover);
+            @include background-image(null, cover);
+            transition: all .3s linear;
+
+            &:hover {
+              filter: grayscale(0%);
+              transform: scale(1.2);
+            }
 					}
 				}
 
@@ -312,8 +381,8 @@
 				}
 			}
 
-			&:nth-child(1),
-			&:nth-child(4) {
+			&:nth-child(1) {
+			// &:nth-child(1 + 2n) {
 
 				@include breakpoint(tablet-and-up) {
 					margin-bottom: 90px;
@@ -323,44 +392,65 @@
 					.speakers-card__header {
 						position: relative;
 
-						&:after {
-							content: '';
-					    left: -35px;
-					    bottom: 30px;
-					    width: 230px;
-					    height: 25px;
-					    display: block;
-					    position: absolute;
-					    background-color: $sunny-yellow;
-						}
+				// 		&:after {
+				// 			content: '';
+				// 	    left: -35px;
+				// 	    bottom: 30px;
+				// 	    width: 230px;
+				// 	    height: 25px;
+				// 	    display: block;
+				// 	    position: absolute;
+				// 	    background-color: $sunny-yellow;
+				// 		}
 					}
 				}
 			}
 
-			&:nth-child(2),
-			&:nth-child(5) {
-				width: 100%;
+      &:nth-child(2n + 3) {
+        // &:nth-child(2n + 5) {
+          // width: 100%;
+          // float: right;
+          display: block;
+          position: relative;
+          float: left;
+      }
+
+			&:nth-child(2n + 2) {
+			// &:nth-child(2n + 5) {
+        // width: 100%;
+        // float: right;
+        display: block;
+        position: relative;
+        float: right;
+      }
+
+      &:nth-child(2) {
+        margin-top: 80px;
+      }
+      &:nth-child(2),
+      &:nth-child(3n) {
+      // &:nth-child(2 + 5n) {
+        min-width: 280px;
 
 				@include breakpoint(desktop) {
 					top: 10%;
 					right: 0;
-					min-width: 280px;
-					position: absolute;
+					// position: absolute;
 				}
 
 				.speakers-card {
-					width: 100%;
+					// width: 100%;
 					float: left;
 					display: flex;
 
 					@include breakpoint(tablet-and-up) {
-						width: 280px;
-						float: right;
+					// 	width: 280px;
+					// 	float: right;
 						flex-flow: column;
 					}
 
 					.speakers-card__header {
-						border: 30px solid $sunny-yellow;
+						// border: 30px solid $sunny-yellow;
 
 						@include breakpoint(tablet-and-up) {
 							margin-right: 0;
@@ -368,11 +458,11 @@
 					}
 
 					.speakers-card__content {
-						position: relative;
+						// position: relative;
 
 						@include breakpoint(tablet-and-up) {
-							left: 70px;
-							bottom: 30px;
+							// left: 70px;
+							// bottom: 30px;
 							text-align: right;
 						}
 
@@ -385,16 +475,17 @@
 				}
 			}
 
-			&:nth-child(3),
-			&:nth-child(6) {
+			&:nth-child(3)
+			&:nth-child(3n+1) {
 				.speakers-card {
 
 					@include breakpoint(tablet-and-up) {
-						flex-flow: row-reverse;
+						// flex-flow: row-reverse;
 					}
 
 					.speakers-card__header {
-						position: relative;
+            position: relative;
+            border: none;
 						// padding-top: 40px;
 
 						@include breakpoint(tablet-and-up) {

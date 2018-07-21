@@ -75,7 +75,7 @@ Template Name: Conf
 				</div>
 				<div class="conf__buttons">
 					<div  style="display: block;" class="ingresse-widget" data-btntext="Comprar Ingressos" data-btnbgcolor="#ffc819" data-btntextcolor="#222" data-eventid="23468"></div>
-					<a class="anchor-button" href="https://docs.google.com/forms/d/e/1FAIpQLScvM9sctUCe2vjbUxv3QzhRimn5ztB7JyPgbnpTDksS3eTpQw/viewform">call 4 papers</a>
+					<a class="anchor-button" href="#hoteis">Buscar hotéis</a>
 				</div>
 			</div>
 		</div>
@@ -88,6 +88,8 @@ Template Name: Conf
 
     <?php
       $speakers = json_decode(file_get_contents(get_template_directory().'/templates/speakers-list.json'), true);
+
+      $picStyle = 1;
     ?>
 
 		<!-- SPEAKERS LIST -->
@@ -104,10 +106,19 @@ Template Name: Conf
                   continue;
                 }
                 ?>
-                  <li class="speakers-list__item">
+                  <li class="speakers-list__item effect-<?php echo ($picStyle % 3 === 1) ? 'dash-yellow' : (($picStyle % 3 === 2) ? 'border' : 'dash-black'); $picStyle++; ?>">
                       <div class="speakers-card">
                         <div class="speakers-card__header">
-                          <div class="speakers-card__thumb" style="background-image: url(<?php asset_path("img/conf/2018/" . $speaker['pic']); ?>)"></div>
+                          <div
+                            class="speakers-card__thumb"
+                            style="background-image: url(<?php asset_path("img/conf/2018/" . $speaker['pic']); ?>);
+                                   <?php
+                                    if ($speaker['faceAt']) {
+                                      echo 'transform-origin: '.$speaker['faceAt'] .';';
+                                      echo 'background-position: '.$speaker['faceAt'] .';';
+                                    }
+                                   ?>"
+                          ></div>
                         </div>
                         <div class="speakers-card__content">
                           <h3 class="speakers-card__title"><?php echo $speaker['name'] ?></h3>
@@ -125,7 +136,7 @@ Template Name: Conf
 		</section>
 		<!-- END * SPEAKERS LIST -->
 
-			<section class="section-wrapper">
+			<?php /*<section class="section-wrapper">
 			  <div class="content">
 			  	<div class="speakers">
 				    <div class="speaker-list-content">
@@ -161,7 +172,7 @@ Template Name: Conf
 				    </div>
 					</div>
 			  </div>
-			</section>
+			</section> */ ?>
 
 		<?php get_template_part('sections/conf/hotels'); ?>
 		<?php get_template_part('sections/sponsors'); ?>

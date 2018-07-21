@@ -1,5 +1,5 @@
 <!-- HOTELS -->
-<section class="section-wrapper">
+<section class="section-wrapper" id='hoteis'>
 	<div class="content">
 		<div class="hostels-wrapper">
 			<div class="hostel-icon">
