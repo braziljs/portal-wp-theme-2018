@@ -92,7 +92,7 @@ Template Name: Conf
 
 		<!-- SPEAKERS LIST -->
 		<section class="section-wrapper">
-			<div class="content">
+			<div class="content" id="palestrantes">
 				<h2 class="title" id="speakers-title">Speakers</h2>
 
 				<div class="speakers-grid__wrapper">

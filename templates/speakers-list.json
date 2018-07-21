@@ -7,7 +7,7 @@
   {
     "name": "Kyle Simpson",
     "pic": "kyle-simpson.jpeg",
-    "bio": "É um escritor, palestrante, professor, e contribuidor em projeto open-source. Evangelista da open web, apaixonado por todas as coisas relacionadas ao javascript."
+    "bio": "É um escritor, palestrante, professor, e contribuidor em projetos open-source. Evangelista da open web, apaixonado por todas as coisas relacionadas ao javascript."
   },
   {
     "name": "Feross Aboukhadijeh",
@@ -25,49 +25,44 @@
     "bio": "Adam Baldwin is the Head of Security at npm inc. He is the Founder of the Node Security Project & talks about javascript security non-stop. In his free time Adam enjoys doing basically the exact same stuff he does for work, also raising chickens, and spending as much time as possible with his wife and 2 children."
   },
   {
-    "name": "Fulano da Silva",
-    "pic": "feross-aboukhadijeh.jpg",
-    "bio": "Some nicely crafted random text."
+    "name": "Fagner Martins",
+    "pic": "",
+    "bio": "Fagner Brack works as a Software Engineer at MYOB Australia. In his spare time, Fagner likes to read books and blog posts. He is also a blog writer, Redditor, and Open Source contributor."
   },
   {
-    "name": "",
-    "pic": "",
-    "bio": ""
+    "name": "Mario Souto",
+    "pic": "mario-souto.jpeg",
+    "bio": "Vivo no 220v, tô sempre procurando coisas novas para fazer e finalmente estou me achando no mundo dos esportes gastando essa energia com corridas. Adoro codar desafios aleatórios, fazer sites, ensinar sobre, e hoje consigo fazer tudo isso pela Caelum e Alura."
   },
   {
-    "name": "",
-    "pic": "",
-    "bio": ""
+    "name": "Monica Lent",
+    "pic": "monica-lent.jpg",
+    "bio": "Monica is the Frontend Lead at SumUp, a multinational FinTech startup. Before moving to Berlin, she worked in domains such as natural language processing and cloud technologies."
   },
   {
-    "name": "",
-    "pic": "",
-    "bio": ""
+    "name": "Claudia Hernández",
+    "pic": "claudia-hernandez.jpg",
+    "bio": "Claudia Hernández is a mexican frontend developer at Auth0. She has previously worked at Dailymotion in Paris and on projects for companies such as Air France, EDF, Groupe SEB and Aéroport de Paris. Claudia has a computer science background and loves learning emerging web technologies. When she is not coding, chances are you’ll find her reading a book ! Claudia also loves travelling and discovering new cultures."
   },
   {
-    "name": "",
-    "pic": "",
-    "bio": ""
+    "name": "Caroline Soares",
+    "pic": "caroline-soares.jpg",
+    "bio": "Desenvolvedora Front end, estudante de Sistemas para Internet, podcaster e professora."
   },
   {
-    "name": "",
-    "pic": "",
-    "bio": ""
+    "name": "Isa Silveira",
+    "pic": "isa-silveira.jpg",
+    "bio": "Isa é uma engenheira de software construindo grandes produtos digitais na Work&Co. Ao longo de sua carreira, ela já atuou na área da pesquisa científica, back-end e front-end para web e mobile, e trabalhou em projeto para clientes internacionais como a Universidade de Stanford, Banco Votorantim e o Grupo Estadão. Não nega uma cerveja e uma boa conversa, no seu tempo livre ela gosta de praticar slalom nos patins e brincar com seus cachorros."
   },
   {
-    "name": "",
-    "pic": "",
-    "bio": ""
+    "name": "Daniel Ehrenberg",
+    "pic": "daniel-ehrenberg.jpg",
+    "bio": "I work on TC39 and occasionally contribute to V8. I work for Igalia, a Galician consultancy which adds features to JavaScript and the Web Platform, as well as embedding web browsers in various products. I live with my partner outside of Barcelona."
   },
   {
-    "name": "",
-    "pic": "",
-    "bio": ""
-  },
-  {
-    "name": "",
-    "pic": "",
-    "bio": ""
+    "name": "Rafael Specht da Silva",
+    "pic": "rafael-silva.jpg",
+    "bio": "Desenvolvedor web, apreciador de chiptunes, sommelier de gifs, entusiasta das APIs fantásticas da web. Já palestrou no mesmo palco do Brendan Eich duas vezes (o que não significa nada, mas deixou-o bem nervoso)."
   },
   {
     "name": "",

@@ -23,15 +23,16 @@
 			    $wp_query = new WP_Query($args);
 			?>
 			<?php if (have_posts()): ?>
-				<div class="sponsor-category">
-					<h3 class="subtitle">Gold</h3>
+				<div class="sponsor-category gold">
+					<span class="subtitle">Gold</span>
 					<ul class="sponsor-list">
 						<?php while ( have_posts() ) : the_post(); ?>
 							<?php $imageLink = wp_get_attachment_image_src(get_post_thumbnail_id(), "medium") ?>
 
 							<li class="sponsor-list__item">
-								<a class="sponsor-list__anchor" href="<?php the_field('url') ?>">
-									<img class="sponsor-list__thumb" src="<?php echo $imageLink[0]; ?>" alt="<?php the_title(); ?>"/>
+                <a class="sponsor-list__anchor" href="<?php the_field('url') ?>">
+                  <div class="sponsor-list__thumb" style="background-image: url(<?php echo $imageLink[0]; ?>)" alt="<?php the_title(); ?>"></div>
+									<img class="sponsor-list__thumb-img" src="<?php echo $imageLink[0]; ?>" alt="<?php the_title(); ?>"/>
 								</a>
 							</li>
 						<?php endwhile; ?>
@@ -59,12 +60,17 @@
 			    $wp_query = new WP_Query($args);
 			?>
 			<?php if (have_posts()): ?>
-				<div class="sponsor-category">
+				<div class="sponsor-category silver">
 					<h3 class="subtitle">Silver</h3>
 					<ul class="sponsor-list">
 						<?php while ( have_posts() ) : the_post(); ?>
 							<?php $imageLink = wp_get_attachment_image_src(get_post_thumbnail_id(), "medium") ?>
-							<li class="sponsor-list__item"><a class="sponsor-list__anchor" href="<?php the_field('url') ?>"><img class="sponsor-list__thumb" src="<?php echo $imageLink[0]; ?>" alt="<?php the_title(); ?>"/></a></li>
+              <li class="sponsor-list__item">
+                <a class="sponsor-list__anchor" href="<?php the_field('url') ?>">
+                <div class="sponsor-list__thumb" style="background-image: url(<?php echo $imageLink[0]; ?>)" alt="<?php the_title(); ?>"></div>
+                  <img class="sponsor-list__thumb-img" src="<?php echo $imageLink[0]; ?>" alt="<?php the_title(); ?>"/>
+                </a>
+              </li>
 						<?php endwhile; ?>
 					</ul>
 				</div>
@@ -90,12 +96,17 @@
 			    $wp_query = new WP_Query($args);
 			?>
 			<?php if (have_posts()): ?>
-				<div class="sponsor-category">
+				<div class="sponsor-category bronze">
 					<h3 class="subtitle">Bronze</h3>
 					<ul class="sponsor-list">
 						<?php while ( have_posts() ) : the_post(); ?>
 							<?php $imageLink = wp_get_attachment_image_src(get_post_thumbnail_id(), "medium") ?>
-							<li class="sponsor-list__item"><a class="sponsor-list__anchor" href="<?php the_field('url') ?>"><img class="sponsor-list__thumb" src="<?php echo $imageLink[0]; ?>" alt="<?php the_title(); ?>"/></a></li>
+							<li class="sponsor-list__item">
+                <a class="sponsor-list__anchor" href="<?php the_field('url') ?>">
+                  <div class="sponsor-list__thumb" style="background-image: url(<?php echo $imageLink[0]; ?>)" alt="<?php the_title(); ?>"></div>
+                  <img class="sponsor-list__thumb-img" src="<?php echo $imageLink[0]; ?>" alt="<?php the_title(); ?>"/>
+                </a>
+              </li>
 						<?php endwhile; ?>
 					</ul>
 				</div>
@@ -121,12 +132,17 @@
 			    $wp_query = new WP_Query($args);
 			?>
 			<?php if (have_posts()): ?>
-				<div class="sponsor-category">
+				<div class="sponsor-category support">
 					<h3 class="subtitle">Apoio</h3>
 					<ul class="sponsor-list">
 						<?php while ( have_posts() ) : the_post(); ?>
 							<?php $imageLink = wp_get_attachment_image_src(get_post_thumbnail_id(), "medium") ?>
-							<li class="sponsor-list__item"><a class="sponsor-list__anchor" href="<?php the_field('url') ?>"><img class="sponsor-list__thumb" src="<?php echo $imageLink[0]; ?>" alt="<?php the_title(); ?>"/></a></li>
+							<li class="sponsor-list__item">
+                <a class="sponsor-list__anchor" href="<?php the_field('url') ?>">
+                  <div class="sponsor-list__thumb" style="background-image: url(<?php echo $imageLink[0]; ?>)" alt="<?php the_title(); ?>"></div>
+                  <img class="sponsor-list__thumb-img" src="<?php echo $imageLink[0]; ?>" alt="<?php the_title(); ?>"/>
+                </a>
+              </li>
 						<?php endwhile; ?>
 					</ul>
 				</div>
