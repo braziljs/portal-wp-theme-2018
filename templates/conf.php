@@ -65,6 +65,8 @@ Template Name: Conf
 		<div class="conf-wp-buy">
 			<div class="conf__description">
 				<p>Venha fazer parte da braziljs conf, uma experiência única e verdadeira em eventos</p>
+        <br/>
+        <div  style="display: block;" class="ingresse-widget" data-btntext="Comprar Ingressos" data-btnbgcolor="#ffc819" data-btntextcolor="#222" data-eventid="23468"></div>
 			</div>
 
 			<div class="background-divisor"></div>
@@ -74,7 +76,7 @@ Template Name: Conf
 					<p class="paragraph">Levamos conteúdo de qualidade para toda a comunidade, por meio da braziljs weekly, artigos, vídeos, screencast, cursos e muito mais.</p>
 				</div>
 				<div class="conf__buttons">
-					<div  style="display: block;" class="ingresse-widget" data-btntext="Comprar Ingressos" data-btnbgcolor="#ffc819" data-btntextcolor="#222" data-eventid="23468"></div>
+					<a class="anchor-button" href="#workshops">Workshops</a><br/>
 					<a class="anchor-button" href="#hoteis">Buscar hotéis</a>
 				</div>
 			</div>
@@ -174,6 +176,7 @@ Template Name: Conf
 			  </div>
 			</section> */ ?>
 
+    <?php get_template_part('sections/workshops'); ?>
 		<?php get_template_part('sections/conf/hotels'); ?>
 		<?php get_template_part('sections/sponsors'); ?>
 	</div>
