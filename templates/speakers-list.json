@@ -12,12 +12,6 @@
     "faceAt": "center center"
   },
   {
-    "name": "Feross Aboukhadijeh",
-    "pic": "feross-aboukhadijeh.jpg",
-    "bio": "Programador, designer, professor e cientista louco. Atualmente, construindo o <a href=\"https://webtorrent.io/\">WebTorrent</a>, um cliente de streaming BitTorrent para o navegador, alimentado pela WebRTC. Antes disso, construiu o <a href=\"https://web.archive.org/web/20150810065820/https://peercdn.com/\">PeerCDN</a>, uma rede de entrega de conteúdo peer-to-peer para tornar os sites mais rápidos e mais baratos.",
-    "faceAt": "center top"
-  },
-  {
     "name": "Mathias Bynens",
     "pic": "mathias-bynens.jpeg",
     "bio": "Mathias works on the V8 JavaScript engine at Google and on the ECMAScript standard through TC39.",
@@ -84,7 +78,7 @@
   },
   {
     "name": "Evangelina Ferreira",
-    "pic": "eva-ferreira.webp",
+    "pic": "eva-ferreira.jpg",
     "bio": "Evangelina Ferreira is a front-end developer and teacher. She is currently working at Aerolab as a UI Developer and has been teaching web technologies at the National Technological University of Argentina for more than five years. In her free time she organizes CSSConf Argentina."
   },
   {

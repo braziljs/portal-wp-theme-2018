@@ -41,7 +41,7 @@ Template Name: Conf
 							<a href="https://www.google.com/maps/place/Barra+Shopping+Sul/@-30.0843929,-51.2475847,17z/data=!3m1!4b1!4m5!3m4!1s0x951978a0f03108f3:0x6d93ede7b30eb35f!8m2!3d-30.0843929!4d-51.245396"
 								class="paragraph"
 								target="braziljs_map"
-								title="24 e 25 de AGOSTO">24 e 25 de agosto porto alegre rs barra shopping sul</a>
+								title="24 e 25 de AGOSTO">24 e 25 de agosto<br/>Porto Alegre RS<br/>Barra Shopping Sul</a>
 						</div>
 					</div>
 				</div>
