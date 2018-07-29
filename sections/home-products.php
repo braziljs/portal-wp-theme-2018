@@ -46,7 +46,7 @@
 				<a href="<?php bloginfo('url'); ?>/conf/" class="anchor-link">Acesse o site da BrazilJS Conf</a>
 			</li>
 			<li class="products-links__item">
-				<a href="<?php bloginfo('url'); ?>/eventos-parceiros/" class="anchor-link">Conheça os nossos eventos</a>
+				<a href="<?php bloginfo('url'); ?>/eventos" class="anchor-link">Conheça os nossos eventos</a>
 			</li>
 		</ul>
 	</div>

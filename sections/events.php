@@ -18,7 +18,7 @@
 			)
 		)
 	);
-  
+
   $wp_query = new WP_Query($args);
 ?>
 
@@ -32,9 +32,9 @@
 				<ul class="event-list calendar-list" aria-labelledby="latest-events-title">
 
 					<?php while (have_posts()) : the_post(); ?>
-						
+
 						<?php
-							$eventDate = get_field('data');					
+							$eventDate = get_field('data');
 							$eventMonth = date_i18n('F', strtotime($eventDate));
 							$eventDay = date_i18n('d', strtotime($eventDate));
 							$eventYear = date_i18n('Y', strtotime($eventDate));

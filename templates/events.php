@@ -41,6 +41,21 @@ Template Name: Eventos
  <?php if (have_posts()): ?>
 	<main class="section-wrapper" id="main">
 		<div class="row">
+      <div class="content">
+        <a href="/conf">
+          <video src="https://scontent.fpoa13-1.fna.fbcdn.net/v/t66.18014-6/29983813_1887212881321898_7124647323031419938_n.mp4?_nc_cat=0&amp;efg=eyJ2ZW5jb2RlX3RhZyI6Im9lcF9oZCJ9&amp;oh=70921d0fe7dae3d59fa12f1e93bdd0b3&amp;oe=5BCE1FD7"
+                style="top: -10px; width: 100%; margin-bottom: 30px;"
+                autoplay></video>
+        </a>
+        <div class="card card--type-2">
+          <div class="card__content">
+            <h2 class="card__title"><a href="/conf">BrazilJS Conference</a></h2>
+            <span class="card__label">24 e 25 de Agosto</span>
+          </div>
+        </div>
+      </div>
+    </div>
+		<div class="row">
 			<div class="content">
 				<ul class="event-list" aria-labelledby="latest-events-title">
 					<?php while ( have_posts() ) : the_post(); ?>
@@ -53,7 +68,6 @@ Template Name: Eventos
 							// Image links and ALT
 							$imageLink = wp_get_attachment_image_src(get_post_thumbnail_id(), 'event-thumb-small');
 							$imageAlt = get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true);
-
 						?>
 
 						<li class="events-list__item">

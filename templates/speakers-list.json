@@ -78,14 +78,14 @@
     "faceAt": "center left"
   },
   {
-    "name": "",
-    "pic": "",
-    "bio": ""
+    "name": "István Szmozsánszky",
+    "pic": "flaki.png",
+    "bio": "István Szmozsánszky (or Flaki, for short) teaches JS & frontend development, working with Mozilla's DevRel team promoting modern web technologies. He loves JavaScript internals & playing (quite literally!) with microcontrollers."
   },
   {
-    "name": "",
-    "pic": "",
-    "bio": ""
+    "name": "Evangelina Ferreira",
+    "pic": "eva-ferreira.webp",
+    "bio": "Evangelina Ferreira is a front-end developer and teacher. She is currently working at Aerolab as a UI Developer and has been teaching web technologies at the National Technological University of Argentina for more than five years. In her free time she organizes CSSConf Argentina."
   },
   {
     "name": "",
