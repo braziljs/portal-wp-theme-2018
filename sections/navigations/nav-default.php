@@ -1,6 +1,6 @@
 <!-- NAVIGATION DEFAULT -->
 
-<style>	
+<style>
 :root {
     --color-primary:#000;
     --color-secondary:#000;
@@ -13,7 +13,7 @@
 	<div class="content">
 		<div class="nav-wrapper">
 			<a href="<?php bloginfo('url'); ?>/" class="nav-logo">
-				<?php get_template_part('sections/logo/logo-anim-horizontal'); ?>
+				<?php get_template_part('sections/logo/logo-anim-horizontal'); ?>XXX
 			</a>
 			<div id="js-navigation-wrapper" class="nav-wrapper-list">
 				<button id="js-navigation-toogler" class="default-button navigation-toogler" type="button" aria-label="Abrir o menu de navegação">

@@ -8,7 +8,7 @@
 	width: 100%;
 	z-index: 1;
 	position: relative;
-	background-color: transparent;
+  background-color: transparent;
 }
 
 .hBG {
@@ -149,8 +149,8 @@
     }
 
     .ir-para {
-      text-shadow: 0 0 1px #000, 0 0 1px #000, 0 0 1px #000, 0 0 1px #000, 0 0 1px #000;
-      color: #ffee1f;
+      // text-shadow: 0 0 1px #000, 0 0 1px #000, 0 0 1px #000, 0 0 1px #000, 0 0 1px #000;
+      // color: #ffee1f;
     }
 
     @include breakpoint(tablet-and-up) {

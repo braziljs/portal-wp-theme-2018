@@ -12,7 +12,7 @@
 /* CARD CONTAINER
 ========================================================================== */
 .card {
-	z-index: 2;
+	// z-index: 2;
 	width: 100%;
 	clear: both;
 	// padding-left: 12%;
@@ -142,7 +142,7 @@
 	line-height: 167%;
 	border-radius: 4px;
 	color: $color-black;
-	
+
 	@include rem(font-size, 12px);
 
 	& + .card__title {
@@ -169,7 +169,7 @@
 	display: block;
 	font-weight: 600;
 	font-style: italic;
-	
+
 	@include rem(font-size, 13px);
 	@include rem(margin-top, -5px);
 	@include rem(margin-bottom, 10px);

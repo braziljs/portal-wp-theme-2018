@@ -1,5 +1,5 @@
 <!-- NAVIGATION CONF -->
-<style>	
+<style>
 :root {
     --color-primary:#fff;
     --color-secondary:#ff0;
