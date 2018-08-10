@@ -34,7 +34,8 @@
 						<?php echo glitch('uma') ?>
 						<?php echo glitch('conferência') ?>-->
 					</h2>
-					<div class="paragraph ">
+
+					<div class="paragraph">
 						<div class="diagonal-ballon">
 							<span>Levamos conteúdo de qualidade para toda a comunidade.</span>
 						</div>

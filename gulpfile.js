@@ -143,7 +143,7 @@ gulp.task('default', function() {
 	//gulp.start('fractalStart');
 
 	//When a SASS file change, build the CSS
-	gulp.watch('dev/sass/**/*.scss', ['css']);
+	gulp.watch('dev/**/*.scss', ['css', 'minifyCSS', 'scripts', 'copy', 'rev']);
 	// gulp.watch(['dev/**/*.scss', 'dev/**/*.js', 'dev/**/*.scss', 'dev/**/*.html', 'dev/**/*.php'], ['build']);
 
 	//When any CSS, HMTL, or JS files change, reload the browser
@@ -159,5 +159,12 @@ gulp.task('build', function(callback) {
  	runSequence('clean', 'css', 'minifyCSS', 'scripts', 'webp', 'imageMin', 'copy', 'rev', 'mp4', function () {
  		process.exit(0);
  	});
+
+});
+gulp.task('build:scss', function(callback) {
+
+  runSequence('css', 'minifyCSS', 'scripts', 'copy', 'rev', function () {
+    process.exit(0);
+  });
 
 });
