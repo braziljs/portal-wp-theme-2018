@@ -88,95 +88,112 @@ Template Name: Conf
 	<div id="js-conf-page" class="conf-wrapper brjs-conf-theme">
     <?php //get_template_part('sections/conf/speakers-list'); ?>
 
-    <?php
-      $speakers = json_decode(file_get_contents(get_template_directory().'/templates/speakers-list.json'), true);
+    <?php get_template_part('sections/workshops'); ?>
 
-      $picStyle = 1;
-    ?>
-
-		<!-- SPEAKERS LIST -->
-		<section class="section-wrapper">
-			<div class="content" id="palestrantes">
-				<h2 class="title" id="speakers-title">Speakers</h2>
-
-				<div class="speakers-grid__wrapper">
-					<ul class="speakers-grid__list" aria-labelledby="speakers-title">
-
-            <?php
-              foreach ($speakers as $speaker) {
-                if (!$speaker['name']) {
-                  continue;
-                }
-                ?>
-                  <li class="speakers-list__item effect-<?php echo ($picStyle % 3 === 1) ? 'dash-yellow' : (($picStyle % 3 === 2) ? 'border' : 'dash-black'); $picStyle++; ?>">
-                      <div class="speakers-card">
-                        <div class="speakers-card__header">
-                          <div
-                            class="speakers-card__thumb"
-                            style="background-image: url(<?php asset_path("img/conf/2018/" . $speaker['pic']); ?>);
-                                   <?php
-                                    if ($speaker['faceAt']) {
-                                      echo 'transform-origin: '.$speaker['faceAt'] .';';
-                                      echo 'background-position: '.$speaker['faceAt'] .';';
-                                    }
-                                   ?>"
-                          ></div>
-                        </div>
-                        <div class="speakers-card__content">
-                          <h3 class="speakers-card__title"><?php echo $speaker['name'] ?></h3>
-                          <p class="speakers-card__paragraph"><?php echo $speaker['bio'] ?></p>
-                        </div>
-                      </div>
-                    </li>
-                <?php
-              }
+    <div class="schedule-speakers-container content" id="grade">
+      <?php
+        $speakersData = json_decode(file_get_contents(get_template_directory().'/templates/speakers-list.json'), true);
+        $speakers = [];
+        $picStyle = 1;
+      ?>
+      <div class="schedule" data-selected-tab="1">
+        <div class="day-tabs-header">
+          <?php
+            foreach ($speakersData as $day) {
+              ?>
+                <div class="day-tab-header" onclick="this.parentNode.parentNode.dataset.selectedTab='<?php echo $day['day']; ?>'">
+                  <?php echo $day['date']; ?>
+                </div>
+              <?php
+            }
             ?>
+        </div>
+          <?php
+          foreach ($speakersData as $day) {
+            ?>
+              <div class="day-tab-content" data-tab-id="<?php echo $day['day']; ?>">
+                <?php
+                  foreach ($day['talks'] as $talk) {
+                    ?>
+                    <div class="talk-container <?php echo $talk['type']; ?>">
+                      <div class="talk-time"><?php echo $talk['time'] ?></div>
+                      <div class="talk-author"><?php
+                        if ($talk['speakers']) {
+                          $curSpeakers = [];
+                          foreach ($talk['speakers'] as $speaker) {
+                            $curSpeakers[] = $speaker['name'];
+                            $speakers[] = $speaker;
+                          }
+                          echo implode(' & ', $curSpeakers);
+                        } else {
+                          echo $talk['title'];
+                        }
+                      ?></div>
+                    </div>
+                    <?php
+                        if ($talk['type'] === 'talk') {
+                          ?>
+                            <div class="talk-title" <?php echo $talk['desc'] ? "data-has-desc=\"1\" onclick=\"this.classList.toggle('expanded')\"" : ""; ?>>
+                              <?php echo $talk['title'] ?>
+                              <div class="talk-desc"><?php echo $talk['desc'] ?></div>
+                            </div>
+                          <?php
+                        }
+                      ?>
+                    <?php
+                  }
+                ?>
+              </div>
+            <?php
+          }
+        ?>
+      </div>
 
-					</ul>
-				</div>
-			</div>
-		</section>
+      <!-- SPEAKERS LIST -->
+      <section class="section-wrapper">
+        <div class="content" id="palestrantes">
+          <h2 class="title" id="speakers-title">Speakers</h2>
+
+          <div class="speakers-grid__wrapper">
+            <ul class="speakers-grid__list" aria-labelledby="speakers-title">
+
+              <?php
+                foreach ($speakers as $speaker) {
+                  if (!$speaker['name']) {
+                    continue;
+                  }
+                  ?>
+                    <li class="speakers-list__item effect-<?php echo ($picStyle % 3 === 1) ? 'dash-yellow' : (($picStyle % 3 === 2) ? 'border' : 'dash-black'); $picStyle++; ?>">
+                        <div class="speakers-card">
+                          <div class="speakers-card__header">
+                            <div
+                              class="speakers-card__thumb"
+                              style="background-image: url(<?php asset_path("img/conf/2018/" . $speaker['pic']); ?>);
+                                    <?php
+                                      if ($speaker['faceAt']) {
+                                        echo 'transform-origin: '.$speaker['faceAt'] .';';
+                                        echo 'background-position: '.$speaker['faceAt'] .';';
+                                      }
+                                    ?>"
+                            ></div>
+                          </div>
+                          <div class="speakers-card__content">
+                            <h3 class="speakers-card__title"><?php echo $speaker['name'] ?></h3>
+                            <p class="speakers-card__paragraph"><?php echo $speaker['bio'] ?></p>
+                          </div>
+                        </div>
+                      </li>
+                  <?php
+                }
+              ?>
+
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
 		<!-- END * SPEAKERS LIST -->
 
-			<?php /*<section class="section-wrapper">
-			  <div class="content">
-			  	<div class="speakers">
-				    <div class="speaker-list-content">
-				    	<div class="pt01">
-					    	<a href="">Andreia Carvalho</a> <b>/</b>
-					    	<a href="">Amanda Santos</a> <b>/</b>
-					    	<a href="">Nathalia Alves</a> <b>/</b>
-					    	<a href="">Otavio Avila</a>
-					    	<br>
-					    	<br>
-					      <a href="">Sandro Peres</a> <b>/</b>
-					      <a href="">Cristiano Fernandes</a> <b>/</b>
-					      <a href="">Fernanda Shaun</a> <b>/</b>
-					      <a href="">Thais Oliveira</a>
-				    	</div>
-				    	<br>
-				    	<div class="pt02">
-								<a href="">Andrei Carvalho</a> <b>/</b>
-								<a href="">Amanda Santos</a> <b>/</b>
-								<a href="">Nathalia Alves</a> <b>/</b>
-								<a href="">Otavio Avila</a> <b>/</b>
-								<a href="">Sandro Peres</a> <b>/</b>
-								<a href="">Cristiano Fernandes</a>
-								<br>
-								<br>
-								<a href="">Fernanda Shaun</a> <b>/</b>
-								<a href="">Thais Oliveira</a> <b>/</b>
-								<a href="">Andreia Carvalho</a> <b>/</b>
-								<a href="">Amanda Santos</a> <b>/</b>
-								<a href="">Andrigo Tostoiesq</a> <b>/</b>
-								<a href="">Laurindo Evetes</a>
-				    	</div>
-				    </div>
-					</div>
-			  </div>
-			</section> */ ?>
-
-    <?php get_template_part('sections/workshops'); ?>
 		<?php get_template_part('sections/conf/hotels'); ?>
 		<?php get_template_part('sections/sponsors'); ?>
 	</div>

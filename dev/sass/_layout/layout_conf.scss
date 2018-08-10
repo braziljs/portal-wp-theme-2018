@@ -321,6 +321,9 @@
               z-index: 9;
             }
           }
+          .speakers-card__content {
+            margin-left: 15px;
+          }
         }
       }
 
@@ -556,6 +559,129 @@
 	}
 }
 
+/*
+*
+* SCHEDULE
+*
+*/
+.schedule-speakers-container {
+  display: flex;
+  flex-direction: column;
+}
+.schedule {
+  order: 2;
+  @for $i from 1 through 5 {
+    &[data-selected-tab="#{$i}"] {
+      .day-tab-header:nth-child(#{$i}) {
+        background: #000;
+        height: 50px;
+        border-top: solid 5px #dd0;
+      }
+      .day-tab-content[data-tab-id="#{$i}"] {
+        display: block;
+      }
+    }
+  }
+}
+.day-tabs-header {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  align-items: flex-end;
+}
+
+.day-tab-header {
+  display: flex;
+  align-items: center;
+  width: 150px;
+  justify-content: center;
+  height: 40px;
+  background: #999;
+  color: #fff;
+  font-family: Anton,san-serif;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.day-tab-content {
+  background: #000;
+  color: #fff;
+  font-family: roboto, 'roboto mono';
+  padding: 10px;
+  display: none;
+  position: relative;
+
+  .talk-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 10px 0;
+
+    &.intervention {
+      color: #ff0;
+      .talk-author {
+        font-weight: 400;
+        text-transform: capitalize;
+        font-size: 20px;
+        font-family: roboto, 'roboto mono';
+      }
+    }
+
+    .talk-time {
+      font-size: 20px;
+      padding: 0 10px;
+      width: 65px;
+      font-family: Anton,san-serif;
+    }
+
+    .talk-author {
+      text-transform: uppercase;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      font-family: Anton,san-serif;
+    }
+  }
+  .talk-title {
+    padding-left: 65px;
+    position: relative;
+
+    &[data-has-desc] {
+      cursor: pointer;
+      &:before {
+        content: '+';
+        position: absolute;
+        left: 40px;
+        transform: scale(1.6);
+        color: #d0d0d0;
+        margin-top: -1px;
+      }
+    }
+
+    &.expanded {
+      &:before {
+        content: '-';
+      }
+
+      .talk-desc {
+        display: block;
+      }
+    }
+
+    .talk-desc {
+      display: none;
+      background: #444;
+      padding: 05px;
+      margin: 10px 10px 10px -10px;
+      transform: skew(-5deg);
+    }
+  }
+}
+/*
+*
+* END SCHEDULE
+*
+*/
 
 
 /*

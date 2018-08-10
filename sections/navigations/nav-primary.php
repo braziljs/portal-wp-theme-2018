@@ -95,7 +95,8 @@
 					?>
 				</nav>
 
-        <div class="login-container">
+        <?php
+        /*<div class="login-container">
           <div class="login-layer"></div>
           <div class="login">...</div>
           <div class="login-content"></div>
@@ -138,7 +139,8 @@
               document.querySelector('.login-container').classList.remove('open');
             }
         </script>
-			</div>
+        */?>
+      </div>
 		</div>
 	</div>
 </div>
