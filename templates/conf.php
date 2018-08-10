@@ -90,13 +90,13 @@ Template Name: Conf
 
     <?php get_template_part('sections/workshops'); ?>
 
-    <div class="schedule-speakers-container content" id="grade">
+    <div class="schedule-speakers-container content">
       <?php
         $speakersData = json_decode(file_get_contents(get_template_directory().'/templates/speakers-list.json'), true);
         $speakers = [];
         $picStyle = 1;
       ?>
-      <div class="schedule" data-selected-tab="1">
+      <div class="schedule" data-selected-tab="1" id="grade">
         <div class="day-tabs-header">
           <?php
             foreach ($speakersData as $day) {
