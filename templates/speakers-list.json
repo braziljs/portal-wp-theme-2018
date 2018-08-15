@@ -246,7 +246,7 @@
         "desc": "",
         "speakers": [
           {
-            "name": "Kyle Simpson",
+            "name": "Kyle Simpson (@getify)",
             "pic": "kyle-simpson.jpeg",
             "bio": "É um escritor, palestrante, professor, e contribuidor em projetos open-source. Evangelista da open web, apaixonado por todas as coisas relacionadas ao javascript.",
             "faceAt": "center center"
@@ -278,7 +278,7 @@
         "desc": "O Clojure entrou nas nossas vidas em 2007 como uma das variações mais poderosas e consistentes do Lisp, e desde então tem sido amplamente adotada pelos membros da comunidade funcional. Recentemente o Clojure ganhou um novo amigo chamado ClojureScript, que nos permite usar Clojure pra construir front ends robustos, confiáveis e funcionais. Você se vê frequentemente lutando contra um escopo bagunçado ou o famoso callback hell em javascript? Sempre quis usar um conjunto ricos de estruturas de dados nativas, macros e ainda levar de brinde as otimizações de performance da JVM? Trago ótimas notícias pra você! Nessa talk veremos como se utilizar dos super poderes que o ClojureScript pode trazer para o front end e os benefícios da programação funcional.",
         "speakers": [
           {
-            "name": "Isabel Silveira",
+            "name": "Isa Silveira",
             "pic": "isa-silveira.jpg",
             "bio": "Isa é uma engenheira de software construindo grandes produtos digitais na Work&Co. Ao longo de sua carreira, ela já atuou na área da pesquisa científica, back-end e front-end para web e mobile, e trabalhou em projeto para clientes internacionais como a Universidade de Stanford, Banco Votorantim e o Grupo Estadão. Não nega uma cerveja e uma boa conversa, no seu tempo livre ela gosta de praticar slalom nos patins e brincar com seus cachorros.",
             "faceAt": "center top"
@@ -294,13 +294,13 @@
           {
             "name": "Natália Medina",
             "pic": "natalia-medina.jpg",
-            "bio": "Product Designer na VTex",
+            "bio": "Product Designer at VTEX focused on UX, Interaction and Visual Design. Previously worked at globo.com, UFRJ and LNCC. Loves everything related  to technology, data and people.",
             "faceAt": "center right"
           },
           {
             "name": "Guilherme Rodrigues",
             "pic": "guilherme-rodrigues.jpg",
-            "bio": ""
+            "bio": "Lead Software Engineer at VTEX focused on serverless, full-stack developer tools, graduated at PUC-Rio Information Systems '13. Previously led the front end development team and contributed to the current continuous deployment infrastructure which powers 800 deploys per month in 80+ microservices."
           }
         ]
       },
