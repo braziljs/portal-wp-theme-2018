@@ -12,8 +12,31 @@
           É uma oportunidade única e exclusiva!<br/>
           Se você vem para a BrazilJS Conf, não perca a chance de fazer um curso com o renomado <a href="https://twitter.com/getify" target="blank">@getify</a>.<br/><br/>
           <strong>JavaScript: The Recent Parts:</strong> spread/rest, destructuring, template literals, iterators, generators, Array.includes, string padding, async-await, RegExp improvements, async generators/iteration, etc.<br/>
+          <br/>
+          <strong>QUANDO:</strong> O dia TODO, no dia 23 de Agosto (das 08:30 às 17:30h<br/>
+          <strong>ONDE:</strong> Faculdade Decision / FGV, Av. Praia de Belas, 1212, 4º andar.<br/>
           <div class="ws-button-container">
             <a href="https://www.ingresse.com/workshop-kyle-simpson" class="anchor-button home-about" data-color="yellow">Inscreva-se</a>
+          </div>
+        </div>
+      </li>
+      <li>
+        <img src="<?php asset_path('img/conf/2018/amp-team.png') ?>" alt="" style="outline: none;" />
+        <div class="paragraph paragraph--color-2">
+          A equipe do Google no time AMP virá à BrazilJS para fazer alguns trabalhos muito legais.<br/>
+          Durante a BrazilJS, teremos os conhecidos <em>office hours</em>, em que você poderá sentar com o pessoal do Google e trocar uma ideia.<br/>
+          <br/>
+          Mas trazemos aqui, mais uma oportunidade única! Trata-se do <strong>CodeLabs</strong> do time do AMP, um dia antes da BrazilJS Conf!<br/>
+          Teremos os mentores Naina, Ben, Raghu e Dipak, do time AMP, disponíveis para vocês. Teremos também pessoal auxiliando com o inglês, caso precise.<br/>
+          <br/>
+          A inscrição é 100% gratuita, mas corre por que o número de participantes é bem limitado!<br/>
+          A, e lembre-se de levar seu computador para fazer os exercícios e exemplos.<br/>
+          <br/>
+          <strong>QUANDO:</strong> Duas edições, no dia 23 de Agosto, uma pela manhã(8:30h) e uma pela tarde(14h).<br/>
+          <strong>ONDE:</strong> Faculdade Decision / FGV, Av. Praia de Belas, 1212, 4º andar.<br/>
+
+          <div class="ws-button-container">
+            <a href="https://goo.gl/forms/z01xuOSf9NBeSBLm2" class="anchor-button home-about" data-color="yellow">Inscreva-se</a>
           </div>
         </div>
       </li>
