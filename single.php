@@ -36,7 +36,7 @@
 						</div>
 					</div>
 					<div class="post-thumb">
-						<?php $imageLink = wp_get_attachment_image_src(get_post_thumbnail_id(), 'highlight-thumb'); ?>
+						<?php $imageLink = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full'); ?>
 						<div class="header__thumb" style="background-image: url(<?php echo $imageLink[0]; ?>)"></div>
 					</div>
 				</div>
