@@ -15,7 +15,7 @@
           <strong>JavaScript: The Recent Parts:</strong> spread/rest, destructuring, template literals, iterators, generators, Array.includes, string padding, async-await, RegExp improvements, async generators/iteration, etc.<br/>
           <br/>
           <strong>QUANDO:</strong> O dia TODO, no dia 23 de Agosto (das 08:30 às 17:30h<br/>
-          <strong>ONDE:</strong> Faculdade Decision / FGV, Av. Praia de Belas, 1212, 4º andar.<br/>
+          <strong>ONDE:</strong> Faculdade Decision / FGV, Av. Praia de Belas, 1212, 5º andar.<br/>
           <div class="ws-button-container">
             <a href="https://www.ingresse.com/workshop-kyle-simpson" class="anchor-button home-about" data-color="yellow">Inscreva-se</a>
           </div>
@@ -34,8 +34,8 @@
           A inscrição é 100% gratuita, mas corre por que o número de participantes é bem limitado!<br/>
           A, e lembre-se de levar seu computador para fazer os exercícios e exemplos.<br/>
           <br/>
-          <strong>QUANDO:</strong> Duas edições, no dia 23 de Agosto, uma pela manhã(8:30h) e uma pela tarde(14h).<br/>
-          <strong>ONDE:</strong> Faculdade Decision / FGV, Av. Praia de Belas, 1212, 4º andar.<br/>
+          <strong>QUANDO:</strong> Duas edições, no dia 23 de Agosto, uma pela manhã(8:30h) e uma pela tarde(13:30h).<br/>
+          <strong>ONDE:</strong> Faculdade Decision / FGV, Av. Praia de Belas, 1212, 4º andar, sala 404.<br/>
 
           <div class="ws-button-container">
             <a href="https://goo.gl/forms/z01xuOSf9NBeSBLm2" class="anchor-button home-about" data-color="yellow">Inscreva-se</a>
@@ -59,8 +59,8 @@
           A inscrição é 100% gratuita, mas corre por que o número de participantes é bem limitado!<br/>
           A, e lembre-se de levar seu computador para fazer os exercícios e exemplos.<br/>
           <br/>
-          <strong>QUANDO:</strong> Dia 23 de Agosto, à tarde(14h).<br/>
-          <strong>ONDE:</strong> Faculdade Decision / FGV, Av. Praia de Belas, 1212, 4º andar.<br/>
+          <strong>QUANDO:</strong> Dia 23 de Agosto, à tarde(13:30h).<br/>
+          <strong>ONDE:</strong> Decision/FGV, Av. Praia de Belas, 1212, 4º andar, sala 401.<br/>
 
           <div class="ws-button-container">
             <a href="https://flowcore.concore.io/evento/1yOCNjd4w4/cadastro" class="anchor-button home-about" data-color="yellow">Inscreva-se</a>
