@@ -95,7 +95,8 @@
 	}
 
 	.title--type-2 {
-		color: #fff;
+    color: #fff;
+    margin: 20px 0;
 	}
 
 	@include breakpoint(desktop) {

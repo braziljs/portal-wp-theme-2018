@@ -8,6 +8,7 @@
       <li>
         <img src="<?php asset_path('img/conf/2018/kyle-simpson.jpeg') ?>" alt="" />
         <div class="paragraph paragraph--color-2">
+          <h2 class="title--type-2">Kyle Simpson</h2>
           Kyle Simpson está trazendo pela primeira vez ao Brasil sua série de Workshops de JavaScript.<br/>
           É uma oportunidade única e exclusiva!<br/>
           Se você vem para a BrazilJS Conf, não perca a chance de fazer um curso com o renomado <a href="https://twitter.com/getify" target="blank">@getify</a>.<br/><br/>
@@ -23,11 +24,12 @@
       <li>
         <img src="<?php asset_path('img/conf/2018/amp-team.png') ?>" alt="" style="outline: none;" />
         <div class="paragraph paragraph--color-2">
+          <h2>Google - AMP Team</h2>
           A equipe do Google no time AMP virá à BrazilJS para fazer alguns trabalhos muito legais.<br/>
           Durante a BrazilJS, teremos os conhecidos <em>office hours</em>, em que você poderá sentar com o pessoal do Google e trocar uma ideia.<br/>
           <br/>
           Mas trazemos aqui, mais uma oportunidade única! Trata-se do <strong>CodeLabs</strong> do time do AMP, um dia antes da BrazilJS Conf!<br/>
-          Teremos os mentores Naina, Ben, Raghu e Dipak, do time AMP, disponíveis para vocês. Teremos também pessoal auxiliando com o inglês, caso precise.<br/>
+          Teremos os mentores Naina, Ben e Raghu, do time AMP, disponíveis para vocês. Teremos também pessoal auxiliando com o inglês, caso precise.<br/>
           <br/>
           A inscrição é 100% gratuita, mas corre por que o número de participantes é bem limitado!<br/>
           A, e lembre-se de levar seu computador para fazer os exercícios e exemplos.<br/>
@@ -37,6 +39,31 @@
 
           <div class="ws-button-container">
             <a href="https://goo.gl/forms/z01xuOSf9NBeSBLm2" class="anchor-button home-about" data-color="yellow">Inscreva-se</a>
+          </div>
+        </div>
+      </li>
+      <li>
+        <img src="<?php asset_path('img/conf/2018/concore.png') ?>" alt="" style="outline: none;" />
+        <div class="paragraph paragraph--color-2">
+          <h2>Front-end a Fullstack em 4 horas</h2>
+          Curso rápido (4 horas) para aprender os principais conceitos de como desenvolver com o concore na prática.<br/><br/>
+          1. O átomo do Software (Introdução a plataforma)<br/>
+          2. Moleculoids - Criando estruturas de dados<br/>
+          3. Moleculas - CRUD de dados<br/>
+          4. MoleculeQuery - Consultas de dados<br/>
+          5. ACL e Login<br/>
+          6. Criando APIs com Flowcore<br/>
+          7. User Flows<br/>
+          8. User Actions<br/>
+          <br/>
+          A inscrição é 100% gratuita, mas corre por que o número de participantes é bem limitado!<br/>
+          A, e lembre-se de levar seu computador para fazer os exercícios e exemplos.<br/>
+          <br/>
+          <strong>QUANDO:</strong> Dia 23 de Agosto, à tarde(14h).<br/>
+          <strong>ONDE:</strong> Faculdade Decision / FGV, Av. Praia de Belas, 1212, 4º andar.<br/>
+
+          <div class="ws-button-container">
+            <a href="https://flowcore.concore.io/evento/1yOCNjd4w4/cadastro" class="anchor-button home-about" data-color="yellow">Inscreva-se</a>
           </div>
         </div>
       </li>

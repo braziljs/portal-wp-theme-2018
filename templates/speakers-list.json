@@ -259,6 +259,19 @@
         "title": "Almoço / Almuerzo / Lunch"
       },
       {
+        "time": "13:30",
+        "type": "talk",
+        "title": "Conceitos e aplicações de Promises no JavaScript",
+        "desc": "Promises são objetos que representam valores e podem estar disponíveis agora, depois ou nunca, permitem que o fluxo de um código em JavaScript continue a ser executado simultaneamente em várias rotinas, mesmo que o primeiro retorno ainda não tenha sido finalizado. Também asseguram que os dados que estão sendo preparados, poderão ser utilizados na execução do código.<br/><br/>Os elementos que serão abordados nesta palestra são: sintaxe, propriedades, métodos, protótipo, exemplo e compatibilidades de navegadores.",
+        "speakers": [
+          {
+            "name": "Aline Estevo da silva",
+            "pic": "aline-estevo.jpg",
+            "bio": "Estudante do último semestre de Análise e Desenvolvimento de Sistemas, assistente de suporte na empresa Hostgator sou apaixonada por tecnologia, gosto de aprender sobre tudo e Javeira nas horas vagas!"
+          }
+        ]
+      },
+      {
         "time": "14:00",
         "type": "talk",
         "title": "React. Em busca da arquitetura ideal",
