@@ -46,13 +46,9 @@
 			<div class="row">
 				<div class="header__li">
           <a href="<?php bloginfo('url'); ?>/sobre" class="anchor-button home-about" data-color="yellow">Sobre a BrazilJS</a>
-          <a href="conf" class="default">
-            <div class="paragraph anch-articles">
-              <!-- <a href="#latest-news-anchor" class="" data-scroll-header title="Explore os artigos disponíveis no Portal BrazilJS">Confira os últimos artigos</a> -->
-              <div class="ir-para">ir para a</div>
-              <div class="conferencia">conferência&nbsp;</div>
-            </div>
-          </a>
+          <div class="paragraph anch-articles">
+            <a href="#latest-news-anchor" class="" data-scroll-header title="Explore os artigos disponíveis no Portal BrazilJS">Confira os <br> últimos artigos</a>
+          </div>
 				</div>
 			</div>
 		</div>

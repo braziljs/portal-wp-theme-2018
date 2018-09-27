@@ -3,7 +3,7 @@
 	<div class="courses-alura">
 		<h2 class="title">Cursos recomendados</h2>
     <div class="row">
-      <?php get_template_part('sections/workshops'); ?>
+      <?php //get_template_part('sections/workshops'); ?>
     </div>
 		<div class="row">
 			<ul class="card-wrapper" id="card-wrapper-list"></ul>

@@ -88,57 +88,27 @@
       }
     }
 
-    .default .paragraph {
+    .paragraph  {
+    	margin: 0;
+			position: relative;
+			border-right: 1px solid #fff;
+			padding: 0 10px;
+			text-transform: uppercase;
+			font-size: 14px;
+			font-weight: bold;
+			text-align: right;
 
-
-      // background: #ffee1f;
-      color: #000;
-      width: 300px;
-      height: 160px;
-      position: absolute;
-      right: 0;
-      font-family: Anton,san-serif;
-      font-size: 40px;
-      padding-right: 10px;
-      line-height: 190%;
-      padding-top: 8px;
-
-
-
-    	// width: 145px;
-    	font-weight: 900;
-    	text-align: right;
-    	// line-height: 200%;
-    	margin-right: 20px;
-    	// position: relative;
-    	padding-left: 10px;
-    	@include transition;
-    	text-transform: uppercase;
-    	// @include rem(font-size, 12px);
-
-    	// &:after {
-    	// 	content: "";
-	    // 	right: 0;
-	    // 	bottom: 0;
-	    // 	width: 28px;
-      //   height: 17px;
-      //   color: #444;
-	    // 	@extend .bounce;
-	    // 	position: absolute;
-	    // 	display: inline-block;
-			// 	background: url('../img/icons/icon-arrow.svg') transparent no-repeat top center;
-      // }
-
-      &:before {
-        content: '';
-        position: absolute;
-        left: 50px;
-        top: 1px;
-        width: 90%;
-        height: 110%;
-        background: #ffee1f;
-        z-index: 0;
-        transform: skew(-10deg,-10deg) translate(-8px,-4px) scale(1);
+    	&:after {
+    		content: "";
+	    	right: 10px;
+	    	bottom: 10px;
+	    	width: 28px;
+        height: 17px;
+        color: #444;
+	    	@extend .bounce;
+	    	position: absolute;
+	    	display: inline-block;
+				background: url('../img/icons/icon-arrow.svg') transparent no-repeat top center;
       }
     }
 
