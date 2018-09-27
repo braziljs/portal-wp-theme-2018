@@ -198,7 +198,7 @@
 									<ul class="sponsor-list">
 										{% for sponsor in cota.patrocinio_cotas_patrocinios[0].patrocinio_cotas_patrocinios_patrocinio %}
 											<li class="sponsor-list__item">
-												<a class="sponsor-list__anchor" href="{{sponsor.url}}"><img class="sponsor-list__thumb" src="{{sponsor.thumbnail.src()}}" alt="{{sponsor.title}}"/></a>
+												<a class="sponsor-list__anchor" href="{{sponsor.url}}"><img class="sponsor-list__thumb" style="width: 150px; height: auto;" src="{{sponsor.thumbnail.src()}}" alt="{{sponsor.title}}"/></a>
 											</li>
 										{% endfor %}
 									</ul>
