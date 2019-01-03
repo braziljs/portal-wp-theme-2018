@@ -137,6 +137,7 @@
 	width: 100%;
 	height: 100%;
 	margin: auto;
+  background-color: rgba(0, 0, 0, 0.84);
 	// background: #fff;
 	z-index: 99999995;
 	@include transition;
@@ -144,6 +145,7 @@
 	// transition-duration: 2s;
 
 	.video-loading-message {
+    color: #FFF;
 		text-transform: uppercase;
 		text-align: center;
 		width: 90%;
