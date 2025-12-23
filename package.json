@@ -25,7 +25,7 @@
     "gulp-clean": "^0.3.2",
     "gulp-concat": "^2.6.1",
     "gulp-copy": "^1.0.0",
-    "gulp-imagemin": "^3.1.1",
+    "gulp-imagemin": "^9.2.0",
     "gulp-requirejs-optimize": "^1.2.0",
     "gulp-rev": "^7.1.2",
     "gulp-rev-css-url": "^0.1.0",
